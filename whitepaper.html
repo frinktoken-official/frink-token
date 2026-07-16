@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Frink Token (FRINK) — Official Whitepaper v1.0</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <meta name="description" content="Official Whitepaper for Frink Token (FRINK) - An innovative experimental utility token on Polygon PoS. Full documentation including technology, tokenomics, roadmap, governance, and risk factors." />
+  <meta name="keywords" content="Frink Token, FRINK, Polygon, Web3, Blockchain, Utility Token, ERC-20, Tokenomics, Governance, Whitepaper" />
+
+  <link rel="icon" type="image/svg+xml" href="https://frinktoken.net/logo.svg" />
+
+<!-- Open Graph (카카오톡, 페이스북, 메신저) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Frink Token (FRINK) — Official Whitepaper v1.0" />
+  <meta property="og:description" content="Innovative experimental Web3 utility token on Polygon PoS. Transparent, community-driven development." />
+  <meta property="og:image" content="https://frinktoken.net/cover_1200_630.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:url" content="https://frinktoken.net/whitepaper.html" />
+  <meta property="og:site_name" content="Frink Token (FRINK)" />
+
+<!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Frink Token (FRINK) — Official Whitepaper v1.0" />
+  <meta name="twitter:description" content="Experimental Polygon-based utility token for education and community-driven innovation." />
+  <meta name="twitter:image" content="https://frinktoken.net/cover_1200_630.jpg" />
+<style>
+  :root {
+    --primary-purple: #9B6DFF;
+    --dark-purple: #7a4bff;
+    --bg-dark: #0f0f0f;
+    --bg-secondary: #1a1a1a;
+    --text-light: #f1f1f1;
+    --border-color: #333;
+    --danger-red: #ff6b6b;
+    --success-green: #51cf66;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    body { font-size: 15px; }
+    h1 { font-size: 1.75rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    h3 { font-size: 1.25rem !important; }
+    h4 { font-size: 1.1rem !important; }
+  }
+
+  h1, h2, h3, h4 {
+    border-left: 5px solid var(--primary-purple);
+    padding-left: 12px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    line-height: 1.3;
+  }
+
+  .section {
+    padding: 30px 0;
+  }
+
+  @media (min-width: 768px) {
+    .section { padding: 50px 0; }
+  }
+
+  .navbar {
+    padding: 12px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+
+  .navbar-brand { font-size: 1.1rem; }
+
+  .logo-top {
+    width: 45px;
+    height: auto;
+  }
+
+  @media (min-width: 768px) {
+    .logo-top { width: 55px; }
+  }
+
+  .nav-link {
+    padding: 6px 15px !important;
+    font-size: 0.95rem;
+  }
+
+  .dropdown-menu-dark {
+    background: #1d1d1d;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    min-width: 200px;
+  }
+
+  .dropdown-item {
+    color: var(--text-light);
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+  }
+
+  .dropdown-item:hover {
+    background: var(--primary-purple);
+    color: #fff;
+  }
+
+  .dropdown-item:focus {
+    background: var(--primary-purple);
+    color: #fff;
+  }
+
+  .dropdown-divider {
+    border-color: var(--border-color);
+    margin: 8px 0;
+  }
+
+  .dropdown-toggle::after {
+    margin-left: 6px;
+  }
+
+  /* 모바일: 드롭다운을 일반 메뉴처럼 */
+  @media (max-width: 991px) {
+    /* 전체 navbar에 스크롤 활성화 */
+    .navbar-collapse {
+      max-height: 80vh !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    /* nav-link 간격 더 줄이기 */
+    .nav-link {
+      padding: 5px 15px !important;
+    }
+    
+    .navbar-collapse .dropdown-menu {
+      position: static !important;
+      transform: none !important;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      margin-left: 20px;
+      max-height: 50vh !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .navbar-collapse .dropdown-item {
+      padding: 6px 15px;
+      font-size: 0.9rem;
+    }
+  }
+
+  /* 데스크톱: 드롭다운 스크롤 */
+  @media (min-width: 992px) {
+    .dropdown-menu {
+      max-height: 70vh !important;
+      overflow-y: auto !important;
+    }
+  }
+
+  .btn-download {
+    background: var(--primary-purple);
+    border: none;
+    font-weight: 600;
+    color: #fff;
+    padding: 14px 30px;
+    font-size: 1rem;
+    min-height: 48px;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+
+  .btn-download:hover {
+    background: var(--dark-purple);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(155, 109, 255, 0.3);
+  }
+
+  .table-responsive-custom {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 20px 0;
+  }
+
+  table {
+    min-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    table {
+      font-size: 0.85rem;
+    }
+    table th, table td {
+      padding: 10px 8px !important;
+      white-space: nowrap;
+    }
+  }
+
+  table th {
+    background: #1d1d1d;
+    color: var(--primary-purple);
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  table td {
+    border-color: var(--border-color);
+  }
+
+  .table-dark {
+    color: #e9ecef;
+  }
+
+  .use-case-box, .timeline-item, .vesting-chart {
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-purple);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  @media (min-width: 768px) {
+    .use-case-box, .timeline-item, .vesting-chart {
+      padding: 25px;
+    }
+  }
+
+  .use-case-box h4, .timeline-item h4 {
+    color: var(--primary-purple);
+    margin-bottom: 12px;
+    margin-top: 0;
+    border: none;
+    padding: 0;
+    font-size: 1.1rem;
+  }
+
+  .risk-item {
+    background: var(--bg-secondary);
+    padding: 18px;
+    border-left: 3px solid var(--danger-red);
+    margin-bottom: 15px;
+    border-radius: 6px;
+  }
+
+  .risk-item strong {
+    color: var(--danger-red);
+  }
+
+  .gov-badge {
+    display: inline-block;
+    background: var(--primary-purple);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  pre {
+    background: #1d1d1d !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    white-space: pre;
+  }
+
+  @media (max-width: 768px) {
+    pre {
+      font-size: 0.75rem;
+      padding: 12px !important;
+    }
+  }
+
+  code {
+    color: var(--primary-purple);
+    background: #1d1d1d;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    word-break: break-all;
+  }
+
+  a {
+    color: var(--primary-purple);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  a:hover {
+    color: var(--dark-purple);
+    text-decoration: underline;
+  }
+
+  ul, ol {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+
+  .container.text-center {
+    padding-top: 100px !important;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: 768px) {
+    .container.text-center {
+      padding-top: 140px !important;
+      padding-bottom: 50px;
+    }
+  }
+
+  .alert {
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  footer {
+    margin-top: 50px;
+    padding: 30px 0;
+    border-top: 1px solid var(--border-color);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .lead {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    .lead {
+      font-size: 1.15rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .table-stack {
+      display: block;
+      width: 100%;
+    }
+    
+    .table-stack thead {
+      display: none;
+    }
+    
+    .table-stack tbody,
+    .table-stack tr,
+    .table-stack td {
+      display: block;
+      width: 100%;
+    }
+    
+    .table-stack tr {
+      margin-bottom: 20px;
+      background: var(--bg-secondary);
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 3px solid var(--primary-purple);
+    }
+    
+    .table-stack td {
+      text-align: left !important;
+      padding: 8px 0 !important;
+      border: none !important;
+      white-space: normal !important;
+    }
+    
+    .table-stack td:before {
+      content: attr(data-label);
+      font-weight: bold;
+      color: var(--primary-purple);
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+  .highlight-number {
+    color: var(--primary-purple);
+    font-weight: 600;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      <img src="https://frinktoken.net/logo.svg" class="logo-top me-2" alt="FRINK"> 
+      <span class="d-none d-md-inline">FRINK Whitepaper</span>
+      <span class="d-md-none">FRINK</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbarNav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="#summary" class="nav-link">Summary</a></li>
+        <li class="nav-item"><a href="#problem" class="nav-link">Problem</a></li>
+        <li class="nav-item"><a href="#usecases" class="nav-link">Uses</a></li>
+        <li class="nav-item"><a href="#tech" class="nav-link">Tech</a></li>
+        <li class="nav-item"><a href="#tokenomics" class="nav-link">Token</a></li>
+        <li class="nav-item"><a href="#liquidity-lock" class="nav-link">Liquidity</a></li>
+        <li class="nav-item"><a href="#roadmap" class="nav-link">Roadmap</a></li>
+        <li class="nav-item"><a href="#governance" class="nav-link">DAO</a></li>
+        <li class="nav-item"><a href="#security" class="nav-link">Security</a></li>
+        <li class="nav-item"><a href="#legal" class="nav-link">Legal</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#market">Market Analysis</a></li>
+            <li><a class="dropdown-item" href="#team">Team</a></li>
+            <li><a class="dropdown-item" href="#finance">Finance</a></li>
+            <li><a class="dropdown-item" href="#risks">Risk Mitigation</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#start">Getting Started</a></li>
+            <li><a class="dropdown-item" href="#contact">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<div class="container text-center">
+  <img src="https://frinktoken.net/logo.svg" class="logo-top mb-3" alt="FRINK Logo" style="width: 80px;">
+  <h1>Frink Token (FRINK)<br>
+    <span class="d-block mt-2" style="font-size: 0.6em;">Official Whitepaper v1.0</span>
+  </h1>
+  <p class="lead mt-3 mb-4">
+    Innovative ERC-20 Utility Token built on Polygon PoS<br>
+    <small class="d-block mt-2">Transparent • Educational • Creator-Focused • Community-Driven</small>
+  </p>
+
+  <a href="https://frinktoken.net/whitepaper.pdf" class="btn btn-download btn-lg mt-3" download>
+    ⬇ Download PDF (v1.0)
+  </a>
+</div>
+
+<div class="container">
+
+<!-- EXECUTIVE SUMMARY -->
+<section id="summary" class="section">
+  <h2>Executive Summary</h2>
+  <p>
+    Frink Token (FRINK) is an innovative experimental Web3 utility token 
+    deployed on the Polygon PoS network with a total supply of 
+    10 billion tokens. FRINK is designed to explore lowering Web3 entry 
+    barriers through education-focused applications, creator rewards, 
+    and decentralized governance.
+  </p>
+  <p>
+    Built on Polygon's low-cost infrastructure, FRINK enables 
+    micro-transactions with minimal fees (typically under $0.001), 
+    making blockchain participation more accessible. Through 
+    open-source development and community-driven decision-making, FRINK 
+    serves as a transparent ecosystem for developing Web3 utility concepts.
+  </p>
+  <p class="text-warning">
+    <strong>Important:</strong> FRINK is an experimental utility-focused project. 
+    Success depends on sustained community participation and development. 
+    Participation involves significant risk.
+  </p>
+  <p>
+  <strong>Liquidity Protection:</strong> Initial liquidity has been locked for 12 months 
+  via Team Finance (triple-audited platform), ensuring no rug pull risk and demonstrating 
+  long-term commitment.
+  </p>
+</section>
+
+<!-- PROBLEM STATEMENT -->
+<section id="problem" class="section">
+  <h2>Problem Statement</h2>
+  <p>
+    Web3 adoption faces several observed barriers that FRINK aims to address:
+  </p>
+  <ul>
+    <li><strong>High Entry Barriers:</strong> Blockchain tools often require technical knowledge</li>
+    <li><strong>Limited Usability:</strong> Few accessible token-based participation systems exist for creators</li>
+    <li><strong>Complex Onboarding:</strong> Wallet setup and blockchain concepts can be challenging for newcomers</li>
+    <li><strong>High Costs:</strong> Transaction fees on some networks make micro-transactions impractical</li>
+  </ul>
+
+  <p>
+    <strong>FRINK's Approach:</strong> An innovative, low-cost utility token designed 
+    to develop solutions for education, participation, and functional DApps. 
+    Success requires sustained community engagement and development resources.
+  </p>
+</section>
+
+<!-- USE CASES -->
+<section id="usecases" class="section">
+  <h2>Use Cases & Mechanics</h2>
+  <p>FRINK is designed to explore the following use cases (implementation varies by development stage):</p>
+
+  <div class="use-case-box">
+    <h4>1. Creator Rewards System (Planned)</h4>
+    <p>
+      Concept: Creators could earn FRINK tokens for content publishing and community engagement.
+      Supporters could send tips directly, distributed through smart contracts with minimal fees (Polygon gas only).
+    </p>
+    <strong>Mechanism:</strong> ERC-20 transfers<br>
+    <strong>Status:</strong> <span class="text-warning">Concept stage - Implementation Q1-Q2 2026</span>
+  </div>
+
+  <div class="use-case-box">
+    <h4>2. Web3 Learning Platform (Planned)</h4>
+    <p>
+      Concept: Users could earn FRINK tokens by learning blockchain concepts through educational content.
+      Tokens could potentially be used for premium courses or community features.
+    </p>
+    <strong>Mechanism:</strong> Planned staking and reward distribution (Target APY 5-15%, subject to governance)<br>
+    <strong>Status:</strong> <span class="text-warning">Development phase - Launch target Q2 2026</span>
+  </div>
+
+  <div class="use-case-box">
+    <h4>3. Community Governance</h4>
+    <p>
+      FRINK holders can vote on protocol decisions, fund allocations, and feature development.
+      1 token = 1 vote in governance proposals.
+    </p>
+    <strong>Mechanism:</strong> Snapshot voting (off-chain) + OpenZeppelin Governor (planned for on-chain)<br>
+    <strong>Status:</strong> <span style="color: var(--success-green);">✓ Active via Snapshot.org</span>
+  </div>
+
+  <div class="use-case-box">
+    <h4>4. Micro Tasks & Freelancing (Planned)</h4>
+    <p>
+      Concept: Developers and contributors could complete small tasks for FRINK rewards.
+      Polygon's low gas fees make small payments economically viable.
+    </p>
+    <strong>Mechanism:</strong> Direct transfers leveraging Polygon's low-cost transactions<br>
+    <strong>Status:</strong> <span class="text-warning">Concept stage - Implementation TBD</span>
+  </div>
+
+  <div class="use-case-box">
+    <h4>5. DApp Access (Future Consideration)</h4>
+    <p>
+      Potential: FRINK holders could gain access to experimental DApps or features.
+      Token amounts could determine participation tiers.
+    </p>
+    <strong>Mechanism:</strong> Token balance verification<br>
+    <strong>Status:</strong> <span class="text-warning">Concept stage - Pending community decision</span>
+  </div>
+
+  <div class="alert alert-info mt-4">
+    <strong>📌 Implementation Note:</strong> Feature development progresses based on available resources, 
+    community priorities, and technical feasibility. Timelines may adjust based on development capacity 
+    and community feedback.
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section id="tech" class="section">
+  <h2>Technology & Architecture</h2>
+
+  <div class="table-responsive-custom">
+    <table class="table table-dark table-bordered">
+      <tr><th style="width: 40%;">Network</th><td>Polygon (PoS)</td></tr>
+      <tr><th>Standard</th><td>ERC-20</td></tr>
+      <tr><th>Contract Address</th><td><code style="font-size: 0.75rem;">0x822AC53a3037d328645B5aa7d6A07360AcC23433</code></td></tr>
+      <tr><th>Decimals</th><td>18</td></tr>
+      <tr><th>Total Supply</th><td class="highlight-number">10,000,000,000 FRINK</td></tr>
+      <tr><th>Contract Type</th><td>Standard ERC-20 (No mint, no burn functions)</td></tr>
+    </table>
+  </div>
+
+  <h3>Architecture Diagram</h3>
+
+  <pre>┌─────────────────────────┐
+│  User Wallet (MetaMask) │
+└───────────┬─────────────┘
+            │
+┌───────────▼─────────────┐
+│ FRINK ERC-20 Contract   │
+│ • Transfer/Approve      │
+│ • Basic ERC-20 only     │
+└───────────┬─────────────┘
+            │
+┌───────────▼─────────────┐
+│    DApp Layer (Planned) │
+│ ├─ Creator Rewards      │
+│ ├─ Learning Platform    │
+│ ├─ Governance DAO       │
+│ └─ Task Marketplace     │
+└───────────┬─────────────┘
+            │
+┌───────────▼─────────────┐
+│  Off-Chain Services     │
+│ ├─ Analytics (Planned)  │
+│ ├─ Notifications (TBD)  │
+│ └─ Data Indexing (TBD)  │
+└─────────────────────────┘</pre>
+
+  <h3>Technical Stack</h3>
+  <ul>
+    <li><strong>Smart Contract:</strong> Solidity 0.8.x, standard ERC-20 implementation</li>
+    <li><strong>Frontend (Planned):</strong> React.js, ethers.js / web3.js</li>
+    <li><strong>Indexing (Under Consideration):</strong> The Graph Protocol or similar</li>
+    <li><strong>Governance:</strong> Snapshot.org (currently active)</li>
+    <li><strong>Storage (If Needed):</strong> IPFS for metadata</li>
+  </ul>
+
+  <div class="alert alert-warning">
+    <strong>⚠️ Technical Limitation:</strong> The current FRINK contract is a basic ERC-20 
+    with no built-in staking, burning, or minting capabilities. Additional functionality 
+    will require separate smart contracts and integration work.
+  </div>
+</section>
+
+<!-- TOKENOMICS -->
+<section id="tokenomics" class="section">
+  <h2>Tokenomics & Distribution</h2>
+
+  <div class="table-responsive-custom">
+    <table class="table table-dark table-bordered">
+      <tr><th style="width: 50%;">Total Supply</th><td class="highlight-number">10,000,000,000 FRINK (Fixed)</td></tr>
+      <tr><th>Planned Liquidity Reserve</th><td>3,000,000,000 (30%)</td></tr>
+      <tr><th>Planned Development Fund</th><td>4,000,000,000 (40%)</td></tr>
+      <tr><th>Planned Community & Public</th><td>3,000,000,000 (30%)</td></tr>
+    </table>
+  </div>
+
+  <div class="alert alert-warning">
+    <strong>📌 Distribution Status:</strong> Token allocation is proposed but not yet fully implemented. 
+    Current distribution may differ from these targets. Actual distribution is tracked on-chain via PolygonScan.
+  </div>
+
+  <h3>Proposed Allocation Breakdown</h3>
+  <div class="table-responsive-custom">
+    <table class="table table-dark table-bordered table-stack">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>%</th>
+          <th>Amount</th>
+          <th>Proposed Method</th>
+          <th>Vesting Plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Category">Liquidity (DEX)</td>
+          <td data-label="Percentage">30%</td>
+          <td data-label="Amount" class="highlight-number">3,000M</td>
+          <td data-label="Proposed Method">Uniswap v3 / QuickSwap</td>
+          <td data-label="Vesting Plan">Target: 12mo lock (pending implementation)</td>
+        </tr>
+        <tr>
+          <td data-label="Category">Development Team</td>
+          <td data-label="Percentage">20%</td>
+          <td data-label="Amount" class="highlight-number">2,000M</td>
+          <td data-label="Proposed Method">Manual distribution</td>
+          <td data-label="Vesting Plan">Target: 24mo vesting (manual process)</td>
+        </tr>
+        <tr>
+          <td data-label="Category">Ecosystem Grants</td>
+          <td data-label="Percentage">10%</td>
+          <td data-label="Amount" class="highlight-number">1,000M</td>
+          <td data-label="Proposed Method">Community governance</td>
+          <td data-label="Vesting Plan">Variable per grant</td>
+        </tr>
+        <tr>
+          <td data-label="Category">Staking Rewards</td>
+          <td data-label="Percentage">10%</td>
+          <td data-label="Amount" class="highlight-number">1,000M</td>
+          <td data-label="Proposed Method">Future staking contract</td>
+          <td data-label="Vesting Plan">Target: 2yr distribution (pending implementation)</td>
+        </tr>
+        <tr>
+          <td data-label="Category">Community Airdrops</td>
+          <td data-label="Percentage">15%</td>
+          <td data-label="Amount" class="highlight-number">1,500M</td>
+          <td data-label="Proposed Method">Manual distribution</td>
+          <td data-label="Vesting Plan">Gradual release over 6mo</td>
+        </tr>
+        <tr>
+          <td data-label="Category">Treasury Reserve</td>
+          <td data-label="Percentage">15%</td>
+          <td data-label="Amount" class="highlight-number">1,500M</td>
+          <td data-label="Proposed Method">Multi-sig wallet</td>
+          <td data-label="Vesting Plan">Governed release via DAO</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Tokenomics Mechanics</h3>
+  <ul>
+    <li><strong>Transaction Fee:</strong> None (standard Polygon gas fees apply to all transfers)</li>
+    <li><strong>Staking Rewards:</strong> Not currently implemented. If implemented, target APY 5-15% (subject to available budget and governance)</li>
+    <li><strong>Inflation Control:</strong> No inflation - Fixed supply of 10B tokens</li>
+    <li><strong>Burn Mechanism:</strong> Not currently implemented. Governance could propose burn mechanisms in the future</li>
+  </ul>
+
+  <div class="alert alert-danger">
+    <strong>⚠️ Critical Notice:</strong> The FRINK token contract does NOT include automated vesting, 
+    locking, or burning mechanisms. All vesting schedules depend on manual execution by the team, 
+    which carries trust and execution risk. Verify actual token distribution on PolygonScan.
+  </div>
+</section>
+
+
+
+<!-- LIQUIDITY & LOCK -->
+<section id="liquidity-lock" class="section">
+  <h2>Liquidity & Lock</h2>
+
+  <div class="alert alert-success">
+    <strong>✅ Liquidity Lock Completed:</strong> FRINK's liquidity has been successfully locked 
+    for 12 months via Team Finance on November 25, 2025.
+  </div>
+
+  <h3>Liquidity Pool Information</h3>
+  <div class="use-case-box">
+    <h4>✅ Pool Details</h4>
+    <div class="table-responsive-custom">
+      <table class="table table-dark table-bordered">
+        <tr>
+          <th style="width: 40%;">Pool Type</th>
+          <td><strong>QuickSwap V3 (Concentrated Liquidity)</strong></td>
+        </tr>
+        <tr>
+          <th>Position Type</th>
+          <td>NFT Position (Algebra-based V3)</td>
+        </tr>
+        <tr>
+          <th>NFT ID</th>
+          <td class="highlight-number">177734</td>
+        </tr>
+        <tr>
+          <th>Liquidity Amount</th>
+          <td class="highlight-number">9.913 POL + 50,560,100 FRINK</td>
+        </tr>
+        <tr>
+          <th>Fee Tier</th>
+          <td>0.01%</td>
+        </tr>
+        <tr>
+          <th>Price Range</th>
+          <td>Full Range (Min: 0, Max: ∞)</td>
+        </tr>
+        <tr>
+          <th>Pool Share</th>
+          <td class="highlight-number">100%</td>
+        </tr>
+        <tr>
+          <th>Network</th>
+          <td>Polygon PoS</td>
+        </tr>
+
+		<tr>
+		  <th>QuickSwap Position</th>
+		  <td><a href="https://quickswap.exchange/#/pool/177734">View V3 Position #177734</a></td>
+		</tr>
+      </table>
+    </div>
+  </div>
+
+  <h3>Liquidity Lock Details</h3>
+  <div class="use-case-box">
+    <h4 style="color: var(--success-green);">🔒 Active Lock Information</h4>
+    <div class="table-responsive-custom">
+      <table class="table table-dark table-bordered">
+        <tr>
+          <th style="width: 40%;">Lock Platform</th>
+          <td><strong>Team Finance</strong> (triple-audited by CertiK, Hacken & Solidity Finance)</td>
+        </tr>
+        <tr>
+          <th>Lock Type</th>
+          <td>V3 Liquidity NFT Lock</td>
+        </tr>
+        <tr>
+          <th>Locked Asset</th>
+          <td>WPOL/FRINK V3 Position (NFT ID: 177734)</td>
+        </tr>
+        <tr>
+          <th>Lock Amount</th>
+          <td class="highlight-number">1 NFT Position (100% of liquidity)</td>
+        </tr>
+        <tr>
+          <th>Lock Duration</th>
+          <td class="highlight-number">12 months</td>
+        </tr>
+        <tr>
+          <th>Lock Date</th>
+          <td>November 25, 2025, ~01:06 AM UTC+9</td>
+        </tr>
+        <tr>
+          <th>Unlock Date</th>
+          <td class="highlight-number">November 25, 2026, 7:27 AM UTC+9</td>
+        </tr>
+        <tr>
+          <th>Lock Fee Paid</th>
+          <td>$150.00 (~1,083.76 POL)</td>
+        </tr>
+        <tr>
+          <th>Owner Wallet</th>
+          <td><code style="font-size: 0.75rem;">0x2432b1229b3e6a284f9a27024b158d2f1a589445</code></td>
+        </tr>
+        <tr>
+          <th>Lock Status</th>
+          <td><span style="color: var(--success-green); font-weight: 600;">🟢 ACTIVE & LOCKED</span></td>
+        </tr>
+        <tr>
+          <th>Team Finance Lock Page</th>
+			<td><a href="https://www.team.finance/view-coin/0x822AC53a3037d328645B5aa7d6A07360AcC23433?name=Frink%20Token&symbol=FRINK&chainid=0x89">View on Team Finance</a> → Click "Liquidity locks" tab</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <h3>Lock Verification</h3>
+  <div class="alert alert-info">
+    <strong>🔍 How to Verify the Lock:</strong>
+	<ol class="mb-0 mt-2">
+	  <li><strong>Team Finance:</strong> Visit <a href="https://www.team.finance/view-coin/0x822AC53a3037d328645B5aa7d6A07360AcC23433?name=Frink%20Token&symbol=FRINK&chainid=0x89">Team Finance FRINK Page</a> → Click "Liquidity locks" tab → View NFT Position #177734</li>
+	  <li><strong>QuickSwap V3:</strong> Visit <a href="https://quickswap.exchange/#/pool/177734">QuickSwap Position #177734</a> (Direct link to NFT Position)</li>
+	  <li><strong>PolygonScan:</strong> View <a href="https://polygonscan.com/address/0x2432b1229b3e6a284f9a27024b158d2f1a589445">wallet transactions</a> → See Team Finance lock transaction on November 25, 2025</li>
+	</ol>    
+  </div>
+
+  <h3>Migration from V2 to V3</h3>
+  <div class="use-case-box">
+    <p>
+      <strong>Note:</strong> The liquidity was originally provided on QuickSwap V2 
+      (LP Token: <code>0x0168E11cff3323774781a2cb46917665581bbc03</code>) with 
+      100M FRINK + 5 POL. On November 25, 2025, the liquidity was migrated to 
+      QuickSwap V3 (Concentrated Liquidity) to enable proper locking via Team Finance.
+    </p>
+    <p>
+      <strong>Migration Process:</strong><br>
+      • V2 LP tokens removed (9.913 POL + 50,560,100 FRINK recovered)<br>
+      • V3 Position created with Full Range (0 to ∞)<br>
+      • V3 NFT Position (ID: 177734) locked via Team Finance
+    </p>
+  </div>
+
+  <h3>Security & Trust</h3>
+  <ul>
+    <li><strong>100% Liquidity Locked:</strong> All initial liquidity is locked for 12 months</li>
+    <li><strong>No Rug Pull Risk:</strong> Liquidity cannot be removed until November 25, 2026</li>
+    <li><strong>Triple-Audited Platform:</strong> Team Finance audited by CertiK, Hacken, and Solidity Finance</li>
+    <li><strong>Publicly Verifiable:</strong> All lock details visible on-chain</li>
+    <li><strong>Community Protection:</strong> Lock demonstrates long-term commitment</li>
+  </ul>
+
+  <div class="alert alert-success mt-4">
+    <strong>✅ Liquidity Lock Confirmed:</strong> FRINK's liquidity is securely locked for 12 months, 
+    demonstrating the team's commitment to the project and protecting the community from liquidity removal.
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- ROADMAP -->
+<section id="roadmap" class="section">
+  <h2>Roadmap & Milestones</h2>
+  <p><strong>Important:</strong> This roadmap represents current plans and targets. Timelines may change, 
+    and features may be delayed, modified, or cancelled based on resources, community feedback, and technical challenges.</p>
+
+  <div class="timeline">
+  
+  
+  
+  
+
+
+	<div class="timeline-item">
+	  <h4>Q4 2025 - Phase 1: Foundation</h4>
+	  <p>
+		✓ Smart Contract Deployment (October 31, 2025) - <span style="color: var(--success-green);">Completed</span><br>
+		✓ Community Discord Server Created - <span style="color: var(--success-green);">Live (Early Stage)</span><br>
+		✓ Initial Liquidity Launch (QuickSwap V3) - <span style="color: var(--success-green);">Completed (NFT ID 177734)</span><br>
+		✓ Liquidity Lock (Team Finance) - <span style="color: var(--success-green);">✅ Completed (November 25, 2025)</span><br>
+		○ Security Audit - <span class="text-warning">Planned for Q1 2026 (no contract signed yet)</span>
+	  </p>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="timeline-item">
+      <h4>Q1 2026 - Phase 2: Ecosystem Development</h4>
+      <p>
+        ○ Creator Rewards DApp Beta - <span class="text-warning">Target release (development stage)</span><br>
+        ○ Staking Contract Deployment - <span class="text-warning">Planned (pending development)</span><br>
+        ○ First Community Governance Vote - <span class="text-warning">Planned</span><br>
+        ○ Educational Content Series - <span class="text-warning">In progress (5/20 tutorials)</span>
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h4>Q2 2026 - Phase 3: Growth (Tentative)</h4>
+      <p>
+        ○ Learning Platform MVP - <span class="text-warning">Tentative target</span><br>
+        ○ Task Marketplace Concept - <span class="text-warning">Under consideration</span><br>
+        ○ Staking Rewards Launch - <span class="text-warning">Dependent on Q1 2026 development</span><br>
+        ○ Partner Integrations - <span class="text-warning">Exploratory discussions</span>
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h4>Q3-Q4 2026 - Phase 4: Expansion (Highly Tentative)</h4>
+      <p>
+        ○ DAO Treasury Management - <span class="text-warning">Under consideration</span><br>
+        ○ Cross-chain Bridge - <span class="text-warning">Long-term possibility</span><br>
+        ○ NFT Badge System - <span class="text-warning">Concept stage</span><br>
+        ○ CEX Listings - <span class="text-warning">No discussions or commitments</span>
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <h4>2027+ - Phase 5: Long-term Vision</h4>
+      <p>
+        ○ Full Governance Protocol - <span class="text-warning">Long-term goal</span><br>
+        ○ Strategic Partnerships - <span class="text-warning">Dependent on community growth</span><br>
+        ○ Ecosystem Sustainability - <span class="text-warning">Subject to adoption and resources</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="alert alert-warning">
+    <strong>⚠️ Roadmap Disclaimer:</strong> This roadmap represents planned development targets. 
+    Progress depends on community participation, available resources, and technical feasibility. 
+    Timelines may vary based on development capacity and priorities.
+  </div>
+</section>
+
+<!-- GOVERNANCE -->
+<section id="governance" class="section">
+  <h2>Governance & Community</h2>
+  <p>FRINK adopts a community-driven governance model for key decisions.</p>
+
+  <h3>Governance Structure</h3>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="use-case-box">
+        <h4>📋 Snapshot Voting</h4>
+        <p>
+          <span class="gov-badge">Active</span>
+          FRINK holders participate in off-chain voting via Snapshot.
+          1 FRINK = 1 vote. Proposals require minimum 20% quorum.
+        </p>
+        <p><strong>Status:</strong> <span style="color: var(--success-green);">✓ Operational</span></p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="use-case-box">
+        <h4>⚙️ OpenZeppelin Governor</h4>
+        <p>
+          <span class="gov-badge">Planned</span>
+          On-chain governance for automated execution of approved proposals.
+        </p>
+        <p><strong>Status:</strong> <span class="text-warning">○ Target Q2 2026 (development stage)</span></p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Community Roles</h3>
+  <div class="table-responsive-custom">
+    <table class="table table-dark table-bordered table-stack">
+      <tr>
+        <th>Role</th>
+        <th>FRINK Required</th>
+        <th>Responsibilities</th>
+      </tr>
+      <tr>
+        <td data-label="Role"><strong>Member</strong></td>
+        <td data-label="FRINK Required">1+</td>
+        <td data-label="Responsibilities">Vote on proposals, participate in Discord</td>
+      </tr>
+      <tr>
+        <td data-label="Role"><strong>Contributor</strong></td>
+        <td data-label="FRINK Required">100,000+</td>
+        <td data-label="Responsibilities">Submit proposals (subject to community review)</td>
+      </tr>
+      <tr>
+        <td data-label="Role"><strong>Delegate</strong></td>
+        <td data-label="FRINK Required">1,000,000+</td>
+        <td data-label="Responsibilities">Represent delegated votes, lead initiatives</td>
+      </tr>
+      <tr>
+        <td data-label="Role"><strong>Core Team</strong></td>
+        <td data-label="FRINK Required">N/A</td>
+        <td data-label="Responsibilities">Execute approved proposals, maintain infrastructure</td>
+      </tr>
+    </table>
+  </div>
+
+  <h3>Governance Proposal Types</h3>
+  <ul>
+    <li><strong>Parameter Changes:</strong> Staking APY adjustments, emission rates (7-day voting minimum)</li>
+    <li><strong>Fund Allocation:</strong> Ecosystem grants, marketing budget (14-day voting minimum)</li>
+    <li><strong>Protocol Upgrades:</strong> Smart contract changes (21-day voting + security review required)</li>
+    <li><strong>Partnership Decisions:</strong> Major integrations or collaborations (14-day voting minimum)</li>
+  </ul>
+
+  <div class="alert alert-info">
+    <strong>📌 Governance Limitation:</strong> Off-chain voting (Snapshot) is non-binding. 
+    Execution depends on core team implementation. On-chain governance is planned but not yet active.
+  </div>
+</section>
+
+
+
+
+<!-- SECURITY -->
+<section id="security" class="section">
+  <h2>Security & Audits</h2>
+
+  <h3>Security Measures</h3>
+  
+  
+	<div class="use-case-box">
+	  <h4>🔒 Liquidity Lock Security</h4>
+	  <p>
+		<strong>Lock Status:</strong> <span style="color: var(--success-green);">✅ Active (12-month lock)</span><br>
+		• Platform: Team Finance (audited by CertiK, Hacken, Solidity Finance)<br>
+		• Lock Duration: November 25, 2025 → November 25, 2026<br>
+		• Locked Asset: 100% of V3 liquidity (NFT ID 177734)<br>
+		• Protection: No liquidity removal possible until unlock date<br>
+		• Verification: Publicly verifiable on Team Finance and PolygonScan
+	  </p>
+	</div>  
+  
+  
+  
+  
+  <div class="use-case-box">
+    <h4>🔐 Smart Contract Security</h4>
+    <p>
+      <strong>Current Status:</strong> <span class="text-warning">No professional audit completed</span><br>
+      • Standard ERC-20 implementation (publicly reviewable)<br>
+      • Contract source code available on PolygonScan<br>
+      • Multi-signature wallet planned for treasury (not yet implemented)<br>
+      • No upgrade mechanisms (immutable contract)
+    </p>
+  </div>
+
+  <div class="use-case-box">
+    <h4>🛡️ Risk Management</h4>
+    <p>
+      <strong>Liquidity Protection:</strong> 12-month lockup scheduled via Team Finance (November 23, 2025)<br>
+      <strong>Developer Vesting:</strong> Manual vesting process (trust-based, not automated)<br>
+      <strong>Emergency Pause:</strong> Not available (contract is immutable)<br>
+      <strong>Bug Bounty Program:</strong> Planned for Q1 2026 (not yet launched)
+    </p>
+  </div>
+
+  <h3>Planned Audits</h3>
+  <div class="table-responsive-custom">
+    <table class="table table-dark table-bordered table-stack">
+      <tr>
+        <th>Auditor</th>
+        <th>Scope</th>
+        <th>Target Date</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td data-label="Auditor">Professional Auditor (TBD)</td>
+        <td data-label="Scope">Smart Contract Review</td>
+        <td data-label="Target Date">Q1 2026</td>
+        <td data-label="Status"><span class="text-warning">○ Budget pending, no contract</span></td>
+      </tr>
+      <tr>
+        <td data-label="Auditor">Community Security Review</td>
+        <td data-label="Scope">Public Code Review</td>
+        <td data-label="Target Date">Ongoing</td>
+        <td data-label="Status"><span style="color: var(--success-green);">✓ Code public on PolygonScan</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="alert alert-danger">
+    <strong>⚠️ CRITICAL SECURITY NOTICE:</strong><br>
+    • No professional security audit has been completed<br>
+    • Contract has NOT been reviewed by OpenZeppelin, Certora, or any established auditor<br>
+    • Previous whitepaper claims of "scheduled" audits were premature<br>
+    • Use this token at your own risk. Bugs or vulnerabilities may exist.
+  </div>
+
+  <h3>Risk Warnings</h3>
+  
+  <div class="risk-item">
+    <strong>Blockchain Risk:</strong> Blockchain transactions are irreversible. 
+    Tokens sent to incorrect addresses cannot be recovered. Always verify addresses carefully.
+  </div>
+
+  <div class="risk-item">
+    <strong>Smart Contract Risk:</strong> The contract has not been professionally audited. 
+    Undiscovered bugs, vulnerabilities, or logical errors may exist that could result in loss of tokens.
+  </div>
+
+  <div class="risk-item">
+    <strong>Market Risk:</strong> FRINK is a utility-focused token under development with price 
+    volatility dependent on market conditions and adoption. Price can be extremely volatile. 
+    Only participate with amounts you can afford to lose completely.
+  </div>
+
+  <div class="risk-item">
+    <strong>Regulatory Risk:</strong> Regulatory treatment of utility tokens is evolving. 
+    The project may be required to cease operations, modify features, or face legal challenges.
+  </div>
+
+  <div class="risk-item">
+    <strong>Development Risk:</strong> The project relies on volunteer contributions and community resources. 
+    Feature implementation depends on sustained community participation and development capacity. 
+    Timelines may vary based on available resources.
+  </div>
+
+  <div class="risk-item">
+    <strong>Centralization Risk:</strong> Key functions currently depend on the core team. 
+    Vesting and fund management are not fully automated, creating trust and execution risks.
+  </div>
+</section>
+
+<!-- LEGAL -->
+<section id="legal" class="section">
+  <h2>Legal & Regulatory Compliance</h2>
+
+  <p>
+    FRINK Token is <strong>designed as a utility token and not intended to be a security.</strong><br>
+    It is used for utility-focused, educational, and community-driven purposes with no financial return promises.
+    However, regulatory classification is determined by applicable authorities, not by the project team.
+  </p>
+
+  <h3>Regulatory Considerations</h3>
+  <div class="use-case-box">
+    <p>
+      <strong>Intended Classification:</strong> Utility Token<br>
+      <strong>Design Goals:</strong><br>
+      • No investment contract or profit expectations<br>
+      • No promises of financial returns<br>
+      • Utility-focused functionality<br>
+      • Transparent, open-source development<br><br>
+      <strong>Important:</strong> Final regulatory classification is determined by regulators in each jurisdiction, 
+      not by the project team. Laws vary by country and may change.
+    </p>
+  </div>
+
+  <h3>US Regulatory Considerations</h3>
+  <div class="use-case-box">
+    <p>
+      <strong>Howey Test Considerations:</strong><br>
+      FRINK is designed to avoid meeting securities criteria by:<br>
+      • Not offering common enterprise investment opportunities<br>
+      • Not promising profits from team efforts<br>
+      • Emphasizing utility over speculation<br><br>
+      <strong>Disclaimer:</strong> This analysis is not legal advice. Regulatory classification 
+      is determined by the SEC and courts, not by project assertions. Token holders should 
+      seek independent legal counsel.
+    </p>
+  </div>
+
+  <h3>Terms of Use & Disclaimers</h3>
+  <ul>
+    <li>FRINK is an experimental token with <strong>no warranties, guarantees, or service commitments</strong>.</li>
+    <li>Token holders must understand and accept all technical, financial, and regulatory risks.</li>
+    <li>This whitepaper is not legal, financial, or investment advice. Consult professionals before participating.</li>
+    <li>Use may be prohibited in certain jurisdictions. Users are responsible for compliance with local laws.</li>
+    <li>Tax obligations vary by jurisdiction. Consult a tax professional regarding your specific situation.</li>
+    <li>The project team reserves the right to modify, suspend, or discontinue the project at any time.</li>
+  </ul>
+
+  <h3>Tax Considerations</h3>
+  <p>Cryptocurrency transactions may be taxable events in your jurisdiction:</p>
+  <div class="table-responsive-custom">
+    <table class="table table-dark table-bordered table-stack">
+      <tr>
+        <th>Activity</th>
+        <th>Potential Tax Treatment</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td data-label="Activity">Token Purchase</td>
+        <td data-label="Tax Treatment">May be taxable when sold</td>
+        <td data-label="Notes">Capital gains tax considerations</td>
+      </tr>
+      <tr>
+        <td data-label="Activity">Airdrop Receipt</td>
+        <td data-label="Tax Treatment">May be taxable as income</td>
+        <td data-label="Notes">Value at time of receipt</td>
+      </tr>
+      <tr>
+        <td data-label="Activity">Staking/Rewards</td>
+        <td data-label="Tax Treatment">May be taxable as earned</td>
+        <td data-label="Notes">If staking is implemented</td>
+      </tr>
+      <tr>
+        <td data-label="Activity">Token Trading</td>
+        <td data-label="Tax Treatment">May trigger capital gains/losses</td>
+        <td data-label="Notes">Each trade may be taxable</td>
+      </tr>
+    </table>
+  </div>
+
+  <p class="text-danger mt-3">
+    ⚠️ <strong>Tax Disclaimer:</strong> This is NOT tax advice. Tax treatment of cryptocurrency 
+    varies significantly by jurisdiction and individual circumstances. You are responsible for 
+    understanding and complying with tax obligations in your jurisdiction. Consult a qualified 
+    tax professional before participating.
+  </p>
+</section>
+
+<!-- MARKET ANALYSIS -->
+<section id="market" class="section">
+  <h2>Market Analysis & Positioning</h2>
+  
+  <h3>Market Context</h3>
+  <p>
+    FRINK operates in the broader context of creator economy tools, Web3 education platforms, 
+    and utility token ecosystems. While specific market size estimates vary widely by source 
+    and methodology, these sectors show general growth trends in blockchain adoption.
+  </p>
+
+  <div class="alert alert-info">
+    <strong>📌 Note on Market Data:</strong> Previous versions of this whitepaper included 
+    specific market size figures without sources. Those have been removed. Any market opportunity 
+    for FRINK is highly speculative and uncertain.
+  </div>
+
+  <h3>Competitive Landscape</h3>
+  <p>Several established projects operate in adjacent spaces:</p>
+  
+  <div class="table-responsive-custom">
+    <table class="table table-dark table-bordered table-stack">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Focus Area</th>
+          <th>FRINK Difference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Project"><strong>Lens Protocol</strong></td>
+          <td data-label="Focus Area">Decentralized social graph</td>
+          <td data-label="FRINK Difference">FRINK focuses on education and creator rewards rather than social networking</td>
+        </tr>
+        <tr>
+          <td data-label="Project"><strong>Mirror.xyz</strong></td>
+          <td data-label="Focus Area">Creator publishing platform</td>
+          <td data-label="FRINK Difference">FRINK is a token, not a platform - complementary rather than competitive</td>
+        </tr>
+        <tr>
+          <td data-label="Project"><strong>Gitcoin</strong></td>
+          <td data-label="Focus Area">Developer funding and grants</td>
+          <td data-label="FRINK Difference">FRINK aims for broader creator focus beyond developers</td>
+        </tr>
+        <tr>
+          <td data-label="Project"><strong>Rally</strong></td>
+          <td data-label="Focus Area">Creator coins</td>
+          <td data-label="FRINK Difference">FRINK is a single token rather than individual creator coins</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>FRINK's Positioning</h3>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="use-case-box">
+        <h4>🎯 Experimental Approach</h4>
+        <p>Open acknowledgment of experimental nature rather than promising revolutionary outcomes.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="use-case-box">
+        <h4>💰 Low Transaction Costs</h4>
+        <p>Polygon PoS enables sub-cent transactions, making micro-payments economically viable.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="use-case-box">
+        <h4>🏛️ Community Governance</h4>
+        <p>Active Snapshot voting gives token holders a voice in project decisions.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="use-case-box">
+        <h4>📚 Education Focus</h4>
+        <p>Emphasis on learning and onboarding rather than speculation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-warning mt-4">
+    <strong>⚠️ Competitive Reality:</strong> FRINK is a small, experimental project competing 
+    with well-funded, established platforms. Success is uncertain and depends on community 
+    adoption, which cannot be predicted or guaranteed.
+  </div>
+</section>
+
+<!-- TEAM & ADVISORS -->
+<section id="team" class="section">
+  <h2>Team & Organization</h2>
+
+  <div class="alert alert-warning">
+    <strong>📌 Team Transparency:</strong> Team members operate pseudonymously with governance oversight 
+    through community participation. Transparency considerations are under community review.
+  </div>
+
+  <h3>Core Development Roles</h3>
+  <div class="table-responsive-custom">
+    <table class="table table-dark table-bordered table-stack">
+      <tr>
+        <th>Role</th>
+        <th>Responsibility</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td data-label="Role"><strong>Protocol Development</strong></td>
+        <td data-label="Responsibility">Smart contract deployment, technical architecture</td>
+        <td data-label="Status">Pseudonymous</td>
+      </tr>
+      <tr>
+        <td data-label="Role"><strong>Full Stack Development</strong></td>
+        <td data-label="Responsibility">DApp development, frontend work</td>
+        <td data-label="Status">Seeking contributors</td>
+      </tr>
+      <tr>
+        <td data-label="Role"><strong>Community Management</strong></td>
+        <td data-label="Responsibility">Discord, governance coordination</td>
+        <td data-label="Status">Active (pseudonymous)</td>
+      </tr>
+      <tr>
+        <td data-label="Role"><strong>Content Creation</strong></td>
+        <td data-label="Responsibility">Educational materials, documentation</td>
+        <td data-label="Status">Community volunteers</td>
+      </tr>
+    </table>
+  </div>
+
+  <p class="text-secondary mt-3">
+    <em>Team Disclosure: Under community consideration. Governance vote planned for Q1 2026 
+    regarding team transparency enhancement.</em>
+  </p>
+
+  <h3>Advisory & Support</h3>
+  <p>The project operates with community governance oversight. Members with relevant 
+  expertise are encouraged to participate in governance and provide guidance.</p>
+
+  <div class="alert alert-danger">
+    <strong>⚠️ Pseudonymous Team:</strong> Team members operate pseudonymously, which affects 
+    direct accountability. Governance oversight is provided through community participation. 
+    This structure requires participants to evaluate risk accordingly.
+  </div>
+</section>
+
+<!-- FINANCIAL PROJECTIONS -->
+<section id="finance" class="section">
+  <h2>Financial Sustainability</h2>
+
+  <div class="alert alert-warning">
+    <strong>📌 Financial Development Status:</strong> The project currently operates on community 
+    contributions and volunteer resources. Revenue generation depends on successful implementation 
+    of planned features and community adoption.
+  </div>
+
+  <h3>Current Financial Reality</h3>
+  <ul>
+    <li><strong>Revenue:</strong> Currently $0. Revenue-generating features are in development.</li>
+    <li><strong>Funding:</strong> Community-funded. No venture capital or institutional funding.</li>
+    <li><strong>Development:</strong> Primarily volunteer-based with community resources.</li>
+    <li><strong>Treasury:</strong> Multi-signature wallet planned for governance control.</li>
+  </ul>
+
+  <h3>Potential Revenue Models (In Development)</h3>
+  <p>As the project develops, potential revenue sources could include:</p>
+  <ul>
+    <li>Optional DApp transaction fees (subject to governance approval)</li>
+    <li>Premium features in learning platform (development stage)</li>
+    <li>Marketplace commissions (planning stage)</li>
+  </ul>
+
+  <p class="text-warning">
+    <strong>Important:</strong> Revenue model implementation depends on development resources, 
+    community participation, and governance decisions. Timeline and success are not guaranteed.
+  </p>
+
+  <h3>Sustainability Path</h3>
+  <ul>
+    <li><strong>Year 1:</strong> Focus on community building and infrastructure development.</li>
+    <li><strong>Year 2:</strong> Potential launch of revenue-generating features pending development progress.</li>
+    <li><strong>Year 3+:</strong> Expansion dependent on community growth and feature adoption.</li>
+  </ul>
+
+  <div class="alert alert-danger">
+    <strong>⚠️ Financial Reality:</strong> Project sustainability requires sustained community participation 
+    and successful feature implementation. Timelines may vary based on available resources. 
+    Do not assume guaranteed continuation or feature delivery.
+  </div>
+</section>
+
+<!-- RISK MITIGATION -->
+<section id="risks" class="section">
+  <h2>Risk Mitigation Strategy</h2>
+
+  <p>While risks cannot be eliminated, the project attempts to mitigate them through:</p>
+
+  <div class="table-responsive-custom">
+    <table class="table table-dark table-bordered table-stack">
+      <thead>
+        <tr>
+          <th>Risk Category</th>
+          <th>Description</th>
+          <th>Mitigation Attempts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Risk Category"><strong>Regulatory</strong></td>
+          <td data-label="Description">Changing regulations could impact operations</td>
+          <td data-label="Mitigation Attempts">Designed as utility token; monitoring developments; prepared to adapt or cease operations</td>
+        </tr>
+        <tr>
+          <td data-label="Risk Category"><strong>Technical</strong></td>
+          <td data-label="Description">Smart contract bugs or vulnerabilities</td>
+          <td data-label="Mitigation Attempts">Public code review; planned audit (pending budget); immutable contract limits upgrade risks</td>
+        </tr>
+        <tr>
+          <td data-label="Risk Category"><strong>Market</strong></td>
+          <td data-label="Description">Token price volatility or collapse</td>
+          <td data-label="Mitigation Attempts">Emphasizing utility over speculation; no price promises; transparent communication</td>
+        </tr>
+        <tr>
+          <td data-label="Risk Category"><strong>Liquidity</strong></td>
+          <td data-label="Description">Insufficient trading volume</td>
+          <td data-label="Mitigation Attempts">Initial DEX liquidity provided; community education about liquidity risks</td>
+        </tr>
+        <tr>
+          <td data-label="Risk Category"><strong>Adoption</strong></td>
+          <td data-label="Description">Insufficient user growth</td>
+          <td data-label="Mitigation Attempts">Focus on education; building useful tools; community engagement</td>
+        </tr>
+        <tr>
+          <td data-label="Risk Category"><strong>Execution</strong></td>
+          <td data-label="Description">Team unable to deliver features</td>
+          <td data-label="Mitigation Attempts">Realistic roadmap; seeking community developers; open-source approach</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-danger mt-4">
+    <strong>⚠️ Risk Reality:</strong> These mitigation strategies reduce but do not eliminate risks. 
+    Many of these risks could still result in complete loss of token value or project failure. 
+    Participate only if you can afford total loss.
+  </div>
+</section>
+
+<!-- GETTING STARTED -->
+<section id="start" class="section">
+  <h2>Getting Started with FRINK</h2>
+
+  <div class="alert alert-warning">
+    <strong>⚠️ Before You Start:</strong> Make sure you understand the risks described in this whitepaper. 
+    FRINK is an experimental utility-focused project with value dependent on adoption and development. 
+    Only proceed if you accept the possibility of complete loss.
+  </div>
+
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="use-case-box">
+        <h4>Step 1: Set Up Polygon Wallet</h4>
+        <p>Install MetaMask or similar wallet and add Polygon PoS network (Chain ID: 137).</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="use-case-box">
+        <h4>Step 2: Acquire Small Amount</h4>
+        <p>Start with a small test amount on QuickSwap or Uniswap v3. Verify everything works before larger amounts.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="use-case-box">
+        <h4>Step 3: Join Community</h4>
+        <p>Discord → Learn about governance → Participate in discussions. Don't invest more than you learn about.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="use-case-box">
+        <h4>Step 4: Stay Informed</h4>
+        <p>Follow official channels for updates. Be skeptical of promises. Verify information independently.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Useful Resources</h3>
+  <ul>
+    <li>📊 <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433">PolygonScan</a> — Verify all on-chain activity</li>
+    <li>💬 <a href="https://discord.gg/2MAqQbgP9j">Community Discord</a> — Official communication channel</li>
+    <li>🌐 <a href="https://frinktoken.net">Official Website</a> — Project information</li>
+    <li>📖 Documentation — Community-maintained guides (verify all information)</li>
+  </ul>
+
+  <div class="alert alert-info">
+    <strong>📌 Best Practice:</strong> Always verify smart contract addresses. Never send tokens to addresses 
+    shared in unofficial channels. Use test transactions first. Never invest more than you can afford to lose completely.
+  </div>
+</section>
+
+<!-- CONTACT & CHANNELS -->
+<section id="contact" class="section">
+  <h2>Official Channels & Support</h2>
+  <div class="alert alert-warning mb-4">
+    <strong>⚠️ Scam Warning:</strong> Only trust information from verified official channels listed below. 
+    Beware of impersonators on Telegram, Discord, or social media. The team will never DM you first or ask for private keys.
+  </div>
+  
+  <!-- PRIMARY CHANNELS (8개) -->
+  <div class="row g-3">
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <a href="https://frinktoken.net" class="btn btn-outline-light w-100" style="border-color: var(--primary-purple); min-height: 48px;">🌐 Website</a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <a href="https://frinktoken.net/whitepaper.html" class="btn btn-outline-light w-100" style="border-color: var(--primary-purple); min-height: 48px;">📜 Whitepaper</a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <a href="https://discord.gg/2MAqQbgP9j" class="btn btn-outline-light w-100" style="border-color: var(--primary-purple); min-height: 48px;">💬 Discord</a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <a href="https://x.com/FrinkTokenNet" class="btn btn-outline-light w-100" style="border-color: var(--primary-purple); min-height: 48px;">𝕏 Twitter/X</a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <a href="https://t.me/frinktoken_official" class="btn btn-outline-light w-100" style="border-color: var(--primary-purple); min-height: 48px;">✈️ Telegram</a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <a href="https://medium.com/@contact_2545" class="btn btn-outline-light w-100" style="border-color: var(--primary-purple); min-height: 48px;">📝 Medium</a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <a href="https://github.com/frinktoken-official" class="btn btn-outline-light w-100" style="border-color: var(--primary-purple); min-height: 48px;">💻 GitHub</a>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433" class="btn btn-outline-light w-100" style="border-color: var(--primary-purple); min-height: 48px;">📊 PolygonScan</a>
+    </div>
+  </div>
+
+  <!-- ADDITIONAL CHANNELS (5개) -->
+  <div class="mt-4 pt-3" style="border-top: 1px solid var(--border-color);">
+    <p class="text-secondary mb-2">
+      <strong>Additional Channels:</strong>
+    </p>
+    <p class="mb-0">
+      <a href="https://www.reddit.com/user/FrinkTokenOfficial" style="color: var(--primary-purple); text-decoration: none;">🤖 Reddit</a> • 
+      <a href="https://www.facebook.com/FrinkToken" style="color: var(--primary-purple); text-decoration: none;">📘 Facebook</a> • 
+      <a href="https://www.linkedin.com/in/alex-seo-39b76a338" style="color: var(--primary-purple); text-decoration: none;">💼 LinkedIn</a> • 
+      <a href="https://frinktoken.slack.com" style="color: var(--primary-purple); text-decoration: none;">💬 Slack</a> • 
+      <a href="https://bitcointalk.org/index.php?topic=5566014" style="color: var(--primary-purple); text-decoration: none;">🪙 Bitcointalk</a>
+    </p>
+  </div>
+
+  <!-- CONTACT INFO -->
+  <div class="mt-4 text-center">
+    <p>
+      <strong>Official Website:</strong> <a href="https://frinktoken.net">frinktoken.net</a><br>
+      <strong>Contract Address:</strong> <code>0x822AC53a3037d328645B5aa7d6A07360AcC23433</code><br>
+      <strong>Contact Email:</strong> <a href="mailto:contact@frinktoken.net">contact@frinktoken.net</a>
+    </p>
+    <p class="text-secondary">
+      <small>Verify all links and addresses independently. Do not trust unverified sources.</small>
+    </p>
+  </div>
+</section>
+
+<!-- CONCLUSION -->
+<section class="section">
+  <h2>Conclusion</h2>
+
+  <p>
+    Frink Token (FRINK) is an <strong>innovative experimental Web3 project</strong> exploring concepts 
+    in creator rewards, education, and community governance. This whitepaper presents 
+    an honest assessment of the project's current state, development progress, and future directions.
+  </p>
+
+  <p>
+    Success requires sustained community participation, volunteer development contributions, 
+    and favorable external conditions. Many features are in development or planning stages, 
+    with implementation timelines dependent on community resources and engagement.
+  </p>
+
+  <div class="alert alert-danger">
+    <strong>⚠️ Final Warning:</strong> FRINK is a high-risk experimental utility-focused token. 
+    It has no revenue, no professional audit yet, and relies on community development. 
+    Most roadmap features are in development or planning stages. 
+    Price volatility is expected and value depends on adoption and utility development.
+    <br><br>
+    <strong>Only participate if you:</strong><br>
+    ✓ Can afford to lose your entire investment<br>
+    ✓ Understand blockchain technology risks<br>
+    ✓ Are interested in the educational/experimental aspects<br>
+    ✓ Do not expect guaranteed financial returns<br>
+    ✓ Have read and understood all risk disclosures
+  </div>
+
+  <div class="alert alert-info">
+    <strong>📢 Join Responsibly:</strong> If you understand and accept the risks, 
+    you're welcome to participate in Discord, vote on governance, and contribute to 
+    the project's development. Approach with realistic expectations and caution.
+  </div>
+</section>
+
+<!-- APPENDIX -->
+<section class="section">
+  <h2>Appendix: Technical Reference</h2>
+
+  <h3>Smart Contract Details</h3>
+  <div class="use-case-box">
+    <p><strong>Contract Address (Polygon):</strong><br>
+    <code style="word-break: break-all;">0x822AC53a3037d328645B5aa7d6A07360AcC23433</code></p>
+    <p><strong>Deployment Date:</strong> October 31, 2025 (12:06:52 PM UTC)</p>
+    <p><strong>Deployment Block:</strong> 78403786</p>
+    <p><strong>Chain ID:</strong> 137 (Polygon PoS)</p>
+    <p><strong>Token Standard:</strong> ERC-20</p>
+    <p><strong>Decimals:</strong> 18</p>
+    <p><strong>Total Supply:</strong> <span class="highlight-number">10,000,000,000 FRINK</span> (Fixed)</p>
+    <p><strong>Contract Type:</strong> Standard ERC-20 (no mint, burn, pause, or upgrade functions)</p>
+    <p><strong>Source Code:</strong> Viewable on PolygonScan</p>
+  </div>
+
+  <h3>Adding FRINK to Wallet</h3>
+  <pre>Token Contract: 
+0x822AC53a3037d328645B5aa7d6A07360AcC23433
+
+Network: Polygon PoS
+Chain ID: 137
+Symbol: FRINK
+Decimals: 18</pre>
+
+  <h3>Useful Links</h3>
+  <ul>
+    <li><strong>PolygonScan:</strong> <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433">View Token Contract</a></li>
+    <li><strong>QuickSwap:</strong> <a href="https://quickswap.exchange">Trade FRINK</a></li>
+    <li><strong>Snapshot Governance:</strong> <a href="https://snapshot.org">Vote on Proposals</a></li>
+    <li><strong>Official Website:</strong> <a href="https://frinktoken.net">frinktoken.net</a></li>
+  </ul>
+</section>
+
+<!-- DISCLAIMER REPEAT -->
+<section class="section">
+  <div class="alert alert-danger" style="border: 2px solid var(--danger-red);">
+    <h3 style="margin-top: 0; border: none; padding: 0;">🚨 COMPREHENSIVE DISCLAIMER 🚨</h3>
+    <p><strong>This token is experimental and high-risk. By acquiring or using FRINK, you acknowledge:</strong></p>
+    <ul style="margin-bottom: 0;">
+      <li>FRINK is a utility-focused token with value dependent on adoption and development progress</li>
+      <li>The project is NOT yet audited by professional security firms (audit planned Q1 2026)</li>
+      <li>The team is pseudonymous with governance oversight through community</li>
+      <li>Most roadmap features are in development with completion dependent on community resources</li>
+      <li>Success requires sustained community participation and development</li>
+      <li>This is NOT investment advice - seek professional counsel</li>
+      <li>Regulatory status is evolving and may change</li>
+      <li>You could lose 100% of funds invested</li>
+      <li>Project continuation depends on community support and resources</li>
+    </ul>
+    <p class="mt-3 mb-0"><strong>PROCEED ONLY IF YOU FULLY UNDERSTAND AND ACCEPT THESE RISKS.</strong></p>
+  </div>
+</section>
+
+</div>
+
+<footer class="text-center text-secondary">
+  <div class="container">
+    <p class="mb-2">© 2025 Frink Token (FRINK) — Innovative Experimental Project</p>
+    <p style="font-size: 0.85rem;">
+      <strong>Whitepaper v1.0:</strong> This document provides an honest, transparent assessment. 
+      FRINK is an experimental utility-focused project with inherent risks. 
+      Always conduct independent research and consult professionals before participating.
+    </p>
+  </div>
+</footer>
+
+<!-- Bootstrap Bundle JS (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

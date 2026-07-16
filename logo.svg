@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64">
+  <!-- 투명 배경 -->
+  <rect width="100%" height="100%" fill="none"/>
+
+  <!-- 보라색 원 -->
+  <circle cx="32" cy="32" r="28" fill="#9E4BFF"/>
+
+  <!-- 흰색 "FR" 텍스트 -->
+  <text x="50%" y="57%" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="20" font-weight="bold">
+    FR
+  </text>
+</svg>

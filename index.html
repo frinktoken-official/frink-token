@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Frink Token (FRINK) — Official Website</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="Frink Token (FRINK) is an innovative experimental utility token on Polygon PoS. Focused on transparency, education, creator tools, and community-driven Web3 development." />
+
+  <!-- Keywords -->
+  <meta name="keywords" content="Frink Token, FRINK, Polygon Token, Utility Token, Web3, Blockchain, ERC-20, Experimental Token" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="https://frinktoken.net/logo.svg" />
+
+  <!-- Open Graph (카카오톡, 페이스북, 메신저) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Frink Token (FRINK) — Official Website" />
+  <meta property="og:description" content="Innovative experimental utility token on Polygon PoS for creators, education, and decentralized innovation." />
+  <meta property="og:image" content="https://frinktoken.net/cover_1200_630.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:url" content="https://frinktoken.net" />
+  <meta property="og:site_name" content="Frink Token (FRINK)" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Frink Token (FRINK) — Official Website" />
+  <meta name="twitter:description" content="Innovative experimental Web3 utility token built on Polygon PoS." />
+  <meta name="twitter:image" content="https://frinktoken.net/cover_1200_630.jpg" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --primary-purple: #9B6DFF;
+      --dark-purple: #7a4bff;
+      --bg-dark: #1a1d2e;
+      --bg-darker: #14161f;
+      --table-header-bg: #3d3557;
+      --table-content-bg: #2a2d3e;
+      --text-light: #f1f1f1;
+      --border-color: #404558;
+      --danger-red: #ff6b6b;
+      --warning-yellow: #ffc107;
+      --success-green: #51cf66;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg-darker);
+      font-family: 'Inter', sans-serif;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(20, 22, 31, 0.98) !important;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-brand {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--primary-purple) !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-brand img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .nav-link {
+      color: var(--text-light) !important;
+      font-weight: 500;
+      padding: 10px 15px !important;
+      transition: color 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-purple) !important;
+    }
+
+    .navbar-toggler {
+      border-color: rgba(155, 109, 255, 0.5);
+      padding: 8px 12px;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(155, 109, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* 모바일: navbar 스크롤 활성화 */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        max-height: 80vh !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 140px 20px 60px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero-section {
+        padding: 180px 20px 80px;
+      }
+    }
+
+    .hero-logo {
+      width: 90px;
+      filter: drop-shadow(0 0 20px #9B6DFF);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: var(--primary-purple);
+      font-size: 2em;
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2.5em;
+      }
+    }
+
+    h2 {
+      color: var(--primary-purple);
+      font-size: 1.6em;
+      margin-bottom: 30px;
+      margin-top: 50px;
+    }
+
+    @media (min-width: 768px) {
+      h2 {
+        font-size: 1.9em;
+        margin-top: 60px;
+      }
+    }
+
+    h3 {
+      color: var(--primary-purple);
+      font-size: 1.3em;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      font-size: 1.1em;
+      color: #bfefff;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 768px) {
+      .lead {
+        font-size: 1.25em;
+      }
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: linear-gradient(90deg, var(--dark-purple), var(--primary-purple));
+      border: none;
+      padding: 14px 28px;
+      font-weight: 600;
+      color: white;
+      border-radius: 8px;
+      transition: all 0.25s;
+      text-decoration: none;
+      display: inline-block;
+      margin: 8px;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.15);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(155, 109, 255, 0.4);
+      color: white;
+    }
+
+    .btn-outline-primary {
+      background: transparent;
+      border: 2px solid var(--primary-purple);
+      color: var(--primary-purple);
+      padding: 14px 28px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.25s;
+      text-decoration: none;
+      display: inline-block;
+      margin: 8px;
+    }
+
+    .btn-outline-primary:hover {
+      background: var(--primary-purple);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Alert Boxes */
+    .alert {
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      border: 1px solid;
+      background: rgba(255, 107, 107, 0.1);
+      border-color: var(--danger-red);
+    }
+
+    .alert-danger {
+      background: rgba(255, 107, 107, 0.1);
+      border-color: var(--danger-red);
+      color: var(--text-light);
+    }
+
+    .alert-danger strong {
+      color: var(--danger-red);
+    }
+
+    .alert-warning {
+      background: rgba(255, 193, 7, 0.1);
+      border-color: var(--warning-yellow);
+      color: var(--text-light);
+    }
+
+    .alert-warning strong {
+      color: var(--warning-yellow);
+    }
+
+    .alert-success {
+      background: rgba(81, 207, 102, 0.1);
+      border-color: var(--success-green);
+      color: var(--text-light);
+    }
+
+
+	.alert-info {
+	  background: rgba(66, 153, 225, 0.1);
+	  border-color: #4299e1;
+	  color: var(--text-light);
+	}
+	
+	.alert-info strong {
+	  color: #4299e1;
+	}
+	
+	.alert-info a {
+	  color: #4299e1;
+	  text-decoration: underline;
+	}
+	
+	.alert-info a:hover {
+	  color: #63b3ed;
+	}
+
+    .alert-success strong {
+      color: var(--success-green);
+    }
+
+    /* Dark Tables */
+    .info-table {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 30px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .info-table tr {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .info-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .info-table th {
+      background: var(--table-header-bg);
+      color: var(--primary-purple);
+      font-weight: 600;
+      padding: 16px 20px;
+      width: 40%;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    .info-table td {
+      background: var(--table-content-bg);
+      color: var(--text-light);
+      padding: 16px 20px;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    .info-table td code {
+      background: rgba(0, 0, 0, 0.3);
+      color: var(--primary-purple);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      word-break: break-all;
+      display: inline-block;
+    }
+
+    .info-table td a {
+      color: var(--primary-purple);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .info-table td a:hover {
+      color: var(--dark-purple);
+      text-decoration: underline;
+    }
+
+    .highlight-purple {
+      color: var(--primary-purple);
+      font-weight: 600;
+    }
+
+    /* Feature List */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      font-size: 1.05em;
+      line-height: 2.2;
+    }
+
+    .feature-list li {
+      padding: 8px 0;
+    }
+
+    /* Status Badges */
+    .badge {
+      padding: 6px 14px;
+      border-radius: 16px;
+      font-size: 0.85em;
+      font-weight: 600;
+      margin-left: 10px;
+      display: inline-block;
+    }
+
+    .badge-live {
+      background: rgba(81, 207, 102, 0.2);
+      color: var(--success-green);
+      border: 1px solid var(--success-green);
+    }
+
+    .badge-pending {
+      background: rgba(255, 193, 7, 0.2);
+      color: var(--warning-yellow);
+      border: 1px solid var(--warning-yellow);
+    }
+
+    /* Sections */
+    section {
+      margin: 60px 0;
+    }
+
+    @media (min-width: 768px) {
+      section {
+        margin: 90px 0;
+      }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 80px;
+      border-top: 1px solid var(--border-color);
+      color: #aab3cc;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: var(--primary-purple);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Links */
+    a {
+      color: var(--primary-purple);
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--dark-purple);
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .info-table th {
+        font-size: 0.9em;
+        padding: 12px 15px;
+      }
+
+      .info-table td {
+        font-size: 0.9em;
+        padding: 12px 15px;
+      }
+
+      .info-table td code {
+        font-size: 0.75em;
+        padding: 4px 8px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .info-table th,
+      .info-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .info-table th {
+        border-bottom: none;
+        padding-bottom: 8px;
+      }
+
+      .info-table td {
+        padding-top: 8px;
+        padding-bottom: 16px;
+      }
+
+      .info-table tr {
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://frinktoken.net/logo.svg" alt="FRINK Logo">
+        <span>Frink Token</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="#utility">Utility</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tokenomics">Tokenomics</a></li>
+          <li class="nav-item"><a class="nav-link" href="#liquidity">Liquidity</a></li>
+          <li class="nav-item"><a class="nav-link" href="#channels">Channels</a></li>
+          <li class="nav-item"><a class="nav-link" href="#roadmap">Roadmap</a></li>
+          <li class="nav-item"><a class="nav-link" href="whitepaper.html">Whitepaper</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <img src="https://frinktoken.net/logo.svg" class="hero-logo" alt="FRINK Logo" />
+      <h1>Frink Token (FRINK)</h1>
+      <p class="lead">
+        Innovative experimental utility token on Polygon PoS<br>
+        <small style="font-size: 0.85em; color: #aab3cc;">Transparent • Educational • Creator-Focused • Community-Driven</small>
+      </p>
+
+      <div class="mt-4">
+        <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433" target="_blank" class="btn btn-primary">
+          View on PolygonScan
+        </a>
+        <a href="whitepaper.html" class="btn btn-outline-primary">
+          Read Whitepaper
+        </a>
+      </div>
+
+      <!-- Risk Warning -->
+      <div class="alert alert-danger mt-5">
+        <strong>⚠️ Important Risk Notice:</strong> FRINK is an experimental utility-focused project with no guarantees of success, utility, or value. Token value depends on adoption and development progress. This is NOT investment advice. Only participate with funds you can afford to lose completely. Read the <a href="whitepaper.html#legal" style="color: var(--danger-red); text-decoration: underline;">full risk disclosure</a> before participating.
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section id="overview">
+      <h2>📘 Project Overview</h2>
+      <p>
+        <strong>Frink Token (FRINK)</strong> is an innovative experimental ERC-20 utility token deployed on the <strong>Polygon PoS Network</strong> with a total supply of <strong>10 billion tokens</strong>.
+      </p>
+      <p>
+        FRINK is designed to explore lowering Web3 entry barriers through education-focused applications, creator rewards, and decentralized governance. Built on Polygon's low-cost infrastructure, FRINK enables micro-transactions with minimal fees (typically under $0.001).
+      </p>
+
+      <table class="info-table">
+        <tbody>
+          <tr><th>Token Name</th><td>Frink Token</td></tr>
+          <tr><th>Symbol</th><td>FRINK</td></tr>
+          <tr><th>Network</th><td>Polygon PoS (Chain ID: 137)</td></tr>
+          <tr><th>Standard</th><td>ERC-20</td></tr>
+          <tr><th>Total Supply</th><td><span class="highlight-purple">10,000,000,000 FRINK</span> (Fixed)</td></tr>
+          <tr><th>Contract Address</th><td><code>0x822AC53a3037d328645B5aa7d6A07360AcC23433</code></td></tr>
+          <tr><th>Deployment Date</th><td>October 31, 2025</td></tr>
+          <tr><th>Contract Type</th><td>Standard ERC-20 (No mint, no burn)</td></tr>
+          <tr><th>Source Code</th><td><a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433">Verified on PolygonScan</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Utility -->
+    <section id="utility">
+      <h2>⚙️ Utility & Use Cases</h2>
+      <p>FRINK is designed to explore the following experimental use cases:</p>
+
+      <ul class="feature-list">
+        <li>🎨 <strong>Creator Rewards System</strong> — Token-based rewards for content creators (Planned Q1 2026)</li>
+        <li>📚 <strong>Web3 Learning Platform</strong> — Earn tokens by learning blockchain concepts (Planned Q2 2026)</li>
+        <li>🗳️ <strong>Community Governance</strong> — 1 token = 1 vote on protocol decisions <span class="badge badge-live">LIVE</span></li>
+        <li>💼 <strong>Micro Tasks & Freelancing</strong> — Small task payments with low fees (Concept stage)</li>
+        <li>🔐 <strong>DApp Access Tiers</strong> — Token-gated features (Future consideration)</li>
+      </ul>
+
+      <div class="alert alert-warning mt-4">
+        <strong>⚠️ Development Status:</strong> Most features are in development or planning stages. Implementation depends on community resources and participation. Timelines may vary based on available development capacity.
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="whitepaper.html#usecases" class="btn btn-outline-primary">View Detailed Use Cases</a>
+      </div>
+    </section>
+
+    <!-- Tokenomics -->
+    <section id="tokenomics">
+      <h2>💰 Tokenomics</h2>
+      
+      <table class="info-table">
+        <tbody>
+          <tr><th>Total Supply</th><td><span class="highlight-purple">10,000,000,000 FRINK</span> (Fixed, Immutable)</td></tr>
+          <tr><th>Decimals</th><td>18</td></tr>
+          <tr><th>Transaction Fee</th><td>None (only Polygon gas fees apply)</td></tr>
+          <tr><th>Inflation Control</th><td>No inflation — Fixed supply</td></tr>
+          <tr><th>Burn Mechanism</th><td>Not currently implemented</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Proposed Allocation</h3>
+      <table class="info-table">
+        <tbody>
+          <tr><th>Liquidity (DEX)</th><td>30% — <span class="highlight-purple">3,000M FRINK</span></td></tr>
+          <tr><th>Development Team</th><td>20% — <span class="highlight-purple">2,000M FRINK</span></td></tr>
+          <tr><th>Ecosystem Grants</th><td>10% — <span class="highlight-purple">1,000M FRINK</span></td></tr>
+          <tr><th>Staking Rewards</th><td>10% — <span class="highlight-purple">1,000M FRINK</span></td></tr>
+          <tr><th>Community Airdrops</th><td>15% — <span class="highlight-purple">1,500M FRINK</span></td></tr>
+          <tr><th>Treasury Reserve</th><td>15% — <span class="highlight-purple">1,500M FRINK</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="alert alert-warning mt-3">
+        <strong>📌 Note:</strong> Token allocation is proposed but not fully implemented. Actual distribution is tracked on-chain via PolygonScan. The contract does NOT include automated vesting or locking mechanisms. All vesting depends on manual execution.
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="whitepaper.html#tokenomics" class="btn btn-outline-primary">View Detailed Tokenomics</a>
+      </div>
+    </section>
+
+    <!-- Liquidity & Lock -->
+    <section id="liquidity">
+      <h2>💧 Liquidity & Lock</h2>
+      
+      <div class="alert alert-success">
+        <strong>✅ Liquidity Lock Completed:</strong> FRINK's liquidity has been successfully locked for 12 months via Team Finance on November 25, 2025, demonstrating long-term commitment and protecting the community from liquidity removal.
+      </div>
+
+      <h3 style="color: var(--success-green);">✅ Current Liquidity Pool</h3>
+      <table class="info-table">
+        <tbody>
+          <tr><th>Pool Type</th><td><strong>QuickSwap V3</strong> (Concentrated Liquidity)</td></tr>
+          <tr><th>Position Type</th><td>NFT Position (Algebra-based V3)</td></tr>
+          <tr><th>NFT ID</th><td><span class="highlight-purple">177734</span></td></tr>
+          <tr><th>Liquidity Amount</th><td><span class="highlight-purple">9.913 POL + 50,560,100 FRINK</span></td></tr>
+          <tr><th>Fee Tier</th><td>0.01%</td></tr>
+          <tr><th>Price Range</th><td>Full Range (0 to ∞)</td></tr>
+          <tr><th>Network</th><td>Polygon PoS</td></tr>
+          <tr><th>Trade Now</th><td><a href="https://quickswap.exchange/#/swap?currency0=0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270&currency1=0x822AC53a3037d328645B5aa7d6A07360AcC23433">FRINK/POL on QuickSwap</a></td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="color: var(--success-green); margin-top: 50px;">🔒 Liquidity Lock Details</h3>
+      <table class="info-table">
+        <tbody>
+          <tr><th>Lock Status</th><td><strong style="color: var(--success-green);">🟢 ACTIVE & LOCKED</strong></td></tr>
+          <tr><th>Lock Platform</th><td><strong>Team Finance</strong> (audited by CertiK, Hacken & Solidity Finance)</td></tr>
+          <tr><th>Lock Type</th><td>V3 Liquidity NFT Lock</td></tr>
+          <tr><th>Locked Asset</th><td>WPOL/FRINK V3 Position (NFT ID: 177734)</td></tr>
+          <tr><th>Lock Amount</th><td><span class="highlight-purple">100% of liquidity</span> (1 NFT Position)</td></tr>
+          <tr><th>Lock Duration</th><td><span class="highlight-purple">12 months</span></td></tr>
+          <tr><th>Lock Date</th><td>November 25, 2025</td></tr>
+          <tr><th>Unlock Date</th><td><span class="highlight-purple">November 25, 2026</span></td></tr>
+          <tr><th>Owner Wallet</th><td><code>0x2432b1229b3e6a284f9a27024b158d2f1a589445</code></td></tr>
+		  <tr><th>Verification</th><td><a href="https://www.team.finance/view-coin/0x822AC53a3037d328645B5aa7d6A07360AcC23433?name=Frink%20Token&symbol=FRINK&chainid=0x89">Verify on Team Finance</a> → Click "Liquidity locks" tab</td></tr>          
+        </tbody>
+      </table>
+
+      <h3>Security & Trust</h3>
+      <ul class="feature-list">
+        <li>✅ <strong>100% Liquidity Locked</strong> — All initial liquidity secured for 12 months</li>
+        <li>✅ <strong>No Rug Pull Risk</strong> — Cannot be removed until November 25, 2026</li>
+        <li>✅ <strong>Triple-Audited Platform</strong> — Team Finance audited by CertiK, Hacken, and Solidity Finance</li>
+        <li>✅ <strong>Publicly Verifiable</strong> — All lock details visible on-chain</li>
+        <li>✅ <strong>Long-term Commitment</strong> — Demonstrates team dedication to the project</li>
+      </ul>
+
+
+
+<h3>🔍 Lock Verification</h3>
+<div class="alert alert-info">
+  <strong>How to Verify the Lock:</strong>
+  <ol class="mb-0 mt-2">
+    <li><strong>Team Finance:</strong> Visit <a href="https://www.team.finance/view-coin/0x822AC53a3037d328645B5aa7d6A07360AcC23433?name=Frink%20Token&symbol=FRINK&chainid=0x89">Team Finance FRINK Page</a> → Click "Liquidity locks" tab → View NFT Position #177734</li>
+    <li><strong>QuickSwap V3:</strong> Visit <a href="https://quickswap.exchange/#/pool/177734">QuickSwap Position #177734</a> (Direct link to NFT Position)</li>
+    <li><strong>PolygonScan:</strong> View <a href="https://polygonscan.com/address/0x2432b1229b3e6a284f9a27024b158d2f1a589445">wallet transactions</a> → See Team Finance lock transaction on November 25, 2025</li>
+  </ol>    
+</div>
+
+
+
+
+      <div class="text-center mt-4">
+        <a href="whitepaper.html#liquidity-lock" class="btn btn-outline-primary">View Full Liquidity Details</a>
+      </div>
+    </section>
+
+	<!-- Official Channels -->
+	<section id="channels">
+	  <h2>🌐 Official Channels</h2>
+	  
+	  <div class="alert alert-warning">
+		<strong>⚠️ Scam Warning:</strong> Only trust information from verified official channels listed below. Beware of impersonators on Telegram, Discord, or social media. The team will never DM you first or ask for private keys.
+	  </div>
+	
+	  <!-- PRIMARY CHANNELS (8개) -->
+	  <div class="row g-3">
+		<div class="col-sm-6 col-md-4 col-lg-3">
+		  <a href="https://frinktoken.net" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">🌐 Website</a>
+		</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+		  <a href="https://frinktoken.net/whitepaper.html" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">📜 Whitepaper</a>
+		</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+		  <a href="https://discord.gg/2MAqQbgP9j" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">💬 Discord</a>
+		</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+		  <a href="https://x.com/FrinkTokenNet" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">𝕏 Twitter/X</a>
+		</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+		  <a href="https://t.me/frinktoken_official" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">✈️ Telegram</a>
+		</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+		  <a href="https://medium.com/@contact_2545" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">📝 Medium</a>
+		</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+		  <a href="https://github.com/frinktoken-official" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">💻 GitHub</a>
+		</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+		  <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">📊 PolygonScan</a>
+		</div>
+	  </div>
+	
+	  <!-- ADDITIONAL CHANNELS (5개) -->
+	  <div class="mt-4 pt-3" style="border-top: 1px solid var(--border-color);">
+		<p style="color: #aab3cc; margin-bottom: 10px;">
+		  <strong>Additional Channels:</strong>
+		</p>
+		<p style="margin-bottom: 0;">
+		  <a href="https://www.reddit.com/user/FrinkTokenOfficial" style="color: var(--primary-purple); text-decoration: none;">🤖 Reddit</a> • 
+		  <a href="https://www.facebook.com/FrinkToken" style="color: var(--primary-purple); text-decoration: none;">📘 Facebook</a> • 
+		  <a href="https://www.linkedin.com/in/alex-seo-39b76a338" style="color: var(--primary-purple); text-decoration: none;">💼 LinkedIn</a> • 
+		  <a href="https://frinktoken.slack.com" style="color: var(--primary-purple); text-decoration: none;">💬 Slack</a> • 
+		  <a href="https://bitcointalk.org/index.php?topic=5566014" style="color: var(--primary-purple); text-decoration: none;">🪙 Bitcointalk</a>
+		</p>
+	  </div>
+	
+	  <!-- CONTACT INFO -->
+	  <h3>Contact Information</h3>
+	  <table class="info-table">
+		<tbody>
+		  <tr><th>Email</th><td><a href="mailto:contact@frinktoken.net">contact@frinktoken.net</a></td></tr>
+		  <tr><th>Contract Address</th><td><code>0x822AC53a3037d328645B5aa7d6A07360AcC23433</code></td></tr>
+		</tbody>
+	  </table>
+	
+	  <p class="text-secondary mt-3" style="font-size: 0.9em;">
+		<strong>Security Reminder:</strong> Verify all links and addresses independently. Do not trust unverified sources.
+	  </p>
+	</section>
+
+    <!-- Roadmap -->
+    <section id="roadmap">
+      <h2>🛣️ Roadmap</h2>
+
+      <div class="alert alert-warning">
+        <strong>⚠️ Roadmap Disclaimer:</strong> This roadmap represents planned development targets. Progress depends on community participation and resources. Timelines may vary.
+      </div>
+
+      <h3 style="color: var(--success-green);">✅ Q4 2025 — Foundation (Current)</h3>
+      <ul class="feature-list">
+        <li>✓ Smart Contract Deployment (October 31, 2025) — <strong style="color: var(--success-green);">COMPLETED</strong></li>
+        <li>✓ Community Discord Server — <strong style="color: var(--success-green);">LIVE</strong></li>
+        <li>✓ Initial Liquidity Launch (QuickSwap V3) — <strong style="color: var(--success-green);">COMPLETED</strong></li>
+        <li>✓ Liquidity Lock (Team Finance) — <strong style="color: var(--success-green);">✅ COMPLETED (November 25, 2025)</strong></li>
+      </ul>
+
+      <h3 style="color: var(--warning-yellow);">⏳ Q1 2026 — Ecosystem Development</h3>
+      <ul class="feature-list">
+        <li>○ Security Audit — Planned (no contract signed yet)</li>
+        <li>○ Creator Rewards DApp Beta — Target release</li>
+        <li>○ Staking Contract Deployment — Planned</li>
+        <li>○ First Community Governance Vote — Planned</li>
+      </ul>
+
+      <h3 style="color: #aab3cc;">🔮 Q2-Q4 2026 & Beyond</h3>
+      <ul class="feature-list">
+        <li>○ Learning Platform MVP — Tentative</li>
+        <li>○ Task Marketplace — Under consideration</li>
+        <li>○ DAO Treasury Management — Planned</li>
+        <li>○ Strategic Partnerships — Dependent on growth</li>
+      </ul>
+
+      <div class="text-center mt-4">
+        <a href="whitepaper.html#roadmap" class="btn btn-outline-primary">View Full Roadmap</a>
+      </div>
+    </section>
+
+    <!-- Security Notice -->
+    <section>
+      <div class="alert alert-danger">
+        <h3 style="margin-top: 0; font-size: 1.3em; color: var(--danger-red);">
+          🚨 Critical Security & Risk Notice
+        </h3>
+        <p><strong>Before participating, understand these critical points:</strong></p>
+        <ul class="mb-0">
+          <li><strong>No Professional Audit:</strong> Contract has NOT been audited by professional security firms (audit planned Q1 2026)</li>
+          <li><strong>Experimental Project:</strong> This is an experimental utility token with no guarantees of success or value</li>
+          <li><strong>High Risk:</strong> You could lose 100% of funds invested</li>
+          <li><strong>Development Dependent:</strong> Success requires sustained community participation and development</li>
+          <li><strong>Manual Vesting:</strong> No automated vesting or locking in the contract</li>
+          <li><strong>Not Investment Advice:</strong> This is NOT financial or investment advice. Consult professionals before participating</li>
+        </ul>
+        <p class="mt-3 mb-0">
+          <strong>Read the complete <a href="whitepaper.html#legal" style="color: var(--danger-red); text-decoration: underline;">risk disclosure and legal terms</a> before participating.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="text-center">
+      <h2>Ready to Learn More?</h2>
+      <p style="font-size: 1.1em;">
+        Explore the complete whitepaper for detailed information on technology,<br class="d-none d-md-block">
+        tokenomics, governance, security, and legal compliance.
+      </p>
+      <div class="mt-4">
+        <a href="whitepaper.html" class="btn btn-primary" style="font-size: 1.1em; padding: 16px 36px;">
+          📄 Read Full Whitepaper
+        </a>
+        <a href="https://discord.gg/2MAqQbgP9j" target="_blank" class="btn btn-outline-primary" style="font-size: 1.1em; padding: 16px 36px;">
+          💬 Join Discord
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p class="mb-3">
+      <strong>© 2025 Frink Token (FRINK)</strong> — Innovative Experimental Project
+    </p>
+    <p style="font-size: 0.85em; color: #7080a3;" class="mb-3">
+      This is an experimental utility-focused token with inherent risks.<br>
+      Always conduct independent research and consult professionals before participating.
+    </p>
+    <p style="font-size: 0.85em;">
+      <a href="whitepaper.html">Whitepaper</a> • 
+      <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433">PolygonScan</a> • 
+      <a href="https://discord.gg/2MAqQbgP9j">Discord</a> • 
+      <a href="mailto:contact@frinktoken.net">contact@frinktoken.net</a>
+    </p>
+  </footer>
+
+  <!-- Bootstrap Bundle JS (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
