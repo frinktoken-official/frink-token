@@ -10,15 +10,15 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-  <meta name="description" content="Official Whitepaper for Frink Token (FRINK), an experimental ERC-20 on Polygon PoS. Token, site, and liquidity lock." />
-  <meta name="keywords" content="Frink Token, FRINK, Polygon, Web3, Blockchain, ERC-20, Tokenomics, Whitepaper" />
+  <meta name="description" content="Official Whitepaper for Frink Token (FRINK): experimental ERC-20 on Polygon PoS. Transfer, swap, token, site, and liquidity lock." />
+  <meta name="keywords" content="Frink Token, FRINK, Polygon, ERC-20, Tokenomics, Whitepaper, Transfer, Swap" />
 
   <link rel="icon" type="image/svg+xml" href="https://frinktoken.net/logo.svg" />
 
 <!-- Open Graph (카카오톡, 페이스북, 메신저) -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Frink Token (FRINK) — Official Whitepaper v1.0" />
-  <meta property="og:description" content="Experimental ERC-20 on Polygon PoS. Token, site, and liquidity lock." />
+  <meta property="og:description" content="Experimental ERC-20 on Polygon PoS. Transfer and swap on frinktoken.net. Token, site, and liquidity lock." />
   <meta property="og:image" content="https://frinktoken.net/cover_1200_630.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -437,7 +437,7 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">
+    <a class="navbar-brand fw-bold" href="index.html">
       <img src="https://frinktoken.net/logo.svg" class="logo-top me-2" alt="FRINK"> 
       <span class="d-none d-md-inline">FRINK Whitepaper</span>
       <span class="d-md-none">FRINK</span>
@@ -449,8 +449,9 @@
 
     <div id="navbarNav" class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="index.html#use" class="nav-link">Transfer / Swap</a></li>
         <li class="nav-item"><a href="#summary" class="nav-link">Summary</a></li>
-        <li class="nav-item"><a href="#problem" class="nav-link">Problem</a></li>
+        <li class="nav-item"><a href="#problem" class="nav-link">What exists</a></li>
         <li class="nav-item"><a href="#usecases" class="nav-link">What it does</a></li>
         <li class="nav-item"><a href="#tech" class="nav-link">Tech</a></li>
         <li class="nav-item"><a href="#tokenomics" class="nav-link">Token</a></li>
@@ -463,7 +464,7 @@
             More
           </a>
           <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#market">Market Analysis</a></li>
+            <li><a class="dropdown-item" href="#market">Market</a></li>
             <li><a class="dropdown-item" href="#team">Team</a></li>
             <li><a class="dropdown-item" href="#finance">Finance</a></li>
             <li><a class="dropdown-item" href="#risks">Risk Mitigation</a></li>
@@ -484,8 +485,8 @@
     <span class="d-block mt-2" style="font-size: 0.6em;">Official Whitepaper v1.0</span>
   </h1>
   <p class="lead mt-3 mb-4">
-    Innovative ERC-20 Utility Token built on Polygon PoS<br>
-    <small class="d-block mt-2">Experimental ERC-20 on Polygon PoS</small>
+    Experimental ERC-20 on Polygon PoS<br>
+    <small class="d-block mt-2">Token, website (transfer / swap), and a locked QuickSwap LP</small>
   </p>
 
   <a href="https://frinktoken.net/whitepaper.pdf" class="btn btn-download btn-lg mt-3" download>
@@ -500,22 +501,22 @@
   <h2>Executive Summary</h2>
   <p>
     Frink Token (FRINK) is an experimental ERC-20 on Polygon PoS with a fixed
-    supply of 10 billion tokens. It can be transferred and swapped. There is no
-    application layer beyond the token contract, the website, and a locked QuickSwap LP.
+    supply of 10 billion tokens. Live uses are <a href="index.html#transfer">transfer</a>
+    and <a href="index.html#swap">swap</a> on frinktoken.net. There is no extra product
+    beyond the token contract, this website, and a locked QuickSwap LP.
   </p>
   <p>
-    Built on Polygon's low-cost infrastructure, FRINK enables 
-    micro-transactions with minimal fees (typically under $0.001), 
-    making ordinary transfers inexpensive. The public record is this website
-    and the verified contract on PolygonScan.
+    Polygon fees for a transfer are typically well under $0.001. That is a network
+    property, not a FRINK application. The public record is this website and the
+    verified contract on PolygonScan.
   </p>
   <p class="text-warning">
-    <strong>Important:</strong> FRINK is an experimental utility-focused project. 
-    Success depends on sustained community participation and development. 
+    <strong>Important:</strong> FRINK is experimental. It is not an investment product.
     Participation involves significant risk.
   </p>
   <div class="alert alert-warning">
-    <strong>Status as of August 18, 2026:</strong> The ERC-20, website, and Team Finance lock are live.
+    <strong>Status as of August 18, 2026:</strong> Transfer and swap run on
+    <a href="index.html#use">frinktoken.net</a>. The ERC-20 and Team Finance lock are live.
     There is no reward program, learning app, voting product, task board, or DApp tier list.
     About 99% of supply is in the founder wallet. LP unlocks November 25, 2026.
   </div>
@@ -529,20 +530,21 @@
 
 <!-- PROBLEM STATEMENT -->
 <section id="problem" class="section">
-  <h2>Problem Statement</h2>
+  <h2>What exists today</h2>
   <p>
-    Web3 adoption faces several observed barriers that FRINK aims to address:
+    FRINK does not solve Web3 onboarding, creator platforms, or education.
+    Those headings were draft copy. What exists on August 18, 2026:
   </p>
   <ul>
-    <li><strong>High Entry Barriers:</strong> Blockchain tools often require technical knowledge</li>
-    <li><strong>Limited Usability:</strong> Few accessible token-based participation systems exist for creators</li>
-    <li><strong>Complex Onboarding:</strong> Wallet setup and blockchain concepts can be challenging for newcomers</li>
-    <li><strong>High Costs:</strong> Transaction fees on some networks make micro-transactions impractical</li>
+    <li><strong>Token:</strong> Fixed-supply ERC-20 on Polygon PoS (chain 137)</li>
+    <li><strong>Website:</strong> Static site with wallet transfer and QuickSwap V3 swap</li>
+    <li><strong>Liquidity:</strong> Thin locked QuickSwap V3 position (NFT 177734)</li>
+    <li><strong>Concentration:</strong> About 99% of supply sits in the founder EOA</li>
   </ul>
 
   <p>
-    <strong>FRINK's Approach:</strong> A low-cost experimental ERC-20 on Polygon.
-    Success is not guaranteed.
+    A wallet and a small amount of POL for gas are still required. Polygon fees are low;
+    that does not make FRINK a product for newcomers or creators.
   </p>
 </section>
 
@@ -587,6 +589,11 @@
 └───────────┬─────────────┘
             │
 ┌───────────▼─────────────┐
+│ frinktoken.net          │
+│ Transfer / Swap UI      │
+└───────────┬─────────────┘
+            │
+┌───────────▼─────────────┐
 │ FRINK ERC-20 Contract   │
 │ • Transfer / Approve    │
 │ • Ownable, no mint      │
@@ -600,8 +607,8 @@
   <h3>Technical Stack</h3>
   <ul>
     <li><strong>Smart Contract:</strong> Solidity 0.8.x, standard ERC-20 with Ownable</li>
-    <li><strong>Website:</strong> Static HTML on Cloudflare Pages</li>
-    <li><strong>DEX:</strong> QuickSwap V3 on Polygon</li>
+    <li><strong>Website:</strong> Static HTML on Cloudflare Pages; transfer and swap in <code>js/use.js</code></li>
+    <li><strong>DEX:</strong> QuickSwap V3 (Algebra) on Polygon</li>
   </ul>
 
   <div class="alert alert-warning">
@@ -645,7 +652,7 @@
           <td data-label="Category">Liquidity (DEX)</td>
           <td data-label="Percentage">30%</td>
           <td data-label="Amount" class="highlight-number">3,000M</td>
-          <td data-label="Proposed Method">Uniswap v3 / QuickSwap</td>
+          <td data-label="Proposed Method">QuickSwap V3 (actual pool is ~0.5%, not 30%)</td>
           <td data-label="Vesting Plan">LP NFT locked via Team Finance until November 25, 2026 (amount is not 30% of supply)</td>
         </tr>
         <tr>
@@ -832,16 +839,16 @@
 
   <h3>Security & Trust</h3>
   <ul>
-    <li><strong>100% Liquidity Locked:</strong> All initial liquidity is locked for 12 months</li>
-    <li><strong>LP lock:</strong> Liquidity cannot be removed until November 25, 2026. Founder-held tokens are not locked.</li>
-    <li><strong>Triple-Audited Platform:</strong> Team Finance audited by CertiK, Hacken, and Solidity Finance</li>
-    <li><strong>Publicly Verifiable:</strong> All lock details visible on-chain</li>
-    <li><strong>Community Protection:</strong> Lock demonstrates long-term commitment</li>
+    <li><strong>100% of the published LP NFT is locked:</strong> NFT 177734 cannot be withdrawn until November 25, 2026</li>
+    <li><strong>Founder tokens are not locked:</strong> ~99% of supply can still move from the founder EOA</li>
+    <li><strong>Pool is thin:</strong> About 9.913 POL + 50.56M FRINK. Swaps can slip sharply</li>
+    <li><strong>Lock platform:</strong> Team Finance (audited by CertiK, Hacken, and Solidity Finance)</li>
+    <li><strong>Publicly verifiable:</strong> Lock details are on-chain</li>
   </ul>
 
   <div class="alert alert-success mt-4">
-    <strong>✅ Liquidity Lock Confirmed:</strong> FRINK's liquidity is securely locked for 12 months, 
-    demonstrating the team's commitment to the project and protecting the community from liquidity removal.
+    <strong>Liquidity lock confirmed:</strong> The published LP NFT is locked until November 25, 2026.
+    That does not lock founder-held tokens and does not make the pool deep.
   </div>
 </section>
 
@@ -1012,9 +1019,9 @@
   </div>
 
   <div class="risk-item">
-    <strong>Market Risk:</strong> FRINK is a utility-focused token under development with price 
-    volatility dependent on market conditions and adoption. Price can be extremely volatile. 
-    Only participate with amounts you can afford to lose completely.
+    <strong>Market Risk:</strong> FRINK is a small experimental ERC-20. The swap pool is thin
+    and about 99% of supply is in one wallet. Price can move sharply or go to zero.
+    Only use amounts you can afford to lose completely.
   </div>
 
   <div class="risk-item">
@@ -1119,89 +1126,29 @@
 
 <!-- MARKET ANALYSIS -->
 <section id="market" class="section">
-  <h2>Market Analysis & Positioning</h2>
-  
-  <h3>Market Context</h3>
+  <h2>Market</h2>
+
   <p>
-    FRINK is a small experimental token on Polygon. It is not a creator-economy platform
-    or an education product. Any “market opportunity” claim is speculative.
+    FRINK is a small experimental token on Polygon. It is not a creator-economy platform,
+    a social network, or an education product. It does not compete with Lens, Mirror,
+    Gitcoin, or Rally. Those comparisons were leftover draft positioning.
   </p>
 
   <div class="alert alert-info">
-    <strong>📌 Note on Market Data:</strong> Previous versions of this whitepaper included 
-    specific market size figures without sources. Those have been removed. Any market opportunity 
-    for FRINK is highly speculative and uncertain.
+    <strong>Note:</strong> Earlier versions listed market-size figures and competitor tables
+    without a matching product. Those claims are removed. Any “market opportunity” for FRINK
+    is speculative.
   </div>
 
-  <h3>Competitive Landscape</h3>
-  <p>Several established projects operate in adjacent spaces:</p>
-  
-  <div class="table-responsive-custom">
-    <table class="table table-dark table-bordered table-stack">
-      <thead>
-        <tr>
-          <th>Project</th>
-          <th>Focus Area</th>
-          <th>FRINK Difference</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="Project"><strong>Lens Protocol</strong></td>
-          <td data-label="Focus Area">Decentralized social graph</td>
-          <td data-label="FRINK Difference">FRINK is a single experimental ERC-20, not a social network</td>
-        </tr>
-        <tr>
-          <td data-label="Project"><strong>Mirror.xyz</strong></td>
-          <td data-label="Focus Area">Creator publishing platform</td>
-          <td data-label="FRINK Difference">FRINK is a token, not a platform - complementary rather than competitive</td>
-        </tr>
-        <tr>
-          <td data-label="Project"><strong>Gitcoin</strong></td>
-          <td data-label="Focus Area">Developer funding and grants</td>
-          <td data-label="FRINK Difference">FRINK aims for broader creator focus beyond developers</td>
-        </tr>
-        <tr>
-          <td data-label="Project"><strong>Rally</strong></td>
-          <td data-label="Focus Area">Creator coins</td>
-          <td data-label="FRINK Difference">FRINK is a single token rather than individual creator coins</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>FRINK's Positioning</h3>
-  <div class="row g-3">
-    <div class="col-md-6">
-      <div class="use-case-box">
-        <h4>🎯 Experimental Approach</h4>
-        <p>Open acknowledgment of experimental nature rather than promising revolutionary outcomes.</p>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="use-case-box">
-        <h4>💰 Low Transaction Costs</h4>
-        <p>Polygon PoS enables sub-cent transactions, making micro-payments economically viable.</p>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="use-case-box">
-        <h4>Public contract</h4>
-        <p>Source is verified on PolygonScan. There is no voting product and no extra DApp.</p>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="use-case-box">
-        <h4>Low fees</h4>
-        <p>Polygon transfers are cheap. That is a network property, not a FRINK app.</p>
-      </div>
-    </div>
-  </div>
+  <h3>What is actually comparable</h3>
+  <ul>
+    <li>Other small Polygon ERC-20s with a website and a DEX pool</li>
+    <li>Not a protocol, not a DApp platform, not a DAO</li>
+  </ul>
 
   <div class="alert alert-warning mt-4">
-    <strong>⚠️ Competitive Reality:</strong> FRINK is a small, experimental project competing 
-    with well-funded, established platforms. Success is uncertain and depends on community 
-    adoption, which cannot be predicted or guaranteed.
+    <strong>Reality:</strong> Liquidity is thin. Supply is concentrated. There is no revenue
+    product. Success is not a forecast in this document.
   </div>
 </section>
 
@@ -1269,23 +1216,15 @@
     with a static website. Any future revenue depends on building something that does not exist yet.
   </div>
 
-  <h3>Current Financial Reality</h3>
+  <h3>Current financial reality</h3>
   <ul>
     <li><strong>Revenue:</strong> $0. No revenue product exists.</li>
     <li><strong>Funding:</strong> No venture capital or institutional funding.</li>
-    <li><strong>Development:</strong> Founder-led. This repository is a static website; there is no DApp codebase.</li>
+    <li><strong>Development:</strong> Founder-led static website plus the ERC-20 and locked LP.</li>
     <li><strong>Treasury:</strong> No multi-signature wallet. Tokens are in the founder EOA.</li>
   </ul>
 
-  <h3>Potential Revenue Models (none exist)</h3>
-  <p>There is no revenue product. Hypothetical fees or marketplaces are not in this project.</p>
-
-  <h3>Sustainability Path</h3>
-  <ul>
-    <li><strong>Year 1:</strong> Focus on community building and infrastructure development.</li>
-    <li><strong>Year 2:</strong> Potential launch of revenue-generating features pending development progress.</li>
-    <li><strong>Year 3+:</strong> Expansion dependent on community growth and feature adoption.</li>
-  </ul>
+  <p>There is no Year 1 / Year 2 revenue plan in this document. Hypothetical fees or marketplaces are not in this project.</p>
 
   <div class="alert alert-danger">
     <strong>⚠️ Financial Reality:</strong> Project sustainability requires sustained community participation 
@@ -1357,8 +1296,8 @@
 
   <div class="alert alert-warning">
     <strong>⚠️ Before You Start:</strong> Make sure you understand the risks described in this whitepaper. 
-    FRINK is an experimental utility-focused project with value dependent on adoption and development. 
-    Only proceed if you accept the possibility of complete loss.
+    FRINK is an experimental ERC-20. Value, if any, depends on whether anyone uses
+    transfer and swap. Only proceed if you accept the possibility of complete loss.
   </div>
 
   <div class="row g-3">
@@ -1370,8 +1309,8 @@
     </div>
     <div class="col-md-6">
       <div class="use-case-box">
-        <h4>Step 2: Acquire Small Amount</h4>
-        <p>Start with a small test amount on QuickSwap or Uniswap v3. Verify everything works before larger amounts.</p>
+        <h4>Step 2: Transfer or swap on this site</h4>
+        <p>Open <a href="index.html#use">frinktoken.net</a>. Connect a wallet. Send FRINK or swap a tiny test amount of POL/FRINK. The pool is thin — start small.</p>
       </div>
     </div>
     <div class="col-md-6">
@@ -1390,10 +1329,10 @@
 
   <h3>Useful Resources</h3>
   <ul>
+    <li>🌐 <a href="https://frinktoken.net/#use">Transfer / Swap</a> — Official send and swap on this site</li>
     <li>📊 <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433">PolygonScan</a> — Verify all on-chain activity</li>
     <li>💬 <a href="https://discord.gg/2MAqQbgP9j">Community Discord</a> — Official communication channel</li>
     <li>🌐 <a href="https://frinktoken.net">Official Website</a> — Project information</li>
-    <li>📖 Documentation — Community-maintained guides (verify all information)</li>
   </ul>
 
   <div class="alert alert-info">
@@ -1469,21 +1408,21 @@
   <h2>Conclusion</h2>
 
   <p>
-    Frink Token (FRINK) is an <strong>innovative experimental Web3 project</strong> exploring concepts 
-    in a small experimental ERC-20 on Polygon. This whitepaper presents 
-    an honest assessment of the project's current state, development progress, and future directions.
+    Frink Token (FRINK) is an experimental ERC-20 on Polygon. Live uses are transfer
+    and swap on frinktoken.net. This whitepaper states what exists: the token, the site,
+    and a thin locked LP. Extra product headings from earlier drafts were not built.
   </p>
 
   <p>
-    Success requires sustained community participation, volunteer development contributions, 
-    Many features listed in earlier drafts were never built. This document now states that plainly.
+    About 99% of supply is in the founder wallet. There is no professional audit and
+    no revenue product. Read the risk sections before using the token.
   </p>
 
   <div class="alert alert-danger">
-    <strong>⚠️ Final Warning:</strong> FRINK is a high-risk experimental utility-focused token. 
+    <strong>⚠️ Final Warning:</strong> FRINK is a high-risk experimental token.
     It has no revenue and no professional audit.
-    Most roadmap items for Q1–Q2 2026 were not delivered. 
-    Price volatility is expected and value depends on adoption and utility development.
+    Extra product headings from earlier drafts were not built.
+    The swap pool is thin. Supply is concentrated.
     <br><br>
     <strong>Only participate if you:</strong><br>
     ✓ Can afford to lose your entire investment<br>
@@ -1529,7 +1468,8 @@ Decimals: 18</pre>
   <h3>Useful Links</h3>
   <ul>
     <li><strong>PolygonScan:</strong> <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433">View Token Contract</a></li>
-    <li><strong>QuickSwap:</strong> <a href="https://quickswap.exchange">Trade FRINK</a></li>
+    <li><strong>Transfer / Swap:</strong> <a href="index.html#use">frinktoken.net/#use</a></li>
+    <li><strong>QuickSwap position:</strong> <a href="https://quickswap.exchange/#/pool/177734">NFT 177734</a></li>
     <li><strong>Official Website:</strong> <a href="https://frinktoken.net">frinktoken.net</a></li>
   </ul>
 </section>
@@ -1540,7 +1480,7 @@ Decimals: 18</pre>
     <h3 style="margin-top: 0; border: none; padding: 0;">🚨 COMPREHENSIVE DISCLAIMER 🚨</h3>
     <p><strong>This token is experimental and high-risk. By acquiring or using FRINK, you acknowledge:</strong></p>
     <ul style="margin-bottom: 0;">
-      <li>FRINK is a utility-focused token with value dependent on adoption and development progress</li>
+      <li>FRINK is an experimental ERC-20. Live uses are transfer and swap. Extra products were not built</li>
       <li>The project is NOT audited by professional security firms (the Q1 2026 audit did not happen)</li>
       <li>The founder is publicly named; ~99% of supply is in that wallet.</li>
       <li>Most Q1–Q2 2026 roadmap features were not built</li>
@@ -1558,11 +1498,10 @@ Decimals: 18</pre>
 
 <footer class="text-center text-secondary">
   <div class="container">
-    <p class="mb-2">© 2025 Frink Token (FRINK) — Innovative Experimental Project</p>
+    <p class="mb-2">© 2025 Frink Token (FRINK) — Experimental ERC-20 on Polygon</p>
     <p style="font-size: 0.85rem;">
-      <strong>Whitepaper v1.0:</strong> This document provides an honest, transparent assessment. 
-      FRINK is an experimental utility-focused project with inherent risks. 
-      Always conduct independent research and consult professionals before participating.
+      <strong>Whitepaper v1.0:</strong> This document states what exists on-chain and on this site.
+      FRINK is experimental. Always verify independently before participating.
     </p>
   </div>
 </footer>

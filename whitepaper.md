@@ -1,29 +1,31 @@
 # FRINK Token (FRINK) — Official Whitepaper v1.0  
 Verified on Polygon · Official Project of GTone Network  
-© 2025 FRINK Token | Transparent. Open. Utility-Driven.
+© 2025 FRINK Token
 
 ---
 
-## 🪙 Introduction
+## Introduction
 
 **Frink Token (FRINK)** is an experimental ERC-20 on the **Polygon PoS Network**, under the **GTone Network** name.
 
-FRINK explores a small experimental token on Polygon. The live artifacts today are the token, the website, and a locked QuickSwap LP.
+Live artifacts on August 18, 2026: the token, the website (transfer and swap), and a locked QuickSwap LP.
 
 ---
 
-## 🎯 Vision & Mission
-
-FRINK Token aims to:
-
-- Operate transparently with a simple, auditable ERC-20  
-- Keep public docs matched to what exists on-chain  
+## What exists
 
 FRINK is not an investment product. It is an experimental ERC-20.
 
+On-chain and on the site today:
+
+- Token contract (fixed 10B, Ownable, no mint/burn)
+- Transfer and swap on [frinktoken.net](https://frinktoken.net/#use)
+- Thin locked QuickSwap V3 LP (NFT 177734)
+- About **99%** of supply in the founder wallet
+
 ---
 
-## 🧠 Technology & Network
+## Technology & Network
 
 | Field | Value |
 |-------|--------|
@@ -40,7 +42,7 @@ FRINK uses Polygon for fast, low-fee transfers.
 
 ---
 
-## 🧩 What FRINK does
+## What FRINK does
 
 FRINK is a standard ERC-20. Live uses:
 
@@ -51,10 +53,12 @@ Earlier drafts listed creator rewards, a learning platform, token voting, micro-
 
 ---
 
-## 🧮 Tokenomics
+## Tokenomics
 
-| Category | Allocation |
-|----------|------------|
+On-chain today: ~99% founder wallet, ~0.5% in the locked LP. The split below is a **proposal only**.
+
+| Category | Proposed allocation |
+|----------|---------------------|
 | **Total Supply** | 10,000,000,000 FRINK (Fixed) |
 | **Network** | Polygon PoS (Chain ID: 137) |
 | **Liquidity (DEX)** | 30% — 3,000M FRINK |
@@ -69,7 +73,7 @@ The token contract does not mint. It is Ownable. Liquidity NFT lock is separate 
 
 ---
 
-## 🗺 Roadmap
+## Roadmap
 
 ### **Q4 2025 — Phase 1: Launch (completed)**
 - Token deployment (Polygon, October 31, 2025)  
@@ -90,7 +94,7 @@ The token contract does not mint. It is Ownable. Liquidity NFT lock is separate 
 
 ---
 
-## 🧑‍💻 Team
+## Team
 
 ### **Founder & Project Lead — Alex Seo**  
 Developer, creator-platform architect, and blockchain educator.  
@@ -98,7 +102,7 @@ LinkedIn: https://www.linkedin.com/in/alex-seo-39b76a338/
 
 ---
 
-## 🔗 Official Channels
+## Official Channels
 
 | Platform | Link |
 |----------|------|
@@ -115,7 +119,7 @@ LinkedIn: https://www.linkedin.com/in/alex-seo-39b76a338/
 
 ---
 
-## ⚖ Legal Disclaimer
+## Legal Disclaimer
 
 Frink Token (FRINK) is an **experimental** ERC-20 on Polygon.  
 It is **not intended as an investment asset** and carries **no guarantees of financial return**.
@@ -127,10 +131,9 @@ Users interacting with FRINK acknowledge:
 - Possible ecosystem changes  
 - Irreversible on-chain actions  
 
-FRINK should be used responsibly within the intended non-investment utility context.
+FRINK should be used only if you accept complete loss. It is not an investment product.
 
 ---
 
 ## © 2025 FRINK Token (FRINK)  
-Developed under the GTone Network  
-Transparent. Open. Utility-Driven.
+Developed under the GTone Network
