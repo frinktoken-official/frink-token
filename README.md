@@ -47,6 +47,7 @@ This is the same contract listed on [PolygonScan](https://polygonscan.com/token/
 | Item | Reality |
 |------|---------|
 | Token + website + LP lock | Live. LP unlocks **November 25, 2026**. |
+| Transfer / swap page | [frinktoken.net](https://frinktoken.net/#use) |
 | Extra product drafts (rewards, learning, voting, tasks, DApp tiers) | **Removed** from public docs. Never shipped. |
 | Supply | Founder wallet `0x2432b1229b3e6a284f9a27024b158d2f1a589445` holds **~99%**. Published LP is ~50.56M FRINK + 9.913 POL. |
 | Audit | **None.** The Q1 2026 audit did not happen. |
@@ -68,7 +69,7 @@ This is the same contract listed on [PolygonScan](https://polygonscan.com/token/
 | **Email** | contact@frinktoken.net |
 | **PolygonScan** | [Token contract](https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433) |
 | **Liquidity lock** | [Team Finance](https://www.team.finance/view-coin/0x822AC53a3037d328645B5aa7d6A07360AcC23433) |
-| **Trade** | [FRINK/POL on QuickSwap](https://quickswap.exchange/#/swap?currency0=0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270&currency1=0x822AC53a3037d328645B5aa7d6A07360AcC23433) |
+| **Trade** | [Transfer / swap on frinktoken.net](https://frinktoken.net/#use) · [FRINK/POL on QuickSwap](https://quickswap.exchange/#/swap?currency0=0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270&currency1=0x822AC53a3037d328645B5aa7d6A07360AcC23433) |
 
 ---
 
@@ -76,7 +77,9 @@ This is the same contract listed on [PolygonScan](https://polygonscan.com/token/
 
 | Path | Description |
 |------|-------------|
-| `index.html` | Official website |
+| `index.html` | Official website, including transfer and swap |
+| `js/use.js` | Wallet transfer and QuickSwap V3 swap |
+| `use.html` | Redirects to the homepage transfer/swap section |
 | `whitepaper.html` / `whitepaper.pdf` | Full whitepaper |
 | `guides/quickswap-liquidity-guide.html` | QuickSwap liquidity guide |
 | `SECURITY.md` | Vulnerability reporting |

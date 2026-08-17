@@ -44,8 +44,8 @@ FRINK uses Polygon for fast, low-fee transfers.
 
 FRINK is a standard ERC-20. Live uses:
 
-- **Transfer** to another Polygon wallet  
-- **Swap** FRINK/POL on QuickSwap (thin liquidity)
+- **Transfer** to another Polygon wallet ([on this site](https://frinktoken.net/#transfer))  
+- **Swap** FRINK/POL on the locked QuickSwap V3 pool ([on this site](https://frinktoken.net/#swap); thin liquidity)
 
 Earlier drafts listed creator rewards, a learning platform, token voting, micro-tasks, and DApp access tiers. Those headings are withdrawn. They were not products.
 

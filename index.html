@@ -468,6 +468,58 @@
         overflow: hidden;
       }
     }
+
+    /* Transfer / swap on the homepage */
+    #use, #transfer, #swap { scroll-margin-top: 88px; }
+    .use-widget { max-width: 640px; margin: 0 auto; }
+    .wallet-bar {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+      justify-content: space-between; padding: 16px;
+      background: var(--bg-dark); border: 1px solid var(--border-color); border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .balances { font-size: 0.9rem; color: #aab3cc; }
+    .balances strong { color: var(--text-light); }
+    .use-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+    .use-tabs .tab {
+      flex: 1; text-align: center; padding: 12px; border-radius: 8px;
+      border: 2px solid var(--primary-purple); color: var(--primary-purple);
+      background: transparent; font-weight: 600; text-decoration: none;
+    }
+    .use-tabs .tab.active, .use-tabs .tab:hover { background: var(--primary-purple); color: #fff; }
+    .use-panel {
+      background: var(--table-content-bg); border: 1px solid var(--border-color);
+      border-radius: 8px; padding: 24px;
+    }
+    #use label { font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; display: block; }
+    #use .form-control, #use .form-select {
+      background: #14161f; border-color: var(--border-color); color: var(--text-light);
+    }
+    #use .form-control:focus, #use .form-select:focus {
+      background: #14161f; color: var(--text-light);
+      border-color: var(--primary-purple); box-shadow: none;
+    }
+    .btn-send {
+      width: 100%; border: none; border-radius: 8px; padding: 14px;
+      font-weight: 600; color: #fff; background: var(--primary-purple);
+    }
+    .btn-send:hover { filter: brightness(1.1); color: #fff; }
+    .btn-ghost {
+      background: transparent; border: 1px solid var(--border-color); color: var(--text-light);
+      border-radius: 8px; padding: 8px 12px; font-size: 0.85rem;
+    }
+    .alert-thin {
+      background: rgba(255, 193, 7, 0.1); border: 1px solid var(--warning-yellow);
+      color: var(--text-light); border-radius: 8px; padding: 14px; margin-bottom: 16px; font-size: 0.9rem;
+    }
+    .alert-thin strong { color: var(--warning-yellow); }
+    .quote { font-size: 1.25rem; font-weight: 700; color: var(--primary-purple); }
+    .use-status { margin-top: 12px; font-size: 0.9rem; min-height: 1.4em; word-break: break-word; }
+    .use-status--ok { color: var(--success-green); }
+    .use-status--err { color: var(--danger-red); }
+    .use-status--warn { color: var(--warning-yellow); }
+    .use-status--info { color: #8ec8ff; }
+    .lede-muted { color: #aab3cc; }
   </style>
 </head>
 
@@ -487,6 +539,7 @@
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#use">Transfer / Swap</a></li>
           <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
           <li class="nav-item"><a class="nav-link" href="#utility">What it does</a></li>
           <li class="nav-item"><a class="nav-link" href="#tokenomics">Tokenomics</a></li>
@@ -512,7 +565,10 @@
       </p>
 
       <div class="mt-4">
-        <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433" target="_blank" class="btn btn-primary">
+        <a href="#use" class="btn btn-primary">
+          Transfer / Swap
+        </a>
+        <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433" target="_blank" class="btn btn-outline-primary">
           View on PolygonScan
         </a>
         <a href="whitepaper.html" class="btn btn-outline-primary">
@@ -526,7 +582,85 @@
       </div>
 
       <div class="alert alert-warning mt-3">
-        <strong>Status as of August 18, 2026:</strong> The token, website, and Team Finance liquidity lock are live. FRINK has no app, no reward program, and no voting product. About <strong>99%</strong> of supply is in the founder wallet. The locked LP unlocks on <strong>November 25, 2026</strong>.
+        <strong>Status as of August 18, 2026:</strong> Transfer and swap run on this page. The Team Finance liquidity lock is live until <strong>November 25, 2026</strong>. About <strong>99%</strong> of supply is in the founder wallet. There is no reward program or voting product.
+      </div>
+    </section>
+
+    <!-- Transfer / Swap -->
+    <section id="use">
+      <h2>Transfer and swap</h2>
+      <p>Do it on this page. Your wallet signs every transaction. This site never asks for a seed phrase.</p>
+      <div class="use-widget">
+        <div class="alert-thin">
+          <strong>Pool is thin.</strong> The locked QuickSwap V3 position is about 9.913 POL + 50.56M FRINK. Swaps can slip sharply. Start with a tiny test amount. Contract
+          <code>0x822AC53a3037d328645B5aa7d6A07360AcC23433</code>
+          · Polygon 137.
+        </div>
+        <div class="wallet-bar">
+          <div class="balances">
+            <div><strong id="polBal">— POL</strong></div>
+            <div><strong id="frinkBal">— FRINK</strong></div>
+            <div id="walletMeta" style="margin-top:6px;">Wallet not connected</div>
+          </div>
+          <button type="button" class="btn-send" id="walletBtn" style="width:auto;padding:10px 18px;">Connect wallet</button>
+        </div>
+        <div class="use-tabs">
+          <a class="tab active" id="tabTransfer" href="#transfer">Transfer</a>
+          <a class="tab" id="tabSwap" href="#swap">Swap</a>
+        </div>
+        <div class="use-panel" id="transfer">
+          <p>Send FRINK to another Polygon address. Gas is paid in POL.</p>
+          <form id="transferForm">
+            <div class="mb-3">
+              <label for="toAddress">Recipient</label>
+              <input class="form-control" id="toAddress" autocomplete="off" placeholder="0x…" required />
+            </div>
+            <div class="mb-3">
+              <label for="sendAmount">Amount (FRINK)</label>
+              <div class="d-flex gap-2">
+                <input class="form-control" id="sendAmount" inputmode="decimal" placeholder="0.0" required />
+                <button type="button" class="btn-ghost" id="maxFrink">Max</button>
+              </div>
+            </div>
+            <button type="submit" class="btn-send">Send FRINK</button>
+            <p class="use-status" id="txStatus"></p>
+            <a id="txLink" hidden target="_blank" rel="noopener"></a>
+          </form>
+        </div>
+        <div class="use-panel" id="swap" hidden>
+          <p>Swap through the official QuickSwap V3 router against the locked FRINK/POL pool.</p>
+          <form id="swapForm">
+            <div class="mb-3">
+              <label for="swapDir">Direction</label>
+              <select class="form-select" id="swapDir">
+                <option value="pol-frink">POL → FRINK</option>
+                <option value="frink-pol">FRINK → POL</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="swapAmount">You pay</label>
+              <input class="form-control" id="swapAmount" inputmode="decimal" placeholder="0.0" required />
+            </div>
+            <div class="mb-3">
+              <label for="slippage">Slippage (%)</label>
+              <select class="form-select" id="slippage">
+                <option value="5">5</option>
+                <option value="10" selected>10 (recommended for this pool)</option>
+                <option value="20">20</option>
+              </select>
+            </div>
+            <p class="mb-1">You receive (quote)</p>
+            <p class="quote" id="quoteOut">—</p>
+            <p class="lede-muted" id="quoteNote"></p>
+            <button type="submit" class="btn-send">Swap</button>
+            <p class="use-status" id="swapStatus"></p>
+            <a id="swapLink" hidden target="_blank" rel="noopener"></a>
+          </form>
+          <p class="mt-3 mb-0" style="font-size:0.9rem;color:#aab3cc;">
+            Prefer QuickSwap’s own UI:
+            <a id="quickswapLink" href="https://quickswap.exchange" target="_blank" rel="noopener">Open QuickSwap</a>
+          </p>
+        </div>
       </div>
     </section>
 
@@ -537,7 +671,7 @@
         <strong>Frink Token (FRINK)</strong> is an innovative experimental ERC-20 utility token deployed on the <strong>Polygon PoS Network</strong> with a total supply of <strong>10 billion tokens</strong>.
       </p>
       <p>
-        FRINK is a small experimental ERC-20. It can be transferred and swapped on QuickSwap. There is no separate application layer. Built on Polygon's low-cost infrastructure, typical transfer fees are well under $0.001.
+        FRINK is a small experimental ERC-20. Transfer and swap are on this page. Built on Polygon's low-cost infrastructure, typical transfer fees are well under $0.001.
       </p>
 
       <table class="info-table">
@@ -560,8 +694,8 @@
       <h2>What FRINK does</h2>
       <p>FRINK is a standard ERC-20. Today it can be used for:</p>
       <ul class="feature-list">
-        <li><strong>Transfer</strong> — send FRINK to another Polygon wallet</li>
-        <li><strong>Swap</strong> — trade FRINK/POL on QuickSwap (thin liquidity)</li>
+        <li><strong>Transfer</strong> — send FRINK to another Polygon wallet, on this page</li>
+        <li><strong>Swap</strong> — trade FRINK/POL through the locked QuickSwap V3 pool, on this page (thin liquidity)</li>
       </ul>
       <div class="alert alert-warning mt-4">
         <strong>Withdrawn:</strong> Earlier pages listed creator rewards, a learning platform, token voting, micro-tasks, and DApp access tiers. Those were document drafts, not products. They are removed.
@@ -815,6 +949,7 @@
       Always conduct independent research and consult professionals before participating.
     </p>
     <p style="font-size: 0.85em;">
+      <a href="#use">Transfer / Swap</a> • 
       <a href="whitepaper.html">Whitepaper</a> • 
       <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433">PolygonScan</a> • 
       <a href="https://discord.gg/2MAqQbgP9j">Discord</a> • 
@@ -824,6 +959,8 @@
 
   <!-- Bootstrap Bundle JS (includes Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+  <script src="js/use.js"></script>
 
 </body>
 </html>
