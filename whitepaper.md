@@ -37,7 +37,8 @@ It is a **utility + education + participation** asset.
 | **Contract Address** | `0x822AC53a3037d328645B5aa7d6A07360AcC23433` |
 | **Token Symbol** | FRINK |
 | **Decimals** | 18 |
-| **Total Supply** | 1,000,000,000 FRINK |
+| **Total Supply** | 10,000,000,000 FRINK (Fixed) |
+| **Chain ID** | 137 |
 | **Verification** | Open-source, transparent |
 
 FRINK uses Polygon for fast, low-fee, widely adopted infrastructure ideal for education and experimental utilities.
@@ -71,13 +72,17 @@ FRINK bridges blockchain technology with real creative and educational environme
 
 | Category | Allocation |
 |----------|------------|
-| **Total Supply** | 1,000,000,000 FRINK |
-| **Network** | Polygon (PoS) |
-| **Liquidity Reserve** | 30% |
-| **Development Fund** | 40% |
-| **Public Allocation** | 30% |
+| **Total Supply** | 10,000,000,000 FRINK (Fixed) |
+| **Network** | Polygon PoS (Chain ID: 137) |
+| **Liquidity (DEX)** | 30% — 3,000M FRINK |
+| **Development Team** | 20% — 2,000M FRINK |
+| **Ecosystem Grants** | 10% — 1,000M FRINK |
+| **Staking Rewards** | 10% — 1,000M FRINK |
+| **Community Airdrops** | 15% — 1,500M FRINK |
+| **Treasury Reserve** | 15% — 1,500M FRINK |
 
-✔ All distributions are transparent and verifiable on-chain.  
+Allocation is proposed and not fully implemented on-chain. Actual distribution is visible on PolygonScan. The contract does not include automated vesting or locking.
+
 ✔ No hidden minting or privileged functions.  
 ✔ Tokenomics may be updated with community feedback.
 
@@ -120,8 +125,12 @@ LinkedIn: https://www.linkedin.com/in/alex-seo-39b76a338/
 | Platform | Link |
 |----------|------|
 | Website | https://frinktoken.net |
+| Whitepaper | https://frinktoken.net/whitepaper.html |
+| Discord | https://discord.gg/2MAqQbgP9j |
+| Twitter/X | https://x.com/FrinkTokenNet |
+| Telegram | https://t.me/frinktoken_official |
+| Facebook | https://www.facebook.com/FrinkToken |
 | YouTube | https://youtube.com/@15MChannel |
-| Facebook | https://facebook.com/GToneYS |
 | PolygonScan | https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433 |
 | Developer Contact | contact@frinktoken.net |
 
