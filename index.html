@@ -5,10 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Frink Token (FRINK) — Official Website</title>
+  <title>Transfer and Swap FRINK — Frink Token</title>
 
   <!-- Meta Description -->
-  <meta name="description" content="Frink Token (FRINK) is an experimental ERC-20 on Polygon PoS. Transfer and swap on this site. Official contract and liquidity lock." />
+  <meta name="description" content="Send FRINK or swap FRINK/POL on Polygon. Official Frink Token site. Thin locked QuickSwap pool." />
 
   <!-- Keywords -->
   <meta name="keywords" content="Frink Token, FRINK, Polygon Token, Utility Token, Web3, Blockchain, ERC-20, Experimental Token" />
@@ -18,8 +18,8 @@
 
   <!-- Open Graph (카카오톡, 페이스북, 메신저) -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Frink Token (FRINK) — Official Website" />
-  <meta property="og:description" content="Experimental ERC-20 on Polygon PoS. Transfer and swap on this site. Official contract and liquidity lock." />
+  <meta property="og:title" content="Transfer and Swap FRINK — Frink Token" />
+  <meta property="og:description" content="Send FRINK or swap FRINK/POL on Polygon. Official site. Thin locked pool." />
   <meta property="og:image" content="https://frinktoken.net/cover_1200_630.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -29,8 +29,8 @@
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Frink Token (FRINK) — Official Website" />
-  <meta name="twitter:description" content="Experimental ERC-20 on Polygon PoS. Transfer and swap on this site." />
+  <meta name="twitter:title" content="Transfer and Swap FRINK — Frink Token" />
+  <meta name="twitter:description" content="Send FRINK or swap FRINK/POL on Polygon. Official site." />
   <meta name="twitter:image" content="https://frinktoken.net/cover_1200_630.jpg" />
 
   <!-- Bootstrap 5 CSS -->
@@ -122,20 +122,20 @@
 
     /* Hero Section */
     .hero-section {
-      padding: 140px 20px 60px;
+      padding: 96px 20px 12px;
       text-align: center;
     }
 
     @media (min-width: 768px) {
       .hero-section {
-        padding: 180px 20px 80px;
+        padding: 108px 20px 16px;
       }
     }
 
     .hero-logo {
-      width: 90px;
+      width: 64px;
       filter: drop-shadow(0 0 20px #9B6DFF);
-      margin-bottom: 20px;
+      margin-bottom: 12px;
     }
 
     h1 {
@@ -381,14 +381,16 @@
 
     /* Sections */
     section {
-      margin: 60px 0;
+      margin: 24px 0;
     }
 
     @media (min-width: 768px) {
       section {
-        margin: 90px 0;
+        margin: 32px 0;
       }
     }
+
+    #use h2 { margin-top: 12px; }
 
     /* Footer */
     footer {
@@ -539,14 +541,11 @@
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#use">Transfer / Swap</a></li>
-          <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
-          <li class="nav-item"><a class="nav-link" href="#utility">What it does</a></li>
-          <li class="nav-item"><a class="nav-link" href="#tokenomics">Tokenomics</a></li>
-          <li class="nav-item"><a class="nav-link" href="#liquidity">Liquidity</a></li>
-          <li class="nav-item"><a class="nav-link" href="#channels">Channels</a></li>
-          <li class="nav-item"><a class="nav-link" href="#roadmap">Roadmap</a></li>
+          <li class="nav-item"><a class="nav-link" href="#transfer">Transfer</a></li>
+          <li class="nav-item"><a class="nav-link" href="#swap">Swap</a></li>
           <li class="nav-item"><a class="nav-link" href="whitepaper.html">Whitepaper</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433" target="_blank" rel="noopener">PolygonScan</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://discord.gg/2MAqQbgP9j" target="_blank" rel="noopener">Discord</a></li>
         </ul>
       </div>
     </div>
@@ -559,42 +558,21 @@
     <section class="hero-section">
       <img src="https://frinktoken.net/logo.svg" class="hero-logo" alt="FRINK Logo" />
       <h1>Frink Token (FRINK)</h1>
-      <p class="lead">
-        Experimental ERC-20 on Polygon PoS<br>
-        <small style="font-size: 0.85em; color: #aab3cc;">Transfer and swap on this page. Thin locked LP.</small>
-      </p>
-
-      <div class="mt-4">
-        <a href="#use" class="btn btn-primary">
-          Transfer / Swap
-        </a>
-        <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433" target="_blank" class="btn btn-outline-primary">
-          View on PolygonScan
-        </a>
-        <a href="whitepaper.html" class="btn btn-outline-primary">
-          Read Whitepaper
-        </a>
-      </div>
-
-      <!-- Risk Warning -->
-      <div class="alert alert-danger mt-5">
-        <strong>⚠️ Important Risk Notice:</strong> FRINK is an experimental ERC-20. There is no guarantee of success or value. About 99% of supply is in one wallet. The swap pool is thin. This is NOT investment advice. Only use funds you can afford to lose completely. Read the <a href="whitepaper.html#legal" style="color: var(--danger-red); text-decoration: underline;">full risk disclosure</a> before participating.
-      </div>
-
-      <div class="alert alert-warning mt-3">
-        <strong>Status as of August 18, 2026:</strong> Transfer and swap run on this page. The Team Finance liquidity lock is live until <strong>November 25, 2026</strong>. About <strong>99%</strong> of supply is in the founder wallet. There is no reward program or voting product.
-      </div>
+      <p class="lead">Transfer and swap on Polygon. This page is the official UI.</p>
+      <p class="lede-muted mb-0">Experimental ERC-20 · chain 137 · this site never asks for a seed phrase</p>
     </section>
 
     <!-- Transfer / Swap -->
     <section id="use">
-      <h2>Transfer and swap</h2>
-      <p>Do it on this page. Your wallet signs every transaction. This site never asks for a seed phrase.</p>
       <div class="use-widget">
+        <div class="alert alert-danger" style="margin-top:0;">
+          <strong>Risk:</strong> About 99% of supply is in one wallet. The swap pool is thin. You can lose the amount you send. Not investment advice.
+          <a href="whitepaper.html#legal">Full disclosure</a>
+        </div>
         <div class="alert-thin">
-          <strong>Pool is thin.</strong> The locked QuickSwap V3 position is about 9.913 POL + 50.56M FRINK. Swaps can slip sharply. Start with a tiny test amount. Contract
+          <strong>Pool is thin.</strong> Locked QuickSwap V3 NFT 177734 is about 9.913 POL + 50.56M FRINK. Start with a tiny test. Contract
           <code>0x822AC53a3037d328645B5aa7d6A07360AcC23433</code>
-          · Polygon 137.
+          · unlock November 25, 2026.
         </div>
         <div class="wallet-bar">
           <div class="balances">
@@ -628,7 +606,7 @@
           </form>
         </div>
         <div class="use-panel" id="swap" hidden>
-          <p>Swap through the official QuickSwap V3 router against the locked FRINK/POL pool.</p>
+          <p>Swap FRINK ↔ POL through the locked QuickSwap V3 pool.</p>
           <form id="swapForm">
             <div class="mb-3">
               <label for="swapDir">Direction</label>
@@ -664,290 +642,6 @@
       </div>
     </section>
 
-    <!-- Overview -->
-    <section id="overview">
-      <h2>Project Overview</h2>
-      <p>
-        <strong>Frink Token (FRINK)</strong> is an experimental ERC-20 on the <strong>Polygon PoS Network</strong> with a fixed supply of <strong>10 billion tokens</strong>.
-      </p>
-      <p>
-        Live uses are transfer and swap on this page. Polygon transfer fees are typically well under $0.001. That is a network property, not a FRINK app.
-      </p>
-
-      <table class="info-table">
-        <tbody>
-          <tr><th>Token Name</th><td>Frink Token</td></tr>
-          <tr><th>Symbol</th><td>FRINK</td></tr>
-          <tr><th>Network</th><td>Polygon PoS (Chain ID: 137)</td></tr>
-          <tr><th>Standard</th><td>ERC-20</td></tr>
-          <tr><th>Total Supply</th><td><span class="highlight-purple">10,000,000,000 FRINK</span> (Fixed)</td></tr>
-          <tr><th>Contract Address</th><td><code>0x822AC53a3037d328645B5aa7d6A07360AcC23433</code></td></tr>
-          <tr><th>Deployment Date</th><td>October 31, 2025</td></tr>
-          <tr><th>Contract Type</th><td>Standard ERC-20 (no mint, no burn) with Ownable. The owner wallet holds most of the supply.</td></tr>
-          <tr><th>Source Code</th><td><a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433">Verified on PolygonScan</a></td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- What FRINK does -->
-    <section id="utility">
-      <h2>What FRINK does</h2>
-      <p>FRINK is a standard ERC-20. Today it can be used for:</p>
-      <ul class="feature-list">
-        <li><strong>Transfer</strong> — send FRINK to another Polygon wallet, on this page</li>
-        <li><strong>Swap</strong> — trade FRINK/POL through the locked QuickSwap V3 pool, on this page (thin liquidity)</li>
-      </ul>
-      <div class="alert alert-warning mt-4">
-        <strong>Withdrawn:</strong> Earlier pages listed creator rewards, a learning platform, token voting, micro-tasks, and DApp access tiers. Those were document drafts, not products. They are removed.
-      </div>
-    </section>
-
-    <!-- Tokenomics -->
-    <section id="tokenomics">
-      <h2>Tokenomics</h2>
-
-      <h3>On-chain today (August 18, 2026)</h3>
-      <table class="info-table">
-        <tbody>
-          <tr><th>Total Supply</th><td><span class="highlight-purple">10,000,000,000 FRINK</span> (Fixed)</td></tr>
-          <tr><th>Founder / deployer wallet</th><td><code>0x2432b1229b3e6a284f9a27024b158d2f1a589445</code> — about <strong>99%</strong></td></tr>
-          <tr><th>Published LP</th><td>about <strong>50.56M FRINK + 9.913 POL</strong> (~0.5% of supply)</td></tr>
-          <tr><th>Vesting</th><td>None. No vesting contract.</td></tr>
-          <tr><th>Decimals</th><td>18</td></tr>
-          <tr><th>Transaction Fee</th><td>None (only Polygon gas)</td></tr>
-          <tr><th>Mint / burn</th><td>Not in the contract</td></tr>
-        </tbody>
-      </table>
-
-      <h3>Proposed allocation (not executed)</h3>
-      <div class="alert alert-warning">
-        <strong>Proposal only.</strong> The split below has not been executed. Current holdings are concentrated in the founder wallet. Verify on PolygonScan.
-      </div>
-      <table class="info-table">
-        <tbody>
-          <tr><th>Liquidity (DEX)</th><td>30% — <span class="highlight-purple">3,000M FRINK</span> (actual LP is ~0.5%)</td></tr>
-          <tr><th>Development Team</th><td>20% — <span class="highlight-purple">2,000M FRINK</span></td></tr>
-          <tr><th>Ecosystem Grants</th><td>10% — <span class="highlight-purple">1,000M FRINK</span></td></tr>
-          <tr><th>Community Airdrops</th><td>15% — <span class="highlight-purple">1,500M FRINK</span></td></tr>
-          <tr><th>Treasury Reserve</th><td>25% — <span class="highlight-purple">2,500M FRINK</span></td></tr>
-        </tbody>
-      </table>
-
-      <div class="text-center mt-4">
-        <a href="whitepaper.html#tokenomics" class="btn btn-outline-primary">View Detailed Tokenomics</a>
-      </div>
-    </section>
-
-    <!-- Liquidity & Lock -->
-    <section id="liquidity">
-      <h2>Liquidity &amp; Lock</h2>
-      
-      <div class="alert alert-success">
-        <strong>LP NFT locked:</strong> QuickSwap V3 position 177734 is locked on Team Finance until <strong>November 25, 2026</strong>. The pool is thin (~9.913 POL + 50.56M FRINK). The lock does <strong>not</strong> stop the founder wallet from moving the ~99% of supply it still holds.
-      </div>
-
-      <h3 style="color: var(--success-green);">✅ Current Liquidity Pool</h3>
-      <table class="info-table">
-        <tbody>
-          <tr><th>Pool Type</th><td><strong>QuickSwap V3</strong> (Concentrated Liquidity)</td></tr>
-          <tr><th>Position Type</th><td>NFT Position (Algebra-based V3)</td></tr>
-          <tr><th>NFT ID</th><td><span class="highlight-purple">177734</span></td></tr>
-          <tr><th>Liquidity Amount</th><td><span class="highlight-purple">9.913 POL + 50,560,100 FRINK</span></td></tr>
-          <tr><th>Fee Tier</th><td>0.01%</td></tr>
-          <tr><th>Price Range</th><td>Full Range (0 to ∞)</td></tr>
-          <tr><th>Network</th><td>Polygon PoS</td></tr>
-          <tr><th>Swap on this site</th><td><a href="#swap">frinktoken.net/#swap</a></td></tr>
-          <tr><th>QuickSwap UI</th><td><a href="https://quickswap.exchange/#/swap?currency0=0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270&currency1=0x822AC53a3037d328645B5aa7d6A07360AcC23433">FRINK/POL on QuickSwap</a></td></tr>
-        </tbody>
-      </table>
-
-      <h3 style="color: var(--success-green); margin-top: 50px;">🔒 Liquidity Lock Details</h3>
-      <table class="info-table">
-        <tbody>
-          <tr><th>Lock Status</th><td><strong style="color: var(--success-green);">🟢 ACTIVE & LOCKED</strong></td></tr>
-          <tr><th>Lock Platform</th><td><strong>Team Finance</strong> (audited by CertiK, Hacken & Solidity Finance)</td></tr>
-          <tr><th>Lock Type</th><td>V3 Liquidity NFT Lock</td></tr>
-          <tr><th>Locked Asset</th><td>WPOL/FRINK V3 Position (NFT ID: 177734)</td></tr>
-          <tr><th>Lock Amount</th><td><span class="highlight-purple">100% of liquidity</span> (1 NFT Position)</td></tr>
-          <tr><th>Lock Duration</th><td><span class="highlight-purple">12 months</span></td></tr>
-          <tr><th>Lock Date</th><td>November 25, 2025</td></tr>
-          <tr><th>Unlock Date</th><td><span class="highlight-purple">November 25, 2026</span></td></tr>
-          <tr><th>Owner Wallet</th><td><code>0x2432b1229b3e6a284f9a27024b158d2f1a589445</code></td></tr>
-		  <tr><th>Verification</th><td><a href="https://www.team.finance/view-coin/0x822AC53a3037d328645B5aa7d6A07360AcC23433?name=Frink%20Token&symbol=FRINK&chainid=0x89">Verify on Team Finance</a> → Click "Liquidity locks" tab</td></tr>          
-        </tbody>
-      </table>
-
-      <h3>Lock facts</h3>
-      <ul class="feature-list">
-        <li>The published LP NFT is locked until November 25, 2026</li>
-        <li>Founder-held tokens (~99%) are not locked</li>
-        <li>The pool is thin — swaps can slip sharply</li>
-        <li>Team Finance is the lock platform (audited by CertiK, Hacken, and Solidity Finance)</li>
-        <li>Lock details are publicly verifiable on-chain</li>
-      </ul>
-
-
-
-<h3>🔍 Lock Verification</h3>
-<div class="alert alert-info">
-  <strong>How to Verify the Lock:</strong>
-  <ol class="mb-0 mt-2">
-    <li><strong>Team Finance:</strong> Visit <a href="https://www.team.finance/view-coin/0x822AC53a3037d328645B5aa7d6A07360AcC23433?name=Frink%20Token&symbol=FRINK&chainid=0x89">Team Finance FRINK Page</a> → Click "Liquidity locks" tab → View NFT Position #177734</li>
-    <li><strong>QuickSwap V3:</strong> Visit <a href="https://quickswap.exchange/#/pool/177734">QuickSwap Position #177734</a> (Direct link to NFT Position)</li>
-    <li><strong>PolygonScan:</strong> View <a href="https://polygonscan.com/address/0x2432b1229b3e6a284f9a27024b158d2f1a589445">wallet transactions</a> → See Team Finance lock transaction on November 25, 2025</li>
-  </ol>    
-</div>
-
-
-
-
-      <div class="text-center mt-4">
-        <a href="whitepaper.html#liquidity-lock" class="btn btn-outline-primary">View Full Liquidity Details</a>
-      </div>
-    </section>
-
-	<!-- Official Channels -->
-	<section id="channels">
-	  <h2>Official Channels</h2>
-	  
-	  <div class="alert alert-warning">
-		<strong>Scam warning:</strong> Only trust the links below. The team will never DM you first or ask for a seed phrase.
-        Discord is the public chat. Telegram exists but has little activity.
-	  </div>
-	
-	  <!-- PRIMARY CHANNELS (8개) -->
-	  <div class="row g-3">
-		<div class="col-sm-6 col-md-4 col-lg-3">
-		  <a href="https://frinktoken.net" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">🌐 Website</a>
-		</div>
-		<div class="col-sm-6 col-md-4 col-lg-3">
-		  <a href="https://frinktoken.net/whitepaper.html" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">📜 Whitepaper</a>
-		</div>
-		<div class="col-sm-6 col-md-4 col-lg-3">
-		  <a href="https://discord.gg/2MAqQbgP9j" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">💬 Discord</a>
-		</div>
-		<div class="col-sm-6 col-md-4 col-lg-3">
-		  <a href="https://x.com/FrinkTokenNet" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">𝕏 Twitter/X</a>
-		</div>
-		<div class="col-sm-6 col-md-4 col-lg-3">
-		  <a href="https://t.me/frinktoken_official" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">✈️ Telegram</a>
-		</div>
-		<div class="col-sm-6 col-md-4 col-lg-3">
-		  <a href="https://medium.com/@contact_2545" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">📝 Medium</a>
-		</div>
-		<div class="col-sm-6 col-md-4 col-lg-3">
-		  <a href="https://github.com/frinktoken-official" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">💻 GitHub</a>
-		</div>
-		<div class="col-sm-6 col-md-4 col-lg-3">
-		  <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433" class="btn btn-outline-primary" style="width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center;">📊 PolygonScan</a>
-		</div>
-	  </div>
-	
-	  <!-- ADDITIONAL CHANNELS (5개) -->
-	  <div class="mt-4 pt-3" style="border-top: 1px solid var(--border-color);">
-		<p style="color: #aab3cc; margin-bottom: 10px;">
-		  <strong>Additional Channels:</strong>
-		</p>
-		<p style="margin-bottom: 0;">
-		  <a href="https://www.reddit.com/user/FrinkTokenOfficial" style="color: var(--primary-purple); text-decoration: none;">🤖 Reddit</a> • 
-		  <a href="https://www.facebook.com/FrinkToken" style="color: var(--primary-purple); text-decoration: none;">📘 Facebook</a> • 
-		  <a href="https://www.linkedin.com/in/alex-seo-39b76a338" style="color: var(--primary-purple); text-decoration: none;">💼 LinkedIn</a> • 
-		  <a href="https://bitcointalk.org/index.php?topic=5566014" style="color: var(--primary-purple); text-decoration: none;">🪙 Bitcointalk</a>
-		</p>
-	  </div>
-	
-	  <!-- CONTACT INFO -->
-	  <h3>Contact Information</h3>
-	  <table class="info-table">
-		<tbody>
-		  <tr><th>Email</th><td><a href="mailto:contact@frinktoken.net">contact@frinktoken.net</a></td></tr>
-		  <tr><th>Contract Address</th><td><code>0x822AC53a3037d328645B5aa7d6A07360AcC23433</code></td></tr>
-		</tbody>
-	  </table>
-	
-	  <p class="text-secondary mt-3" style="font-size: 0.9em;">
-		<strong>Security Reminder:</strong> Verify all links and addresses independently. Do not trust unverified sources.
-	  </p>
-	</section>
-
-    <!-- Roadmap -->
-    <section id="roadmap">
-      <h2>Roadmap</h2>
-
-      <div class="alert alert-warning">
-        <strong>This is a record, not a product plan.</strong> Extra headings from earlier drafts were withdrawn. The open item is the LP lock decision before November 25, 2026.
-      </div>
-
-      <h3 style="color: var(--success-green);">✅ Q4 2025 — Foundation (completed)</h3>
-      <ul class="feature-list">
-        <li>✓ Smart Contract Deployment (October 31, 2025) — <strong style="color: var(--success-green);">COMPLETED</strong></li>
-        <li>✓ Community Discord Server — exists (<a href="https://discord.gg/2MAqQbgP9j">invite</a>)</li>
-        <li>✓ Initial Liquidity Launch (QuickSwap V3) — <strong style="color: var(--success-green);">COMPLETED</strong></li>
-        <li>✓ Liquidity Lock (Team Finance) — <strong style="color: var(--success-green);">COMPLETED (unlock November 25, 2026)</strong></li>
-      </ul>
-
-      <h3 style="color: var(--danger-red);">✕ Q1–Q2 2026 — Draft product list withdrawn</h3>
-      <ul class="feature-list">
-        <li>○ Security audit — Not started (no auditor contracted)</li>
-        <li>○ Extra product pages from earlier drafts — Removed from this site</li>
-      </ul>
-
-      <h3 style="color: var(--warning-yellow);">⏳ Q3–Q4 2026 — Restart window</h3>
-      <ul class="feature-list">
-        <li>✓ Public docs aligned with on-chain facts (August 2026)</li>
-        <li>○ Liquidity lock decision before November 25, 2026 — Pending</li>
-      </ul>
-
-      <h3>2027+</h3>
-      <ul class="feature-list">
-        <li>No extra product commitments. Live artifacts remain the token, this site, and the LP lock until it expires.</li>
-      </ul>
-
-      <div class="text-center mt-4">
-        <a href="whitepaper.html#roadmap" class="btn btn-outline-primary">View Full Roadmap</a>
-      </div>
-    </section>
-
-    <!-- Security Notice -->
-    <section>
-      <div class="alert alert-danger">
-        <h3 style="margin-top: 0; font-size: 1.3em; color: var(--danger-red);">
-          🚨 Critical Security & Risk Notice
-        </h3>
-        <p><strong>Before participating, understand these critical points:</strong></p>
-        <ul class="mb-0">
-          <li><strong>No Professional Audit:</strong> The contract has not been audited. The Q1 2026 audit did not happen.</li>
-          <li><strong>Experimental token:</strong> Live uses are transfer and swap. There is no extra product.</li>
-          <li><strong>Concentrated supply:</strong> About 99% of tokens sit in the founder wallet and are not locked.</li>
-          <li><strong>Thin pool:</strong> Swaps can slip sharply. You can lose 100% of funds used.</li>
-          <li><strong>No vesting:</strong> The contract has no automated vesting or token lock.</li>
-          <li><strong>Not investment advice:</strong> Consult professionals before participating.</li>
-        </ul>
-        <p class="mt-3 mb-0">
-          <strong>Read the complete <a href="whitepaper.html#legal" style="color: var(--danger-red); text-decoration: underline;">risk disclosure and legal terms</a> before participating.</strong>
-        </p>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="text-center">
-      <h2>Use FRINK on this page</h2>
-      <p style="font-size: 1.1em;">
-        Transfer and swap are above. The whitepaper states the same facts in more detail.
-      </p>
-      <div class="mt-4">
-        <a href="#use" class="btn btn-primary" style="font-size: 1.1em; padding: 16px 36px;">
-          Transfer / Swap
-        </a>
-        <a href="whitepaper.html" class="btn btn-outline-primary" style="font-size: 1.1em; padding: 16px 36px;">
-          Read Whitepaper
-        </a>
-        <a href="https://discord.gg/2MAqQbgP9j" target="_blank" class="btn btn-outline-primary" style="font-size: 1.1em; padding: 16px 36px;">
-          Discord
-        </a>
-      </div>
-    </section>
-
   </div>
 
   <!-- Footer -->
@@ -960,7 +654,8 @@
       Always verify independently before participating.
     </p>
     <p style="font-size: 0.85em;">
-      <a href="#use">Transfer / Swap</a> • 
+      <a href="#transfer">Transfer</a> • 
+      <a href="#swap">Swap</a> • 
       <a href="whitepaper.html">Whitepaper</a> • 
       <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433">PolygonScan</a> • 
       <a href="https://discord.gg/2MAqQbgP9j">Discord</a> • 

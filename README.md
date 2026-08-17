@@ -77,7 +77,7 @@ This is the same contract listed on [PolygonScan](https://polygonscan.com/token/
 
 | Path | Description |
 |------|-------------|
-| `index.html` | Official website, including transfer and swap |
+| `index.html` | Official transfer and swap UI |
 | `js/use.js` | Wallet transfer and QuickSwap V3 swap |
 | `use.html` | Redirects to the homepage transfer/swap section |
 | `whitepaper.html` / `whitepaper.pdf` | Full whitepaper |
