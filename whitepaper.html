@@ -10,15 +10,15 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-  <meta name="description" content="Official Whitepaper for Frink Token (FRINK) - An innovative experimental utility token on Polygon PoS. Full documentation including technology, tokenomics, roadmap, governance, and risk factors." />
-  <meta name="keywords" content="Frink Token, FRINK, Polygon, Web3, Blockchain, Utility Token, ERC-20, Tokenomics, Governance, Whitepaper" />
+  <meta name="description" content="Official Whitepaper for Frink Token (FRINK), an experimental ERC-20 on Polygon PoS. Token, site, and liquidity lock." />
+  <meta name="keywords" content="Frink Token, FRINK, Polygon, Web3, Blockchain, ERC-20, Tokenomics, Whitepaper" />
 
   <link rel="icon" type="image/svg+xml" href="https://frinktoken.net/logo.svg" />
 
 <!-- Open Graph (카카오톡, 페이스북, 메신저) -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Frink Token (FRINK) — Official Whitepaper v1.0" />
-  <meta property="og:description" content="Innovative experimental Web3 utility token on Polygon PoS. Transparent, community-driven development." />
+  <meta property="og:description" content="Experimental ERC-20 on Polygon PoS. Token, site, and liquidity lock." />
   <meta property="og:image" content="https://frinktoken.net/cover_1200_630.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -29,7 +29,7 @@
 <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Frink Token (FRINK) — Official Whitepaper v1.0" />
-  <meta name="twitter:description" content="Experimental Polygon-based utility token for education and community-driven innovation." />
+  <meta name="twitter:description" content="Experimental ERC-20 on Polygon PoS." />
   <meta name="twitter:image" content="https://frinktoken.net/cover_1200_630.jpg" />
 <style>
   :root {
@@ -451,12 +451,11 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a href="#summary" class="nav-link">Summary</a></li>
         <li class="nav-item"><a href="#problem" class="nav-link">Problem</a></li>
-        <li class="nav-item"><a href="#usecases" class="nav-link">Uses</a></li>
+        <li class="nav-item"><a href="#usecases" class="nav-link">What it does</a></li>
         <li class="nav-item"><a href="#tech" class="nav-link">Tech</a></li>
         <li class="nav-item"><a href="#tokenomics" class="nav-link">Token</a></li>
         <li class="nav-item"><a href="#liquidity-lock" class="nav-link">Liquidity</a></li>
         <li class="nav-item"><a href="#roadmap" class="nav-link">Roadmap</a></li>
-        <li class="nav-item"><a href="#governance" class="nav-link">DAO</a></li>
         <li class="nav-item"><a href="#security" class="nav-link">Security</a></li>
         <li class="nav-item"><a href="#legal" class="nav-link">Legal</a></li>
         <li class="nav-item dropdown">
@@ -486,7 +485,7 @@
   </h1>
   <p class="lead mt-3 mb-4">
     Innovative ERC-20 Utility Token built on Polygon PoS<br>
-    <small class="d-block mt-2">Transparent • Educational • Creator-Focused • Community-Driven</small>
+    <small class="d-block mt-2">Experimental ERC-20 on Polygon PoS</small>
   </p>
 
   <a href="https://frinktoken.net/whitepaper.pdf" class="btn btn-download btn-lg mt-3" download>
@@ -500,18 +499,15 @@
 <section id="summary" class="section">
   <h2>Executive Summary</h2>
   <p>
-    Frink Token (FRINK) is an innovative experimental Web3 utility token 
-    deployed on the Polygon PoS network with a total supply of 
-    10 billion tokens. FRINK is designed to explore lowering Web3 entry 
-    barriers through education-focused applications, creator rewards, 
-    and decentralized governance.
+    Frink Token (FRINK) is an experimental ERC-20 on Polygon PoS with a fixed
+    supply of 10 billion tokens. It can be transferred and swapped. There is no
+    application layer beyond the token contract, the website, and a locked QuickSwap LP.
   </p>
   <p>
     Built on Polygon's low-cost infrastructure, FRINK enables 
     micro-transactions with minimal fees (typically under $0.001), 
-    making blockchain participation more accessible. Through 
-    open-source documentation, FRINK is a small experimental token. Community-driven
-    decision-making is a goal, not a live voting system.
+    making ordinary transfers inexpensive. The public record is this website
+    and the verified contract on PolygonScan.
   </p>
   <p class="text-warning">
     <strong>Important:</strong> FRINK is an experimental utility-focused project. 
@@ -520,7 +516,7 @@
   </p>
   <div class="alert alert-warning">
     <strong>Status as of August 18, 2026:</strong> The ERC-20, website, and Team Finance lock are live.
-    Staking, creator DApps, a learning platform, and Snapshot voting are not built.
+    There is no reward program, learning app, voting product, task board, or DApp tier list.
     About 99% of supply is in the founder wallet. LP unlocks November 25, 2026.
   </div>
   <p>
@@ -545,71 +541,27 @@
   </ul>
 
   <p>
-    <strong>FRINK's Approach:</strong> An innovative, low-cost utility token designed 
-    to develop solutions for education, participation, and functional DApps. 
-    Success requires sustained community engagement and development resources.
+    <strong>FRINK's Approach:</strong> A low-cost experimental ERC-20 on Polygon.
+    Success is not guaranteed.
   </p>
 </section>
 
-<!-- USE CASES -->
+<!-- WHAT FRINK DOES -->
 <section id="usecases" class="section">
-  <h2>Use Cases & Mechanics</h2>
-  <p>FRINK is designed to explore the following use cases (implementation varies by development stage):</p>
-
+  <h2>What FRINK does</h2>
+  <p>FRINK is a standard ERC-20. The live uses are:</p>
   <div class="use-case-box">
-    <h4>1. Creator Rewards System (Planned)</h4>
-    <p>
-      Concept: Creators could earn FRINK tokens for content publishing and community engagement.
-      Supporters could send tips directly, distributed through smart contracts with minimal fees (Polygon gas only).
-    </p>
-    <strong>Mechanism:</strong> ERC-20 transfers<br>
-    <strong>Status:</strong> <span class="text-warning">Not built. Target was Q1–Q2 2026; the date passed with no DApp in this repository.</span>
+    <h4>1. Transfer</h4>
+    <p>Send FRINK to another address on Polygon. Gas is paid in POL.</p>
   </div>
-
   <div class="use-case-box">
-    <h4>2. Web3 Learning Platform (Planned)</h4>
-    <p>
-      Concept: Users could earn FRINK tokens by learning blockchain concepts through educational content.
-      Tokens could potentially be used for premium courses or community features.
-    </p>
-    <strong>Mechanism:</strong> Would require a separate staking/rewards contract (not deployed)<br>
-    <strong>Status:</strong> <span class="text-warning">Not built. Target was Q2 2026; the date passed with no platform in this repository.</span>
+    <h4>2. Swap</h4>
+    <p>Trade FRINK/POL on QuickSwap V3 (NFT 177734). Liquidity is thin: about 9.913 POL + 50,560,100 FRINK.</p>
   </div>
-
-  <div class="use-case-box">
-    <h4>3. Community Governance</h4>
-    <p>
-      FRINK holders <em>could</em> vote on protocol decisions if a Snapshot space existed.
-      1 token = 1 vote is the intended rule, not a live system.
-    </p>
-    <strong>Mechanism:</strong> Snapshot (off-chain) planned; OpenZeppelin Governor not started<br>
-    <strong>Status:</strong> <span class="text-warning">Snapshot space has not been created. Previously marked active in error.</span>
-  </div>
-
-  <div class="use-case-box">
-    <h4>4. Micro Tasks & Freelancing (Planned)</h4>
-    <p>
-      Concept: Developers and contributors could complete small tasks for FRINK rewards.
-      Polygon's low gas fees make small payments economically viable.
-    </p>
-    <strong>Mechanism:</strong> Direct transfers leveraging Polygon's low-cost transactions<br>
-    <strong>Status:</strong> <span class="text-warning">Concept stage - Implementation TBD</span>
-  </div>
-
-  <div class="use-case-box">
-    <h4>5. DApp Access (Future Consideration)</h4>
-    <p>
-      Potential: FRINK holders could gain access to experimental DApps or features.
-      Token amounts could determine participation tiers.
-    </p>
-    <strong>Mechanism:</strong> Token balance verification<br>
-    <strong>Status:</strong> <span class="text-warning">Concept stage - Pending community decision</span>
-  </div>
-
-  <div class="alert alert-info mt-4">
-    <strong>📌 Implementation Note:</strong> Feature development progresses based on available resources, 
-    community priorities, and technical feasibility. Timelines may adjust based on development capacity 
-    and community feedback.
+  <div class="alert alert-warning mt-4">
+    <strong>Withdrawn from this document:</strong> creator rewards, a Web3 learning platform,
+    token voting / Snapshot / DAO, micro-tasks, and DApp access tiers. Those were draft
+    headings, not shipped products.
   </div>
 </section>
 
@@ -636,38 +588,26 @@
             │
 ┌───────────▼─────────────┐
 │ FRINK ERC-20 Contract   │
-│ • Transfer/Approve      │
-│ • Basic ERC-20 only     │
+│ • Transfer / Approve    │
+│ • Ownable, no mint      │
 └───────────┬─────────────┘
             │
 ┌───────────▼─────────────┐
-│    DApp Layer (Planned) │
-│ ├─ Creator Rewards      │
-│ ├─ Learning Platform    │
-│ ├─ Governance DAO       │
-│ └─ Task Marketplace     │
-└───────────┬─────────────┘
-            │
-┌───────────▼─────────────┐
-│  Off-Chain Services     │
-│ ├─ Analytics (Planned)  │
-│ ├─ Notifications (TBD)  │
-│ └─ Data Indexing (TBD)  │
+│ QuickSwap V3 LP (locked)│
+│ NFT 177734 until 2026-11-25 │
 └─────────────────────────┘</pre>
 
   <h3>Technical Stack</h3>
   <ul>
-    <li><strong>Smart Contract:</strong> Solidity 0.8.x, standard ERC-20 implementation</li>
-    <li><strong>Frontend (Planned):</strong> React.js, ethers.js / web3.js</li>
-    <li><strong>Indexing (Under Consideration):</strong> The Graph Protocol or similar</li>
-    <li><strong>Governance:</strong> Snapshot.org space has not been created</li>
-    <li><strong>Storage (If Needed):</strong> IPFS for metadata</li>
+    <li><strong>Smart Contract:</strong> Solidity 0.8.x, standard ERC-20 with Ownable</li>
+    <li><strong>Website:</strong> Static HTML on Cloudflare Pages</li>
+    <li><strong>DEX:</strong> QuickSwap V3 on Polygon</li>
   </ul>
 
   <div class="alert alert-warning">
     <strong>⚠️ Technical Limitation:</strong> The current FRINK contract is a basic ERC-20
-    with Ownable. It has no mint, burn, pause, or staking. The owner wallet currently holds
-    ~99% of supply. Additional functionality would require separate contracts.
+    with Ownable. It has no mint, burn, or pause. The owner wallet currently holds
+    ~99% of supply.
   </div>
 </section>
 
@@ -685,7 +625,7 @@
   </div>
 
   <div class="alert alert-warning">
-    <strong>📌 Distribution Status:</strong> The 6-way split below is a <strong>proposal only</strong> and has not been executed on-chain. Current holdings are concentrated in the founder wallet. Verify on PolygonScan.
+    <strong>📌 Distribution Status:</strong> The split below is a <strong>proposal only</strong> and has not been executed on-chain. Current holdings are concentrated in the founder wallet. Verify on PolygonScan.
   </div>
 
   <h3>Proposed Allocation Breakdown</h3>
@@ -719,29 +659,22 @@
           <td data-label="Category">Ecosystem Grants</td>
           <td data-label="Percentage">10%</td>
           <td data-label="Amount" class="highlight-number">1,000M</td>
-          <td data-label="Proposed Method">Community governance</td>
+          <td data-label="Proposed Method">Manual</td>
           <td data-label="Vesting Plan">Variable per grant</td>
-        </tr>
-        <tr>
-          <td data-label="Category">Staking Rewards</td>
-          <td data-label="Percentage">10%</td>
-          <td data-label="Amount" class="highlight-number">1,000M</td>
-          <td data-label="Proposed Method">Future staking contract</td>
-          <td data-label="Vesting Plan">Target: 2yr distribution (pending implementation)</td>
         </tr>
         <tr>
           <td data-label="Category">Community Airdrops</td>
           <td data-label="Percentage">15%</td>
           <td data-label="Amount" class="highlight-number">1,500M</td>
           <td data-label="Proposed Method">Manual distribution</td>
-          <td data-label="Vesting Plan">Gradual release over 6mo</td>
+          <td data-label="Vesting Plan">Not executed</td>
         </tr>
         <tr>
           <td data-label="Category">Treasury Reserve</td>
-          <td data-label="Percentage">15%</td>
-          <td data-label="Amount" class="highlight-number">1,500M</td>
-          <td data-label="Proposed Method">Multi-sig wallet</td>
-          <td data-label="Vesting Plan">Governed release via DAO</td>
+          <td data-label="Percentage">25%</td>
+          <td data-label="Amount" class="highlight-number">2,500M</td>
+          <td data-label="Proposed Method">Founder wallet today (no multi-sig)</td>
+          <td data-label="Vesting Plan">Not executed</td>
         </tr>
       </tbody>
     </table>
@@ -750,9 +683,8 @@
   <h3>Tokenomics Mechanics</h3>
   <ul>
     <li><strong>Transaction Fee:</strong> None (standard Polygon gas fees apply to all transfers)</li>
-    <li><strong>Staking Rewards:</strong> Not currently implemented. If implemented, target APY 5-15% (subject to available budget and governance)</li>
-    <li><strong>Inflation Control:</strong> No inflation - Fixed supply of 10B tokens</li>
-    <li><strong>Burn Mechanism:</strong> Not currently implemented. Governance could propose burn mechanisms in the future</li>
+    <li><strong>Inflation Control:</strong> No inflation — fixed supply of 10B tokens</li>
+    <li><strong>Burn Mechanism:</strong> Not implemented</li>
   </ul>
 
   <div class="alert alert-danger">
@@ -962,41 +894,25 @@
 
 
     <div class="timeline-item">
-      <h4>Q1 2026 - Phase 2: Ecosystem Development — not delivered</h4>
+      <h4>Q1–Q2 2026 — Draft product list withdrawn</h4>
       <p>
-        ○ Creator Rewards DApp Beta - <span class="text-warning">Not built</span><br>
-        ○ Staking Contract Deployment - <span class="text-warning">Not built</span><br>
-        ○ First Community Governance Vote - <span class="text-warning">Snapshot space was never created</span><br>
-        ○ Educational Content Series - <span class="text-warning">Not published (the previous “5/20 tutorials” claim is withdrawn)</span>
+        Earlier drafts listed extra products. Those headings are removed from this document.<br>
+        ○ Security audit - <span class="text-warning">Not started</span>
       </p>
     </div>
 
     <div class="timeline-item">
-      <h4>Q2 2026 - Phase 3: Growth — not delivered</h4>
+      <h4>Q3–Q4 2026 — Restart window (as of August 18, 2026)</h4>
       <p>
-        ○ Learning Platform MVP - <span class="text-warning">Not built</span><br>
-        ○ Task Marketplace - <span class="text-warning">Not built</span><br>
-        ○ Staking Rewards Launch - <span class="text-warning">Not built (depends on a staking contract that does not exist)</span><br>
-        ○ Partner Integrations - <span class="text-warning">None announced</span>
+        ✓ Public documentation aligned with on-chain facts - <span style="color: var(--success-green);">Done</span><br>
+        ○ Liquidity lock decision before November 25, 2026 - <span class="text-warning">Pending</span>
       </p>
     </div>
 
     <div class="timeline-item">
-      <h4>Q3–Q4 2026 - Restart window (as of August 18, 2026)</h4>
+      <h4>2027+</h4>
       <p>
-        ✓ Public documentation aligned with on-chain facts - <span style="color: var(--success-green);">In progress</span><br>
-        ○ One small utility on the existing ERC-20 - <span class="text-warning">Not started</span><br>
-        ○ Liquidity lock decision before November 25, 2026 - <span class="text-warning">Pending</span><br>
-        ○ DAO treasury, cross-chain bridge, NFT badges, CEX listings - <span class="text-warning">Deferred; not in this window</span>
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <h4>2027+ - Phase 5: Long-term Vision</h4>
-      <p>
-        ○ Full Governance Protocol - <span class="text-warning">Long-term goal</span><br>
-        ○ Strategic Partnerships - <span class="text-warning">Dependent on community growth</span><br>
-        ○ Ecosystem Sustainability - <span class="text-warning">Subject to adoption and resources</span>
+        No product commitments. The live artifacts remain the token, the site, and the LP lock until it expires.
       </p>
     </div>
   </div>
@@ -1007,84 +923,6 @@
     Timelines may vary based on development capacity and priorities.
   </div>
 </section>
-
-<!-- GOVERNANCE -->
-<section id="governance" class="section">
-  <h2>Governance & Community</h2>
-  <p>FRINK does not currently have a live governance system. The structure below is the intended design, not an operating DAO.</p>
-
-  <h3>Governance Structure</h3>
-  <div class="row g-3">
-    <div class="col-md-6">
-      <div class="use-case-box">
-        <h4>📋 Snapshot Voting</h4>
-        <p>
-          <span class="gov-badge">Not created</span>
-          A Snapshot space for FRINK has not been launched. There are no proposals to vote on.
-          1 FRINK = 1 vote is the intended rule if a space is created later.
-        </p>
-        <p><strong>Status:</strong> <span class="text-warning">○ Not created. Previously marked Operational in error.</span></p>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="use-case-box">
-        <h4>⚙️ OpenZeppelin Governor</h4>
-        <p>
-          <span class="gov-badge">Planned</span>
-          On-chain governance for automated execution of approved proposals.
-        </p>
-        <p><strong>Status:</strong> <span class="text-warning">○ Not started. Target was Q2 2026.</span></p>
-      </div>
-    </div>
-  </div>
-
-  <h3>Community Roles</h3>
-  <div class="table-responsive-custom">
-    <table class="table table-dark table-bordered table-stack">
-      <tr>
-        <th>Role</th>
-        <th>FRINK Required</th>
-        <th>Responsibilities</th>
-      </tr>
-      <tr>
-        <td data-label="Role"><strong>Member</strong></td>
-        <td data-label="FRINK Required">1+</td>
-        <td data-label="Responsibilities">Vote on proposals, participate in Discord</td>
-      </tr>
-      <tr>
-        <td data-label="Role"><strong>Contributor</strong></td>
-        <td data-label="FRINK Required">100,000+</td>
-        <td data-label="Responsibilities">Submit proposals (subject to community review)</td>
-      </tr>
-      <tr>
-        <td data-label="Role"><strong>Delegate</strong></td>
-        <td data-label="FRINK Required">1,000,000+</td>
-        <td data-label="Responsibilities">Represent delegated votes, lead initiatives</td>
-      </tr>
-      <tr>
-        <td data-label="Role"><strong>Core Team</strong></td>
-        <td data-label="FRINK Required">N/A</td>
-        <td data-label="Responsibilities">Execute approved proposals, maintain infrastructure</td>
-      </tr>
-    </table>
-  </div>
-
-  <h3>Governance Proposal Types</h3>
-  <ul>
-    <li><strong>Parameter Changes:</strong> Staking APY adjustments, emission rates (7-day voting minimum)</li>
-    <li><strong>Fund Allocation:</strong> Ecosystem grants, marketing budget (14-day voting minimum)</li>
-    <li><strong>Protocol Upgrades:</strong> Smart contract changes (21-day voting + security review required)</li>
-    <li><strong>Partnership Decisions:</strong> Major integrations or collaborations (14-day voting minimum)</li>
-  </ul>
-
-  <div class="alert alert-info">
-    <strong>📌 Governance Limitation:</strong> There is no live Snapshot space and no on-chain Governor.
-    Discord discussion is not a token vote. Any future off-chain vote would be non-binding.
-  </div>
-</section>
-
-
-
 
 <!-- SECURITY -->
 <section id="security" class="section">
@@ -1114,7 +952,7 @@
       <strong>Current Status:</strong> <span class="text-warning">No professional audit completed</span><br>
       • Standard ERC-20 implementation (publicly reviewable)<br>
       • Contract source code available on PolygonScan<br>
-      • Multi-signature wallet planned for treasury (not yet implemented)<br>
+      • No multi-signature wallet (founder EOA holds most supply)<br>
       • No upgrade mechanisms (immutable contract)
     </p>
   </div>
@@ -1202,7 +1040,7 @@
 
   <p>
     FRINK Token is <strong>designed as a utility token and not intended to be a security.</strong><br>
-    It is used for utility-focused, educational, and community-driven purposes with no financial return promises.
+    It is used as an experimental ERC-20 with no financial return promises.
     However, regulatory classification is determined by applicable authorities, not by the project team.
   </p>
 
@@ -1264,11 +1102,6 @@
         <td data-label="Notes">Value at time of receipt</td>
       </tr>
       <tr>
-        <td data-label="Activity">Staking/Rewards</td>
-        <td data-label="Tax Treatment">May be taxable as earned</td>
-        <td data-label="Notes">If staking is implemented</td>
-      </tr>
-      <tr>
         <td data-label="Activity">Token Trading</td>
         <td data-label="Tax Treatment">May trigger capital gains/losses</td>
         <td data-label="Notes">Each trade may be taxable</td>
@@ -1290,9 +1123,8 @@
   
   <h3>Market Context</h3>
   <p>
-    FRINK operates in the broader context of creator economy tools, Web3 education platforms, 
-    and utility token ecosystems. While specific market size estimates vary widely by source 
-    and methodology, these sectors show general growth trends in blockchain adoption.
+    FRINK is a small experimental token on Polygon. It is not a creator-economy platform
+    or an education product. Any “market opportunity” claim is speculative.
   </p>
 
   <div class="alert alert-info">
@@ -1317,7 +1149,7 @@
         <tr>
           <td data-label="Project"><strong>Lens Protocol</strong></td>
           <td data-label="Focus Area">Decentralized social graph</td>
-          <td data-label="FRINK Difference">FRINK focuses on education and creator rewards rather than social networking</td>
+          <td data-label="FRINK Difference">FRINK is a single experimental ERC-20, not a social network</td>
         </tr>
         <tr>
           <td data-label="Project"><strong>Mirror.xyz</strong></td>
@@ -1354,14 +1186,14 @@
     </div>
     <div class="col-md-6">
       <div class="use-case-box">
-        <h4>🏛️ Community Governance</h4>
-        <p>Governance is intended via Snapshot, but no FRINK space exists yet. Token holders cannot vote today.</p>
+        <h4>Public contract</h4>
+        <p>Source is verified on PolygonScan. There is no voting product and no extra DApp.</p>
       </div>
     </div>
     <div class="col-md-6">
       <div class="use-case-box">
-        <h4>📚 Education Focus</h4>
-        <p>Emphasis on learning and onboarding rather than speculation.</p>
+        <h4>Low fees</h4>
+        <p>Polygon transfers are cheap. That is a network property, not a FRINK app.</p>
       </div>
     </div>
   </div>
@@ -1380,7 +1212,7 @@
   <div class="alert alert-warning">
     <strong>📌 Team:</strong> Founder is publicly identified as <strong>Alex Seo</strong>
     (<a href="https://www.linkedin.com/in/alex-seo-39b76a338">LinkedIn</a>).
-    Additional contributors, if any, may remain unnamed. There is no live governance vote overseeing the team.
+    Additional contributors, if any, may remain unnamed.
   </div>
 
   <h3>Core Development Roles</h3>
@@ -1398,35 +1230,33 @@
       </tr>
       <tr>
         <td data-label="Role"><strong>Full Stack Development</strong></td>
-        <td data-label="Responsibility">DApp development, frontend work</td>
+        <td data-label="Responsibility">Website HTML</td>
         <td data-label="Status">Seeking contributors</td>
       </tr>
       <tr>
         <td data-label="Role"><strong>Community Management</strong></td>
-        <td data-label="Responsibility">Discord, governance coordination</td>
-        <td data-label="Status">Founder-run Discord; no token vote</td>
+        <td data-label="Responsibility">Discord</td>
+        <td data-label="Status">Founder-run Discord</td>
       </tr>
       <tr>
         <td data-label="Role"><strong>Content Creation</strong></td>
-        <td data-label="Responsibility">Educational materials, documentation</td>
+        <td data-label="Responsibility">Website and documentation</td>
         <td data-label="Status">Website/docs only in this repo</td>
       </tr>
     </table>
   </div>
 
   <p class="text-secondary mt-3">
-    <em>A governance vote on further team disclosure was planned for Q1 2026 and was not held.
-    There is no Snapshot space to hold that vote.</em>
+    <em>No further team-disclosure vote is scheduled.</em>
   </p>
 
   <h3>Advisory & Support</h3>
-  <p>The project does not currently run community governance. People with relevant
-  expertise can still join Discord and contribute code or docs.</p>
+  <p>People with relevant expertise can join Discord and contribute code or docs.</p>
 
   <div class="alert alert-danger">
     <strong>⚠️ Named founder, concentrated supply:</strong> The founder is publicly named.
     Direct accountability is still limited because ~99% of tokens sit in a single EOA,
-    vesting is manual, and there is no live token vote. Evaluate that risk accordingly.
+    vesting is manual. Evaluate that risk accordingly.
   </div>
 </section>
 
@@ -1447,18 +1277,8 @@
     <li><strong>Treasury:</strong> No multi-signature wallet. Tokens are in the founder EOA.</li>
   </ul>
 
-  <h3>Potential Revenue Models (not built)</h3>
-  <p>As the project develops, potential revenue sources could include:</p>
-  <ul>
-    <li>Optional DApp transaction fees (subject to governance approval)</li>
-    <li>Premium features in learning platform (development stage)</li>
-    <li>Marketplace commissions (planning stage)</li>
-  </ul>
-
-  <p class="text-warning">
-    <strong>Important:</strong> Revenue model implementation depends on development resources, 
-    community participation, and governance decisions. Timeline and success are not guaranteed.
-  </p>
+  <h3>Potential Revenue Models (none exist)</h3>
+  <p>There is no revenue product. Hypothetical fees or marketplaces are not in this project.</p>
 
   <h3>Sustainability Path</h3>
   <ul>
@@ -1508,17 +1328,17 @@
         <tr>
           <td data-label="Risk Category"><strong>Liquidity</strong></td>
           <td data-label="Description">Insufficient trading volume</td>
-          <td data-label="Mitigation Attempts">Initial DEX liquidity provided; community education about liquidity risks</td>
+          <td data-label="Mitigation Attempts">Initial DEX liquidity provided; LP locked until November 25, 2026</td>
         </tr>
         <tr>
           <td data-label="Risk Category"><strong>Adoption</strong></td>
           <td data-label="Description">Insufficient user growth</td>
-          <td data-label="Mitigation Attempts">Focus on education; building useful tools; community engagement</td>
+          <td data-label="Mitigation Attempts">Honest public docs; Discord; no fake product list</td>
         </tr>
         <tr>
           <td data-label="Risk Category"><strong>Execution</strong></td>
           <td data-label="Description">Team unable to deliver features</td>
-          <td data-label="Mitigation Attempts">Realistic roadmap; seeking community developers; open-source approach</td>
+          <td data-label="Mitigation Attempts">This document now states what exists; extra product drafts were removed</td>
         </tr>
       </tbody>
     </table>
@@ -1557,7 +1377,7 @@
     <div class="col-md-6">
       <div class="use-case-box">
         <h4>Step 3: Join Community</h4>
-        <p>Discord → Learn about governance → Participate in discussions. Don't invest more than you learn about.</p>
+        <p>Discord is the public chat. Read this whitepaper and the risk section first.</p>
       </div>
     </div>
     <div class="col-md-6">
@@ -1650,7 +1470,7 @@
 
   <p>
     Frink Token (FRINK) is an <strong>innovative experimental Web3 project</strong> exploring concepts 
-    in creator rewards, education, and community governance. This whitepaper presents 
+    in a small experimental ERC-20 on Polygon. This whitepaper presents 
     an honest assessment of the project's current state, development progress, and future directions.
   </p>
 
@@ -1661,21 +1481,21 @@
 
   <div class="alert alert-danger">
     <strong>⚠️ Final Warning:</strong> FRINK is a high-risk experimental utility-focused token. 
-    It has no revenue, no professional audit, and no live token vote.
+    It has no revenue and no professional audit.
     Most roadmap items for Q1–Q2 2026 were not delivered. 
     Price volatility is expected and value depends on adoption and utility development.
     <br><br>
     <strong>Only participate if you:</strong><br>
     ✓ Can afford to lose your entire investment<br>
     ✓ Understand blockchain technology risks<br>
-    ✓ Are interested in the educational/experimental aspects<br>
+    ✓ Accept that this is an experimental ERC-20 with no extra app<br>
     ✓ Do not expect guaranteed financial returns<br>
     ✓ Have read and understood all risk disclosures
   </div>
 
   <div class="alert alert-info">
     <strong>📢 Join Responsibly:</strong> If you understand and accept the risks, 
-    you're welcome to join Discord and contribute. There is no live governance vote.
+    you're welcome to join Discord and contribute.
   </div>
 </section>
 
@@ -1710,7 +1530,6 @@ Decimals: 18</pre>
   <ul>
     <li><strong>PolygonScan:</strong> <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433">View Token Contract</a></li>
     <li><strong>QuickSwap:</strong> <a href="https://quickswap.exchange">Trade FRINK</a></li>
-    <li><strong>Snapshot Governance:</strong> No FRINK space. Do not treat snapshot.org as a FRINK voting page.</li>
     <li><strong>Official Website:</strong> <a href="https://frinktoken.net">frinktoken.net</a></li>
   </ul>
 </section>
@@ -1723,7 +1542,7 @@ Decimals: 18</pre>
     <ul style="margin-bottom: 0;">
       <li>FRINK is a utility-focused token with value dependent on adoption and development progress</li>
       <li>The project is NOT audited by professional security firms (the Q1 2026 audit did not happen)</li>
-      <li>The founder is publicly named; ~99% of supply is in that wallet. There is no live token vote.</li>
+      <li>The founder is publicly named; ~99% of supply is in that wallet.</li>
       <li>Most Q1–Q2 2026 roadmap features were not built</li>
       <li>Success requires sustained community participation and development</li>
       <li>This is NOT investment advice - seek professional counsel</li>

@@ -20,7 +20,7 @@ FRINK Token is an experimental Web3 utility token developed under the GTone Netw
 ### Key Principles
 
 - **Transparency** — Open development and clear communication
-- **Community-Driven** — Intended; no live token vote yet
+- **Experimental** — Early-stage token, not a product suite
 - **Experimental** — Testing innovative Web3 use cases
 - **Utility-Focused** — Building practical applications
 
@@ -47,8 +47,7 @@ This is the same contract listed on [PolygonScan](https://polygonscan.com/token/
 | Item | Reality |
 |------|---------|
 | Token + website + LP lock | Live. LP unlocks **November 25, 2026**. |
-| Staking / creator DApp / learning platform | **Not built.** This repo is HTML/docs only. |
-| Snapshot governance | **No space.** Earlier “LIVE” labels were wrong. |
+| Extra product drafts (rewards, learning, voting, tasks, DApp tiers) | **Removed** from public docs. Never shipped. |
 | Supply | Founder wallet `0x2432b1229b3e6a284f9a27024b158d2f1a589445` holds **~99%**. Published LP is ~50.56M FRINK + 9.913 POL. |
 | Audit | **None.** The Q1 2026 audit did not happen. |
 

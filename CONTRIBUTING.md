@@ -266,7 +266,6 @@ Contributors will be:
 - Acknowledged in release notes
 - Listed in contributors section
 - Recognized in Discord community
-- May receive future community rewards (TBD)
 
 ---
 
