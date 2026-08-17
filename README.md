@@ -2,135 +2,138 @@
 
 Official FRINK Token repository — a transparent, utility-driven Web3 project built on Polygon.
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Network-Polygon%20PoS-8247E5?style=flat-square&logo=polygon" />
-  <img src="https://img.shields.io/badge/Token-FRINK-4b61d1?style=flat-square" />
-  <img src="https://img.shields.io/badge/Type-Utility%20Token-2c974b?style=flat-square" />
-  <img src="https://img.shields.io/badge/Status-Active-success?style=flat-square" />
-</p>
+**Transparent, utility-driven Web3 project building FRINK Token on Polygon.**
+
+[![Website](https://img.shields.io/badge/Website-frinktoken.net-blue)](https://frinktoken.net)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Us-7289DA)](https://discord.gg/2MAqQbgP9j)
+[![Twitter](https://img.shields.io/badge/Twitter-@FrinkTokenNet-1DA1F2)](https://x.com/FrinkTokenNet)
+[![Telegram](https://img.shields.io/badge/Telegram-Join-26A5E4)](https://t.me/frinktoken_official)
+[![Contract](https://img.shields.io/badge/Contract-PolygonScan-8B3A96)](https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433)
+[![Liquidity](https://img.shields.io/badge/Liquidity-Locked%2012%20Months-success)](https://www.team.finance/view-coin/0x822AC53a3037d328645B5aa7d6A07360AcC23433)
 
 ---
 
-## 🚀 Overview
+## About FRINK Token
 
-**FRINK Token (FRINK)** is an experimental, transparent, utility-driven Web3 token built for the future FRINK Network —  
-a lightweight ecosystem focused on digital creativity, media distribution, and community utilities.
+FRINK Token is an experimental Web3 utility token developed under the GTone Network. Built on **Polygon PoS** for fast, low-cost transactions, FRINK aims to support digital services, community participation, and blockchain-driven innovation experiments.
 
-The project emphasizes:
-- Transparency  
-- Simple & verifiable token design  
-- Open-source development  
-- Real-world utility experiments on Polygon  
+### Key Principles
 
----
-
-## 🔗 Smart Contract  
-The initial contract is deployed on Polygon Amoy Testnet for development and verification:
-
-| Network | Chain | Status | Contract Address |
-|---------|--------|---------|-----------------------------|
-| Polygon Amoy Testnet | Testnet | Active | `0x822AC53a3037d328645B5aa7d6A07360AcC23433` |
-
-> Mainnet deployment will follow after stability and ecosystem utilities are finalized.
+- **Transparency** — Open development and clear communication
+- **Community-Driven** — Governance and feedback integration
+- **Experimental** — Testing innovative Web3 use cases
+- **Utility-Focused** — Building practical applications
 
 ---
 
-## 🧩 Token Specifications
+## Quick Facts
 
-| Item | Value |
-|------|--------|
-| **Token Name** | FRINK Token |
-| **Symbol** | FRINK |
-| **Decimals** | 18 |
-| **Total Supply** | 10,000,000,000 FRINK (initial testnet supply) |
+| Property | Details |
+|----------|---------|
+| **Token Name** | Frink Token (FRINK) |
+| **Network** | Polygon PoS (Chain ID: 137) |
+| **Contract** | `0x822AC53a3037d328645B5aa7d6A07360AcC23433` |
 | **Standard** | ERC-20 |
-| **Network** | Polygon |
+| **Decimals** | 18 |
+| **Total Supply** | 10,000,000,000 (Fixed) |
+| **Deployment** | October 31, 2025 |
+
+This is the same contract listed on [PolygonScan](https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433). It is **not** a testnet deployment.
 
 ---
 
-## 🌐 Official Links
+## Official Links
 
-| Category | Link |
-|---------|------|
-| **Website** | https://frinktoken.net |
-| **Medium** | https://medium.com/@contact_2545 |
-| **LinkedIn** | https://www.linkedin.com/in/alex-seo-39b76a338 |
-| **Discord** | https://discord.gg/jHcY7pkkc |
-| **Developer Contact** | contact@frinktoken.net |
-
----
-
-## 🎯 Purpose & Utility
-
-FRINK Token is being designed for:
-
-### 1. **Creator Ecosystem Utility**
-- Access to creative tools  
-- Media distribution utilities  
-- Digital assets & content-driven features  
-
-### 2. **Community Participation**
-- Access to exclusive project channels  
-- Voting on experimental project features  
-- Early-access to ecosystem updates  
-
-### 3. **Web3 Interaction Layer**
-- Future on-chain utilities  
-- Micro-transactions  
-- Service access tokens  
+| Platform | Link |
+|----------|------|
+| **Website** | [frinktoken.net](https://frinktoken.net) |
+| **Whitepaper** | [frinktoken.net/whitepaper.html](https://frinktoken.net/whitepaper.html) |
+| **Discord** | [Join Community](https://discord.gg/2MAqQbgP9j) |
+| **Twitter/X** | [@FrinkTokenNet](https://x.com/FrinkTokenNet) |
+| **Telegram** | [Official Channel](https://t.me/frinktoken_official) |
+| **Medium** | [@contact_2545](https://medium.com/@contact_2545) |
+| **GitHub org** | [frinktoken-official](https://github.com/frinktoken-official) |
+| **LinkedIn** | [Alex Seo](https://www.linkedin.com/in/alex-seo-39b76a338) |
+| **Email** | contact@frinktoken.net |
+| **PolygonScan** | [Token contract](https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433) |
+| **Liquidity lock** | [Team Finance](https://www.team.finance/view-coin/0x822AC53a3037d328645B5aa7d6A07360AcC23433) |
+| **Trade** | [FRINK/POL on QuickSwap](https://quickswap.exchange/#/swap?currency0=0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270&currency1=0x822AC53a3037d328645B5aa7d6A07360AcC23433) |
 
 ---
 
-## 🛠️ Repository Structure
+## Repository contents
 
-
----
-
-## 🧮 Roadmap
-
-### ✔ Phase 1 — Setup (Completed)
-- Polygon Amoy deployment  
-- GitHub organization setup  
-- Official repository created  
-- Contract verification prep  
-
-### ⏳ Phase 2 — Documentation
-- Whitepaper publishing (in progress)  
-- PolygonScan official info submission  
-- Branding assets & website update  
-
-### 🔜 Phase 3 — Ecosystem Build
-- Utility features prototype  
-- Creator tools integration  
-- Community access utilities  
-
-### 🔮 Phase 4 — Mainnet Strategy
-- Audit readiness  
-- Mainnet deployment  
-- Token distribution plan  
+| Path | Description |
+|------|-------------|
+| `index.html` | Official website |
+| `whitepaper.html` / `whitepaper.pdf` | Full whitepaper |
+| `guides/quickswap-liquidity-guide.html` | QuickSwap liquidity guide |
+| `SECURITY.md` | Vulnerability reporting |
+| `CONTRIBUTING.md` | How to contribute |
+| `LICENSE` | MIT License |
 
 ---
 
-## 🔒 Security & Transparency
+## For developers
 
-FRINK Token prioritizes:
+- **Network:** Polygon PoS (Chain ID: 137)
+- **RPC:** https://polygon-rpc.com
+- **Explorer:** https://polygonscan.com
 
-- Simple, audit-friendly contract design  
-- No hidden mint functions (unless disclosed)  
-- No centralized control over user assets  
-- Open-source code for verification  
+Add FRINK in MetaMask:
 
-Security audits will be added before mainnet deployment.
+```
+Token Contract Address: 0x822AC53a3037d328645B5aa7d6A07360AcC23433
+Token Symbol: FRINK
+Token Decimals: 18
+```
 
----
-
-## 📬 Contact
-
-For all inquiries:  
-**contact@frinktoken.net**
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 
 ---
 
-## © 2025 FRINK Token  
-Transparent. Open. Utility-Driven.
+## Getting started
 
+### Community
+
+1. Read the [Whitepaper](https://frinktoken.net/whitepaper.html)
+2. Join [Discord](https://discord.gg/2MAqQbgP9j)
+3. Follow [@FrinkTokenNet](https://x.com/FrinkTokenNet)
+
+### Developers
+
+1. This repository: [frinktoken-official/frink-token](https://github.com/frinktoken-official/frink-token)
+2. [Contributing Guidelines](CONTRIBUTING.md)
+3. [Security Policy](SECURITY.md)
+
+---
+
+## Important notice
+
+FRINK is an **experimental utility token** with **no financial guarantees**.
+
+- NOT an investment product
+- NO promises of profit or returns
+- HIGH RISK — potential 100% loss
+- Experimental Web3 project
+- Early-stage development
+
+Always Do Your Own Research (DYOR).
+
+The official team will never DM you first. Never share private keys or a seed phrase. Verify the contract address on PolygonScan before interacting.
+
+---
+
+## Security
+
+Liquidity is locked for 12 months via Team Finance. Report vulnerabilities to **contact@frinktoken.net** with subject `SECURITY: [Description]`. See [SECURITY.md](SECURITY.md).
+
+---
+
+## License
+
+MIT License — see [LICENSE](LICENSE).
+
+---
+
+**© 2025 FRINK Token.** Built by the FRINK Token Team.
