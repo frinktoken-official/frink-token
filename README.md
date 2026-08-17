@@ -20,7 +20,7 @@ FRINK Token is an experimental Web3 utility token developed under the GTone Netw
 ### Key Principles
 
 - **Transparency** — Open development and clear communication
-- **Community-Driven** — Governance and feedback integration
+- **Community-Driven** — Intended; no live token vote yet
 - **Experimental** — Testing innovative Web3 use cases
 - **Utility-Focused** — Building practical applications
 
@@ -39,6 +39,18 @@ FRINK Token is an experimental Web3 utility token developed under the GTone Netw
 | **Deployment** | October 31, 2025 |
 
 This is the same contract listed on [PolygonScan](https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433). It is **not** a testnet deployment.
+
+---
+
+## Current status (August 18, 2026)
+
+| Item | Reality |
+|------|---------|
+| Token + website + LP lock | Live. LP unlocks **November 25, 2026**. |
+| Staking / creator DApp / learning platform | **Not built.** This repo is HTML/docs only. |
+| Snapshot governance | **No space.** Earlier “LIVE” labels were wrong. |
+| Supply | Founder wallet `0x2432b1229b3e6a284f9a27024b158d2f1a589445` holds **~99%**. Published LP is ~50.56M FRINK + 9.913 POL. |
+| Audit | **None.** The Q1 2026 audit did not happen. |
 
 ---
 
@@ -126,7 +138,7 @@ The official team will never DM you first. Never share private keys or a seed ph
 
 ## Security
 
-Liquidity is locked for 12 months via Team Finance. Report vulnerabilities to **contact@frinktoken.net** with subject `SECURITY: [Description]`. See [SECURITY.md](SECURITY.md).
+Liquidity is locked until **November 25, 2026** via Team Finance (LP NFT only; founder-held tokens are not locked). Report vulnerabilities to **contact@frinktoken.net** with subject `SECURITY: [Description]`. See [SECURITY.md](SECURITY.md).
 
 ---
 

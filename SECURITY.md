@@ -215,16 +215,15 @@ Check: Look for 🔒 in browser address bar
 - ✅ **Deployed on Polygon PoS:** Secure, established network
 
 #### Liquidity
-- ✅ **Locked for 12 months** via Team Finance
-- ✅ **Verification link:** Public and transparent
-- ✅ **No team allocation:** Fair launch
-- ✅ **LP tokens secured:** Team Finance custody
+- ✅ **LP NFT locked until November 25, 2026** via Team Finance
+- ✅ **Verification link:** Public on Team Finance
+- ⚠️ **Not a fair launch:** The founder/deployer wallet holds about **99%** of supply. Those tokens are not locked in the LP.
+- ✅ **LP tokens secured:** Team Finance custody of NFT 177734 until unlock
 
 #### Infrastructure
-- ✅ **HTTPS enabled:** SSL/TLS encryption
-- ✅ **Regular backups:** Data protection
-- ✅ **Access controls:** Limited admin access
-- ✅ **Monitoring:** Active threat detection
+- ✅ **HTTPS enabled:** Site served on frinktoken.net
+- ⚠️ **No professional audit** of the token contract
+- ⚠️ **No bug bounty program** (target was Q1 2026; reports still go to contact@frinktoken.net)
 
 ---
 
@@ -281,17 +280,19 @@ Security updates will be shared through:
 
 ## 🎯 Security Roadmap
 
-### Planned Security Enhancements
+### Status as of August 18, 2026
 
-**Q1 2026:**
-- 🔄 Professional smart contract audit
-- 🔄 Bug bounty program
-- 🔄 Enhanced monitoring systems
+**Q1 2026 (missed):**
+- Professional smart contract audit — not started
+- Bug bounty program — not launched
+- Enhanced monitoring — not claimed
 
-**Q2 2026:**
-- 🔄 Security certification
-- 🔄 Advanced threat detection
-- 🔄 Community security training
+**Q2 2026 (missed):**
+- Security certification — not started
+- Advanced threat detection — not claimed
+- Community security training — not published
+
+**Next:** Keep using `contact@frinktoken.net` with subject `SECURITY: [Description]`. Do not advertise an audit or bounty that does not exist.
 
 ---
 
@@ -343,7 +344,7 @@ Security researchers who responsibly disclose vulnerabilities are valued members
 ---
 
 **Version:** 1.0  
-**Last Updated:** November 26, 2025
+**Last Updated:** August 18, 2026
 
 ---
 

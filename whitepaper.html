@@ -53,6 +53,14 @@
     font-size: 16px;
   }
 
+  @media print {
+    body, .section, .use-case-box, .alert, table {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    a[href]::after { content: none !important; }
+  }
+
   @media (max-width: 768px) {
     body { font-size: 15px; }
     h1 { font-size: 1.75rem !important; }
@@ -502,18 +510,24 @@
     Built on Polygon's low-cost infrastructure, FRINK enables 
     micro-transactions with minimal fees (typically under $0.001), 
     making blockchain participation more accessible. Through 
-    open-source development and community-driven decision-making, FRINK 
-    serves as a transparent ecosystem for developing Web3 utility concepts.
+    open-source documentation, FRINK is a small experimental token. Community-driven
+    decision-making is a goal, not a live voting system.
   </p>
   <p class="text-warning">
     <strong>Important:</strong> FRINK is an experimental utility-focused project. 
     Success depends on sustained community participation and development. 
     Participation involves significant risk.
   </p>
+  <div class="alert alert-warning">
+    <strong>Status as of August 18, 2026:</strong> The ERC-20, website, and Team Finance lock are live.
+    Staking, creator DApps, a learning platform, and Snapshot voting are not built.
+    About 99% of supply is in the founder wallet. LP unlocks November 25, 2026.
+  </div>
   <p>
   <strong>Liquidity Protection:</strong> Initial liquidity has been locked for 12 months 
-  via Team Finance (triple-audited platform), ensuring no rug pull risk and demonstrating 
-  long-term commitment.
+  via Team Finance (triple-audited lock platform). That lock stops the LP NFT from being
+  withdrawn until November 25, 2026. It does <strong>not</strong> stop the founder wallet
+  from transferring the ~99% of supply it still holds.
   </p>
 </section>
 
@@ -549,7 +563,7 @@
       Supporters could send tips directly, distributed through smart contracts with minimal fees (Polygon gas only).
     </p>
     <strong>Mechanism:</strong> ERC-20 transfers<br>
-    <strong>Status:</strong> <span class="text-warning">Concept stage - Implementation Q1-Q2 2026</span>
+    <strong>Status:</strong> <span class="text-warning">Not built. Target was Q1–Q2 2026; the date passed with no DApp in this repository.</span>
   </div>
 
   <div class="use-case-box">
@@ -558,18 +572,18 @@
       Concept: Users could earn FRINK tokens by learning blockchain concepts through educational content.
       Tokens could potentially be used for premium courses or community features.
     </p>
-    <strong>Mechanism:</strong> Planned staking and reward distribution (Target APY 5-15%, subject to governance)<br>
-    <strong>Status:</strong> <span class="text-warning">Development phase - Launch target Q2 2026</span>
+    <strong>Mechanism:</strong> Would require a separate staking/rewards contract (not deployed)<br>
+    <strong>Status:</strong> <span class="text-warning">Not built. Target was Q2 2026; the date passed with no platform in this repository.</span>
   </div>
 
   <div class="use-case-box">
     <h4>3. Community Governance</h4>
     <p>
-      FRINK holders can vote on protocol decisions, fund allocations, and feature development.
-      1 token = 1 vote in governance proposals.
+      FRINK holders <em>could</em> vote on protocol decisions if a Snapshot space existed.
+      1 token = 1 vote is the intended rule, not a live system.
     </p>
-    <strong>Mechanism:</strong> Snapshot voting (off-chain) + OpenZeppelin Governor (planned for on-chain)<br>
-    <strong>Status:</strong> <span style="color: var(--success-green);">✓ Active via Snapshot.org</span>
+    <strong>Mechanism:</strong> Snapshot (off-chain) planned; OpenZeppelin Governor not started<br>
+    <strong>Status:</strong> <span class="text-warning">Snapshot space has not been created. Previously marked active in error.</span>
   </div>
 
   <div class="use-case-box">
@@ -646,14 +660,14 @@
     <li><strong>Smart Contract:</strong> Solidity 0.8.x, standard ERC-20 implementation</li>
     <li><strong>Frontend (Planned):</strong> React.js, ethers.js / web3.js</li>
     <li><strong>Indexing (Under Consideration):</strong> The Graph Protocol or similar</li>
-    <li><strong>Governance:</strong> Snapshot.org (currently active)</li>
+    <li><strong>Governance:</strong> Snapshot.org space has not been created</li>
     <li><strong>Storage (If Needed):</strong> IPFS for metadata</li>
   </ul>
 
   <div class="alert alert-warning">
-    <strong>⚠️ Technical Limitation:</strong> The current FRINK contract is a basic ERC-20 
-    with no built-in staking, burning, or minting capabilities. Additional functionality 
-    will require separate smart contracts and integration work.
+    <strong>⚠️ Technical Limitation:</strong> The current FRINK contract is a basic ERC-20
+    with Ownable. It has no mint, burn, pause, or staking. The owner wallet currently holds
+    ~99% of supply. Additional functionality would require separate contracts.
   </div>
 </section>
 
@@ -664,15 +678,14 @@
   <div class="table-responsive-custom">
     <table class="table table-dark table-bordered">
       <tr><th style="width: 50%;">Total Supply</th><td class="highlight-number">10,000,000,000 FRINK (Fixed)</td></tr>
-      <tr><th>Planned Liquidity Reserve</th><td>3,000,000,000 (30%)</td></tr>
-      <tr><th>Planned Development Fund</th><td>4,000,000,000 (40%)</td></tr>
-      <tr><th>Planned Community & Public</th><td>3,000,000,000 (30%)</td></tr>
+      <tr><th>On-chain (August 18, 2026)</th><td>Founder/deployer wallet holds ~99% of supply</td></tr>
+      <tr><th>Founder wallet</th><td><code>0x2432b1229b3e6a284f9a27024b158d2f1a589445</code></td></tr>
+      <tr><th>Published LP</th><td>~50.56M FRINK + 9.913 POL (~0.5% of supply, not 30%)</td></tr>
     </table>
   </div>
 
   <div class="alert alert-warning">
-    <strong>📌 Distribution Status:</strong> Token allocation is proposed but not yet fully implemented. 
-    Current distribution may differ from these targets. Actual distribution is tracked on-chain via PolygonScan.
+    <strong>📌 Distribution Status:</strong> The 6-way split below is a <strong>proposal only</strong> and has not been executed on-chain. Current holdings are concentrated in the founder wallet. Verify on PolygonScan.
   </div>
 
   <h3>Proposed Allocation Breakdown</h3>
@@ -693,7 +706,7 @@
           <td data-label="Percentage">30%</td>
           <td data-label="Amount" class="highlight-number">3,000M</td>
           <td data-label="Proposed Method">Uniswap v3 / QuickSwap</td>
-          <td data-label="Vesting Plan">Target: 12mo lock (pending implementation)</td>
+          <td data-label="Vesting Plan">LP NFT locked via Team Finance until November 25, 2026 (amount is not 30% of supply)</td>
         </tr>
         <tr>
           <td data-label="Category">Development Team</td>
@@ -888,7 +901,7 @@
   <h3>Security & Trust</h3>
   <ul>
     <li><strong>100% Liquidity Locked:</strong> All initial liquidity is locked for 12 months</li>
-    <li><strong>No Rug Pull Risk:</strong> Liquidity cannot be removed until November 25, 2026</li>
+    <li><strong>LP lock:</strong> Liquidity cannot be removed until November 25, 2026. Founder-held tokens are not locked.</li>
     <li><strong>Triple-Audited Platform:</strong> Team Finance audited by CertiK, Hacken, and Solidity Finance</li>
     <li><strong>Publicly Verifiable:</strong> All lock details visible on-chain</li>
     <li><strong>Community Protection:</strong> Lock demonstrates long-term commitment</li>
@@ -926,7 +939,7 @@
 		✓ Community Discord Server Created - <span style="color: var(--success-green);">Live (Early Stage)</span><br>
 		✓ Initial Liquidity Launch (QuickSwap V3) - <span style="color: var(--success-green);">Completed (NFT ID 177734)</span><br>
 		✓ Liquidity Lock (Team Finance) - <span style="color: var(--success-green);">✅ Completed (November 25, 2025)</span><br>
-		○ Security Audit - <span class="text-warning">Planned for Q1 2026 (no contract signed yet)</span>
+		○ Security Audit - <span class="text-warning">Not started. Target was Q1 2026; no auditor contracted.</span>
 	  </p>
 	</div>
 
@@ -949,32 +962,32 @@
 
 
     <div class="timeline-item">
-      <h4>Q1 2026 - Phase 2: Ecosystem Development</h4>
+      <h4>Q1 2026 - Phase 2: Ecosystem Development — not delivered</h4>
       <p>
-        ○ Creator Rewards DApp Beta - <span class="text-warning">Target release (development stage)</span><br>
-        ○ Staking Contract Deployment - <span class="text-warning">Planned (pending development)</span><br>
-        ○ First Community Governance Vote - <span class="text-warning">Planned</span><br>
-        ○ Educational Content Series - <span class="text-warning">In progress (5/20 tutorials)</span>
+        ○ Creator Rewards DApp Beta - <span class="text-warning">Not built</span><br>
+        ○ Staking Contract Deployment - <span class="text-warning">Not built</span><br>
+        ○ First Community Governance Vote - <span class="text-warning">Snapshot space was never created</span><br>
+        ○ Educational Content Series - <span class="text-warning">Not published (the previous “5/20 tutorials” claim is withdrawn)</span>
       </p>
     </div>
 
     <div class="timeline-item">
-      <h4>Q2 2026 - Phase 3: Growth (Tentative)</h4>
+      <h4>Q2 2026 - Phase 3: Growth — not delivered</h4>
       <p>
-        ○ Learning Platform MVP - <span class="text-warning">Tentative target</span><br>
-        ○ Task Marketplace Concept - <span class="text-warning">Under consideration</span><br>
-        ○ Staking Rewards Launch - <span class="text-warning">Dependent on Q1 2026 development</span><br>
-        ○ Partner Integrations - <span class="text-warning">Exploratory discussions</span>
+        ○ Learning Platform MVP - <span class="text-warning">Not built</span><br>
+        ○ Task Marketplace - <span class="text-warning">Not built</span><br>
+        ○ Staking Rewards Launch - <span class="text-warning">Not built (depends on a staking contract that does not exist)</span><br>
+        ○ Partner Integrations - <span class="text-warning">None announced</span>
       </p>
     </div>
 
     <div class="timeline-item">
-      <h4>Q3-Q4 2026 - Phase 4: Expansion (Highly Tentative)</h4>
+      <h4>Q3–Q4 2026 - Restart window (as of August 18, 2026)</h4>
       <p>
-        ○ DAO Treasury Management - <span class="text-warning">Under consideration</span><br>
-        ○ Cross-chain Bridge - <span class="text-warning">Long-term possibility</span><br>
-        ○ NFT Badge System - <span class="text-warning">Concept stage</span><br>
-        ○ CEX Listings - <span class="text-warning">No discussions or commitments</span>
+        ✓ Public documentation aligned with on-chain facts - <span style="color: var(--success-green);">In progress</span><br>
+        ○ One small utility on the existing ERC-20 - <span class="text-warning">Not started</span><br>
+        ○ Liquidity lock decision before November 25, 2026 - <span class="text-warning">Pending</span><br>
+        ○ DAO treasury, cross-chain bridge, NFT badges, CEX listings - <span class="text-warning">Deferred; not in this window</span>
       </p>
     </div>
 
@@ -998,7 +1011,7 @@
 <!-- GOVERNANCE -->
 <section id="governance" class="section">
   <h2>Governance & Community</h2>
-  <p>FRINK adopts a community-driven governance model for key decisions.</p>
+  <p>FRINK does not currently have a live governance system. The structure below is the intended design, not an operating DAO.</p>
 
   <h3>Governance Structure</h3>
   <div class="row g-3">
@@ -1006,11 +1019,11 @@
       <div class="use-case-box">
         <h4>📋 Snapshot Voting</h4>
         <p>
-          <span class="gov-badge">Active</span>
-          FRINK holders participate in off-chain voting via Snapshot.
-          1 FRINK = 1 vote. Proposals require minimum 20% quorum.
+          <span class="gov-badge">Not created</span>
+          A Snapshot space for FRINK has not been launched. There are no proposals to vote on.
+          1 FRINK = 1 vote is the intended rule if a space is created later.
         </p>
-        <p><strong>Status:</strong> <span style="color: var(--success-green);">✓ Operational</span></p>
+        <p><strong>Status:</strong> <span class="text-warning">○ Not created. Previously marked Operational in error.</span></p>
       </div>
     </div>
     <div class="col-md-6">
@@ -1020,7 +1033,7 @@
           <span class="gov-badge">Planned</span>
           On-chain governance for automated execution of approved proposals.
         </p>
-        <p><strong>Status:</strong> <span class="text-warning">○ Target Q2 2026 (development stage)</span></p>
+        <p><strong>Status:</strong> <span class="text-warning">○ Not started. Target was Q2 2026.</span></p>
       </div>
     </div>
   </div>
@@ -1065,8 +1078,8 @@
   </ul>
 
   <div class="alert alert-info">
-    <strong>📌 Governance Limitation:</strong> Off-chain voting (Snapshot) is non-binding. 
-    Execution depends on core team implementation. On-chain governance is planned but not yet active.
+    <strong>📌 Governance Limitation:</strong> There is no live Snapshot space and no on-chain Governor.
+    Discord discussion is not a token vote. Any future off-chain vote would be non-binding.
   </div>
 </section>
 
@@ -1109,10 +1122,10 @@
   <div class="use-case-box">
     <h4>🛡️ Risk Management</h4>
     <p>
-      <strong>Liquidity Protection:</strong> 12-month lockup scheduled via Team Finance (November 23, 2025)<br>
-      <strong>Developer Vesting:</strong> Manual vesting process (trust-based, not automated)<br>
-      <strong>Emergency Pause:</strong> Not available (contract is immutable)<br>
-      <strong>Bug Bounty Program:</strong> Planned for Q1 2026 (not yet launched)
+      <strong>Liquidity Protection:</strong> 12-month lock via Team Finance (November 25, 2025 → November 25, 2026)<br>
+      <strong>Developer Vesting:</strong> Manual vesting process (trust-based, not automated). ~99% of supply remains in the founder wallet.<br>
+      <strong>Emergency Pause:</strong> Not available (contract is immutable aside from Ownable transfer)<br>
+      <strong>Bug Bounty Program:</strong> Not launched. Target was Q1 2026. Reports still go to contact@frinktoken.net
     </p>
   </div>
 
@@ -1128,8 +1141,8 @@
       <tr>
         <td data-label="Auditor">Professional Auditor (TBD)</td>
         <td data-label="Scope">Smart Contract Review</td>
-        <td data-label="Target Date">Q1 2026</td>
-        <td data-label="Status"><span class="text-warning">○ Budget pending, no contract</span></td>
+        <td data-label="Target Date">Q1 2026 (missed)</td>
+        <td data-label="Status"><span class="text-warning">○ Not started. No auditor contracted.</span></td>
       </tr>
       <tr>
         <td data-label="Auditor">Community Security Review</td>
@@ -1342,7 +1355,7 @@
     <div class="col-md-6">
       <div class="use-case-box">
         <h4>🏛️ Community Governance</h4>
-        <p>Active Snapshot voting gives token holders a voice in project decisions.</p>
+        <p>Governance is intended via Snapshot, but no FRINK space exists yet. Token holders cannot vote today.</p>
       </div>
     </div>
     <div class="col-md-6">
@@ -1365,8 +1378,9 @@
   <h2>Team & Organization</h2>
 
   <div class="alert alert-warning">
-    <strong>📌 Team Transparency:</strong> Team members operate pseudonymously with governance oversight 
-    through community participation. Transparency considerations are under community review.
+    <strong>📌 Team:</strong> Founder is publicly identified as <strong>Alex Seo</strong>
+    (<a href="https://www.linkedin.com/in/alex-seo-39b76a338">LinkedIn</a>).
+    Additional contributors, if any, may remain unnamed. There is no live governance vote overseeing the team.
   </div>
 
   <h3>Core Development Roles</h3>
@@ -1380,7 +1394,7 @@
       <tr>
         <td data-label="Role"><strong>Protocol Development</strong></td>
         <td data-label="Responsibility">Smart contract deployment, technical architecture</td>
-        <td data-label="Status">Pseudonymous</td>
+        <td data-label="Status">Alex Seo (public)</td>
       </tr>
       <tr>
         <td data-label="Role"><strong>Full Stack Development</strong></td>
@@ -1390,29 +1404,29 @@
       <tr>
         <td data-label="Role"><strong>Community Management</strong></td>
         <td data-label="Responsibility">Discord, governance coordination</td>
-        <td data-label="Status">Active (pseudonymous)</td>
+        <td data-label="Status">Founder-run Discord; no token vote</td>
       </tr>
       <tr>
         <td data-label="Role"><strong>Content Creation</strong></td>
         <td data-label="Responsibility">Educational materials, documentation</td>
-        <td data-label="Status">Community volunteers</td>
+        <td data-label="Status">Website/docs only in this repo</td>
       </tr>
     </table>
   </div>
 
   <p class="text-secondary mt-3">
-    <em>Team Disclosure: Under community consideration. Governance vote planned for Q1 2026 
-    regarding team transparency enhancement.</em>
+    <em>A governance vote on further team disclosure was planned for Q1 2026 and was not held.
+    There is no Snapshot space to hold that vote.</em>
   </p>
 
   <h3>Advisory & Support</h3>
-  <p>The project operates with community governance oversight. Members with relevant 
-  expertise are encouraged to participate in governance and provide guidance.</p>
+  <p>The project does not currently run community governance. People with relevant
+  expertise can still join Discord and contribute code or docs.</p>
 
   <div class="alert alert-danger">
-    <strong>⚠️ Pseudonymous Team:</strong> Team members operate pseudonymously, which affects 
-    direct accountability. Governance oversight is provided through community participation. 
-    This structure requires participants to evaluate risk accordingly.
+    <strong>⚠️ Named founder, concentrated supply:</strong> The founder is publicly named.
+    Direct accountability is still limited because ~99% of tokens sit in a single EOA,
+    vesting is manual, and there is no live token vote. Evaluate that risk accordingly.
   </div>
 </section>
 
@@ -1421,20 +1435,19 @@
   <h2>Financial Sustainability</h2>
 
   <div class="alert alert-warning">
-    <strong>📌 Financial Development Status:</strong> The project currently operates on community 
-    contributions and volunteer resources. Revenue generation depends on successful implementation 
-    of planned features and community adoption.
+    <strong>📌 Financial Development Status:</strong> There is no revenue product. The project is founder-led
+    with a static website. Any future revenue depends on building something that does not exist yet.
   </div>
 
   <h3>Current Financial Reality</h3>
   <ul>
-    <li><strong>Revenue:</strong> Currently $0. Revenue-generating features are in development.</li>
-    <li><strong>Funding:</strong> Community-funded. No venture capital or institutional funding.</li>
-    <li><strong>Development:</strong> Primarily volunteer-based with community resources.</li>
-    <li><strong>Treasury:</strong> Multi-signature wallet planned for governance control.</li>
+    <li><strong>Revenue:</strong> $0. No revenue product exists.</li>
+    <li><strong>Funding:</strong> No venture capital or institutional funding.</li>
+    <li><strong>Development:</strong> Founder-led. This repository is a static website; there is no DApp codebase.</li>
+    <li><strong>Treasury:</strong> No multi-signature wallet. Tokens are in the founder EOA.</li>
   </ul>
 
-  <h3>Potential Revenue Models (In Development)</h3>
+  <h3>Potential Revenue Models (not built)</h3>
   <p>As the project develops, potential revenue sources could include:</p>
   <ul>
     <li>Optional DApp transaction fees (subject to governance approval)</li>
@@ -1614,7 +1627,6 @@
       <a href="https://www.reddit.com/user/FrinkTokenOfficial" style="color: var(--primary-purple); text-decoration: none;">🤖 Reddit</a> • 
       <a href="https://www.facebook.com/FrinkToken" style="color: var(--primary-purple); text-decoration: none;">📘 Facebook</a> • 
       <a href="https://www.linkedin.com/in/alex-seo-39b76a338" style="color: var(--primary-purple); text-decoration: none;">💼 LinkedIn</a> • 
-      <a href="https://frinktoken.slack.com" style="color: var(--primary-purple); text-decoration: none;">💬 Slack</a> • 
       <a href="https://bitcointalk.org/index.php?topic=5566014" style="color: var(--primary-purple); text-decoration: none;">🪙 Bitcointalk</a>
     </p>
   </div>
@@ -1644,14 +1656,13 @@
 
   <p>
     Success requires sustained community participation, volunteer development contributions, 
-    and favorable external conditions. Many features are in development or planning stages, 
-    with implementation timelines dependent on community resources and engagement.
+    Many features listed in earlier drafts were never built. This document now states that plainly.
   </p>
 
   <div class="alert alert-danger">
     <strong>⚠️ Final Warning:</strong> FRINK is a high-risk experimental utility-focused token. 
-    It has no revenue, no professional audit yet, and relies on community development. 
-    Most roadmap features are in development or planning stages. 
+    It has no revenue, no professional audit, and no live token vote.
+    Most roadmap items for Q1–Q2 2026 were not delivered. 
     Price volatility is expected and value depends on adoption and utility development.
     <br><br>
     <strong>Only participate if you:</strong><br>
@@ -1664,8 +1675,7 @@
 
   <div class="alert alert-info">
     <strong>📢 Join Responsibly:</strong> If you understand and accept the risks, 
-    you're welcome to participate in Discord, vote on governance, and contribute to 
-    the project's development. Approach with realistic expectations and caution.
+    you're welcome to join Discord and contribute. There is no live governance vote.
   </div>
 </section>
 
@@ -1683,7 +1693,7 @@
     <p><strong>Token Standard:</strong> ERC-20</p>
     <p><strong>Decimals:</strong> 18</p>
     <p><strong>Total Supply:</strong> <span class="highlight-number">10,000,000,000 FRINK</span> (Fixed)</p>
-    <p><strong>Contract Type:</strong> Standard ERC-20 (no mint, burn, pause, or upgrade functions)</p>
+    <p><strong>Contract Type:</strong> Standard ERC-20 with Ownable (no mint, burn, pause, or upgrade proxy)</p>
     <p><strong>Source Code:</strong> Viewable on PolygonScan</p>
   </div>
 
@@ -1700,7 +1710,7 @@ Decimals: 18</pre>
   <ul>
     <li><strong>PolygonScan:</strong> <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433">View Token Contract</a></li>
     <li><strong>QuickSwap:</strong> <a href="https://quickswap.exchange">Trade FRINK</a></li>
-    <li><strong>Snapshot Governance:</strong> <a href="https://snapshot.org">Vote on Proposals</a></li>
+    <li><strong>Snapshot Governance:</strong> No FRINK space. Do not treat snapshot.org as a FRINK voting page.</li>
     <li><strong>Official Website:</strong> <a href="https://frinktoken.net">frinktoken.net</a></li>
   </ul>
 </section>
@@ -1712,9 +1722,9 @@ Decimals: 18</pre>
     <p><strong>This token is experimental and high-risk. By acquiring or using FRINK, you acknowledge:</strong></p>
     <ul style="margin-bottom: 0;">
       <li>FRINK is a utility-focused token with value dependent on adoption and development progress</li>
-      <li>The project is NOT yet audited by professional security firms (audit planned Q1 2026)</li>
-      <li>The team is pseudonymous with governance oversight through community</li>
-      <li>Most roadmap features are in development with completion dependent on community resources</li>
+      <li>The project is NOT audited by professional security firms (the Q1 2026 audit did not happen)</li>
+      <li>The founder is publicly named; ~99% of supply is in that wallet. There is no live token vote.</li>
+      <li>Most Q1–Q2 2026 roadmap features were not built</li>
       <li>Success requires sustained community participation and development</li>
       <li>This is NOT investment advice - seek professional counsel</li>
       <li>Regulatory status is evolving and may change</li>

@@ -7,9 +7,9 @@ Verified on Polygon · Official Project of GTone Network
 ## 🪙 Introduction
 
 **Frink Token (FRINK)** is an experimental ERC-20 utility token deployed on the **Polygon PoS Network**.  
-The token powers creator-focused digital tools, decentralized participation models, educational Web3 utilities, and early-stage ecosystem prototypes under the **GTone Network**.
+It is **designed** to support creator-focused tools, participation experiments, and educational Web3 utilities under the **GTone Network**. Those utilities are not live as of August 18, 2026.
 
-FRINK explores how blockchain can connect global creators, learners, and communities through transparent, utility-driven functions.
+FRINK explores how blockchain can connect creators, learners, and communities. The live artifacts today are the token, the website, and a locked QuickSwap LP — not a DApp suite.
 
 ---
 
@@ -47,16 +47,16 @@ FRINK uses Polygon for fast, low-fee, widely adopted infrastructure ideal for ed
 
 ## 🧩 Utility Overview
 
-FRINK Token is designed for:
+Intended uses (none of these products are deployed as of August 18, 2026):
 
 ### 1) Creator Ecosystem Utility
-- Access to prototype creative tools  
+- Prototype creative tools  
 - Media distribution + micro-dApp utilities  
-- Digital asset triggers & content-driven rewards  
+- Content-driven rewards  
 
 ### 2) Community Participation
-- Access to private project channels  
-- Voting on development experiments  
+- Access to project channels  
+- Voting on development experiments (Snapshot space not created)  
 - Early access to GTone ecosystem utilities  
 
 ### 3) Web3 Learning Tools
@@ -64,7 +64,7 @@ FRINK Token is designed for:
 - On-chain learning experiments  
 - Real-usage onboarding for new users  
 
-FRINK bridges blockchain technology with real creative and educational environments.
+These are design goals. They are not live products.
 
 ---
 
@@ -81,34 +81,34 @@ FRINK bridges blockchain technology with real creative and educational environme
 | **Community Airdrops** | 15% — 1,500M FRINK |
 | **Treasury Reserve** | 15% — 1,500M FRINK |
 
-Allocation is proposed and not fully implemented on-chain. Actual distribution is visible on PolygonScan. The contract does not include automated vesting or locking.
+The 6-way split is a **proposal only**. On August 18, 2026 the founder/deployer wallet `0x2432b1229b3e6a284f9a27024b158d2f1a589445` held about **99%** of supply. Published LP is about 50.56M FRINK + 9.913 POL (~0.5%), not 30%. There is no vesting contract. Verify on PolygonScan.
 
-✔ No hidden minting or privileged functions.  
-✔ Tokenomics may be updated with community feedback.
+The token contract does not mint. It is Ownable. Liquidity NFT lock is separate (Team Finance, unlock November 25, 2026).
 
 ---
 
 ## 🗺 Roadmap
 
-### **Q4 2025 — Phase 1: Launch**
-- Token deployment (Polygon)  
+### **Q4 2025 — Phase 1: Launch (completed)**
+- Token deployment (Polygon, October 31, 2025)  
 - Website activation  
 - Initial documentation  
+- QuickSwap LP + Team Finance lock (November 25, 2025)  
 
-### **Q1–Q2 2026 — Phase 2: Expansion**
-- Community onboarding  
-- Educational Web3 modules  
-- Creator reward tools  
+### **Q1–Q2 2026 — Phase 2: Expansion (not delivered)**
+- Community onboarding beyond Discord — limited  
+- Educational Web3 modules — not published  
+- Creator reward tools — not built  
+- Snapshot governance — not created  
+- Security audit — not started  
 
-### **Q3–Q4 2026 — Phase 3: Ecosystem Development**
-- Micro-dApp utilities  
-- Creator tools integration  
-- Early GTone Network linkage  
+### **Q3–Q4 2026 — Restart window**
+- Public docs aligned with on-chain facts (August 2026)  
+- One small utility on the existing ERC-20 — not started  
+- Liquidity lock decision before November 25, 2026  
 
-### **2027+ — Phase 4: Future Growth**
-- Governance experiments  
-- Partnerships & integrations  
-- Real-world creator utility expansion  
+### **2027+ — Future**
+- Governance experiments, partnerships, and creator utility remain long-term goals, not commitments.  
 
 ---
 
@@ -130,7 +130,8 @@ LinkedIn: https://www.linkedin.com/in/alex-seo-39b76a338/
 | Twitter/X | https://x.com/FrinkTokenNet |
 | Telegram | https://t.me/frinktoken_official |
 | Facebook | https://www.facebook.com/FrinkToken |
-| YouTube | https://youtube.com/@15MChannel |
+| LinkedIn | https://www.linkedin.com/in/alex-seo-39b76a338 |
+| GitHub | https://github.com/frinktoken-official |
 | PolygonScan | https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433 |
 | Developer Contact | contact@frinktoken.net |
 

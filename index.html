@@ -524,6 +524,10 @@
       <div class="alert alert-danger mt-5">
         <strong>⚠️ Important Risk Notice:</strong> FRINK is an experimental utility-focused project with no guarantees of success, utility, or value. Token value depends on adoption and development progress. This is NOT investment advice. Only participate with funds you can afford to lose completely. Read the <a href="whitepaper.html#legal" style="color: var(--danger-red); text-decoration: underline;">full risk disclosure</a> before participating.
       </div>
+
+      <div class="alert alert-warning mt-3">
+        <strong>Status as of August 18, 2026:</strong> The token, website, and Team Finance liquidity lock are live. Creator rewards, staking, a learning platform, and Snapshot governance are <strong>not</strong> built. About <strong>99%</strong> of supply is in the founder wallet. The locked LP unlocks on <strong>November 25, 2026</strong>.
+      </div>
     </section>
 
     <!-- Overview -->
@@ -545,7 +549,7 @@
           <tr><th>Total Supply</th><td><span class="highlight-purple">10,000,000,000 FRINK</span> (Fixed)</td></tr>
           <tr><th>Contract Address</th><td><code>0x822AC53a3037d328645B5aa7d6A07360AcC23433</code></td></tr>
           <tr><th>Deployment Date</th><td>October 31, 2025</td></tr>
-          <tr><th>Contract Type</th><td>Standard ERC-20 (No mint, no burn)</td></tr>
+          <tr><th>Contract Type</th><td>Standard ERC-20 (no mint, no burn) with Ownable. The owner wallet holds most of the supply.</td></tr>
           <tr><th>Source Code</th><td><a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433">Verified on PolygonScan</a></td></tr>
         </tbody>
       </table>
@@ -557,15 +561,15 @@
       <p>FRINK is designed to explore the following experimental use cases:</p>
 
       <ul class="feature-list">
-        <li>🎨 <strong>Creator Rewards System</strong> — Token-based rewards for content creators (Planned Q1 2026)</li>
-        <li>📚 <strong>Web3 Learning Platform</strong> — Earn tokens by learning blockchain concepts (Planned Q2 2026)</li>
-        <li>🗳️ <strong>Community Governance</strong> — 1 token = 1 vote on protocol decisions <span class="badge badge-live">LIVE</span></li>
-        <li>💼 <strong>Micro Tasks & Freelancing</strong> — Small task payments with low fees (Concept stage)</li>
-        <li>🔐 <strong>DApp Access Tiers</strong> — Token-gated features (Future consideration)</li>
+        <li>🎨 <strong>Creator Rewards System</strong> — Planned for Q1 2026; <strong>not built</strong></li>
+        <li>📚 <strong>Web3 Learning Platform</strong> — Planned for Q2 2026; <strong>not built</strong></li>
+        <li>🗳️ <strong>Community Governance</strong> — Snapshot space has <strong>not</strong> been created (previously marked LIVE in error)</li>
+        <li>💼 <strong>Micro Tasks & Freelancing</strong> — Concept only</li>
+        <li>🔐 <strong>DApp Access Tiers</strong> — Not started</li>
       </ul>
 
       <div class="alert alert-warning mt-4">
-        <strong>⚠️ Development Status:</strong> Most features are in development or planning stages. Implementation depends on community resources and participation. Timelines may vary based on available development capacity.
+        <strong>⚠️ Development Status:</strong> Most listed utilities are <strong>not built</strong>. They were planned for Q1–Q2 2026 and were not delivered. New work, if any, will be announced on this site and Discord.
       </div>
 
       <div class="text-center mt-4">
@@ -600,7 +604,7 @@
       </table>
 
       <div class="alert alert-warning mt-3">
-        <strong>📌 Note:</strong> Token allocation is proposed but not fully implemented. Actual distribution is tracked on-chain via PolygonScan. The contract does NOT include automated vesting or locking mechanisms. All vesting depends on manual execution.
+        <strong>📌 On-chain distribution (August 18, 2026):</strong> The table above is a <strong>proposal only</strong>. The founder/deployer wallet <code>0x2432b1229b3e6a284f9a27024b158d2f1a589445</code> holds about <strong>99%</strong> of supply. Published LP is about <strong>50.56M FRINK + 9.913 POL</strong> (~0.5% of supply), not the 30% liquidity target. There is no vesting contract. Verify balances on PolygonScan.
       </div>
 
       <div class="text-center mt-4">
@@ -649,7 +653,7 @@
       <h3>Security & Trust</h3>
       <ul class="feature-list">
         <li>✅ <strong>100% Liquidity Locked</strong> — All initial liquidity secured for 12 months</li>
-        <li>✅ <strong>No Rug Pull Risk</strong> — Cannot be removed until November 25, 2026</li>
+        <li>✅ <strong>LP locked until November 25, 2026</strong> — The LP NFT cannot be withdrawn before then. Founder-held tokens (~99%) are not locked.</li>
         <li>✅ <strong>Triple-Audited Platform</strong> — Team Finance audited by CertiK, Hacken, and Solidity Finance</li>
         <li>✅ <strong>Publicly Verifiable</strong> — All lock details visible on-chain</li>
         <li>✅ <strong>Long-term Commitment</strong> — Demonstrates team dedication to the project</li>
@@ -720,7 +724,6 @@
 		  <a href="https://www.reddit.com/user/FrinkTokenOfficial" style="color: var(--primary-purple); text-decoration: none;">🤖 Reddit</a> • 
 		  <a href="https://www.facebook.com/FrinkToken" style="color: var(--primary-purple); text-decoration: none;">📘 Facebook</a> • 
 		  <a href="https://www.linkedin.com/in/alex-seo-39b76a338" style="color: var(--primary-purple); text-decoration: none;">💼 LinkedIn</a> • 
-		  <a href="https://frinktoken.slack.com" style="color: var(--primary-purple); text-decoration: none;">💬 Slack</a> • 
 		  <a href="https://bitcointalk.org/index.php?topic=5566014" style="color: var(--primary-purple); text-decoration: none;">🪙 Bitcointalk</a>
 		</p>
 	  </div>
@@ -747,28 +750,29 @@
         <strong>⚠️ Roadmap Disclaimer:</strong> This roadmap represents planned development targets. Progress depends on community participation and resources. Timelines may vary.
       </div>
 
-      <h3 style="color: var(--success-green);">✅ Q4 2025 — Foundation (Current)</h3>
+      <h3 style="color: var(--success-green);">✅ Q4 2025 — Foundation (completed)</h3>
       <ul class="feature-list">
         <li>✓ Smart Contract Deployment (October 31, 2025) — <strong style="color: var(--success-green);">COMPLETED</strong></li>
         <li>✓ Community Discord Server — <strong style="color: var(--success-green);">LIVE</strong></li>
         <li>✓ Initial Liquidity Launch (QuickSwap V3) — <strong style="color: var(--success-green);">COMPLETED</strong></li>
-        <li>✓ Liquidity Lock (Team Finance) — <strong style="color: var(--success-green);">✅ COMPLETED (November 25, 2025)</strong></li>
+        <li>✓ Liquidity Lock (Team Finance) — <strong style="color: var(--success-green);">COMPLETED (unlock November 25, 2026)</strong></li>
       </ul>
 
-      <h3 style="color: var(--warning-yellow);">⏳ Q1 2026 — Ecosystem Development</h3>
+      <h3 style="color: var(--danger-red);">✕ Q1–Q2 2026 — Not delivered</h3>
       <ul class="feature-list">
-        <li>○ Security Audit — Planned (no contract signed yet)</li>
-        <li>○ Creator Rewards DApp Beta — Target release</li>
-        <li>○ Staking Contract Deployment — Planned</li>
-        <li>○ First Community Governance Vote — Planned</li>
+        <li>○ Security audit — Not started (no auditor contracted)</li>
+        <li>○ Creator Rewards DApp — Not built</li>
+        <li>○ Staking contract — Not built</li>
+        <li>○ Snapshot governance / first vote — Not created</li>
+        <li>○ Learning platform MVP — Not built</li>
       </ul>
 
-      <h3 style="color: #aab3cc;">🔮 Q2-Q4 2026 & Beyond</h3>
+      <h3 style="color: var(--warning-yellow);">⏳ Q3–Q4 2026 — Restart window</h3>
       <ul class="feature-list">
-        <li>○ Learning Platform MVP — Tentative</li>
-        <li>○ Task Marketplace — Under consideration</li>
-        <li>○ DAO Treasury Management — Planned</li>
-        <li>○ Strategic Partnerships — Dependent on growth</li>
+        <li>✓ Public docs aligned with on-chain facts (August 2026)</li>
+        <li>○ One small utility on the existing ERC-20 — Not started</li>
+        <li>○ Liquidity lock decision before November 25, 2026 — Pending</li>
+        <li>○ Task marketplace, DAO treasury, CEX, bridges — Deferred (not in this window)</li>
       </ul>
 
       <div class="text-center mt-4">
@@ -784,7 +788,7 @@
         </h3>
         <p><strong>Before participating, understand these critical points:</strong></p>
         <ul class="mb-0">
-          <li><strong>No Professional Audit:</strong> Contract has NOT been audited by professional security firms (audit planned Q1 2026)</li>
+          <li><strong>No Professional Audit:</strong> Contract has NOT been audited. The Q1 2026 audit did not happen.</li>
           <li><strong>Experimental Project:</strong> This is an experimental utility token with no guarantees of success or value</li>
           <li><strong>High Risk:</strong> You could lose 100% of funds invested</li>
           <li><strong>Development Dependent:</strong> Success requires sustained community participation and development</li>
