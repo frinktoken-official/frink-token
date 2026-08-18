@@ -472,7 +472,7 @@
     }
 
     /* Transfer / swap on the homepage */
-    #use, #transfer, #swap { scroll-margin-top: 88px; }
+    #use, #transfer, #swap, #guide { scroll-margin-top: 88px; }
     .use-widget { max-width: 640px; margin: 0 auto; }
     .wallet-bar {
       display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
@@ -522,6 +522,34 @@
     .use-status--warn { color: var(--warning-yellow); }
     .use-status--info { color: #8ec8ff; }
     .lede-muted { color: #aab3cc; }
+    .guide-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .guide-box summary {
+      color: var(--primary-purple);
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+    }
+    .guide-box summary::-webkit-details-marker { display: none; }
+    .guide-box summary::after {
+      content: " +";
+      float: right;
+      color: #aab3cc;
+      font-weight: 400;
+    }
+    .guide-box[open] summary::after { content: " −"; }
+    .guide-body { margin-top: 14px; }
+    .guide-body ol {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+    .guide-body li { margin-bottom: 10px; }
+    .guide-body p:last-child { margin-bottom: 0; }
   </style>
 </head>
 
@@ -638,6 +666,27 @@
             Prefer QuickSwap’s own UI:
             <a id="quickswapLink" href="https://quickswap.exchange" target="_blank" rel="noopener">Open QuickSwap</a>
           </p>
+        </div>
+
+        <div class="guide-stack" id="guide">
+          <!-- Add another <details class="use-panel guide-box"> here when a new topic is ready. -->
+          <details class="use-panel guide-box" open>
+            <summary>How to buy a little FRINK</summary>
+            <div class="guide-body">
+              <p>Transfer is for sending FRINK you already have. To buy FRINK, use <a href="#swap">Swap</a>.</p>
+              <ol>
+                <li>Get a Polygon wallet, such as MetaMask.</li>
+                <li>Put a small amount of POL in that wallet. POL buys FRINK and also pays the network fee.</li>
+                <li>Click <strong>Connect wallet</strong>. In the wallet popup, click Confirm. If you click Reject, nothing is sent.</li>
+                <li>Open the <strong>Swap</strong> tab.</li>
+                <li>Keep the direction <strong>POL → FRINK</strong>.</li>
+                <li>Enter a very small POL amount. The pool is thin, so a large swap can lose a lot of value.</li>
+                <li>Check the quote, then click <strong>Swap</strong>. Confirm again in your wallet.</li>
+              </ol>
+              <p>This site never asks for your seed phrase. If a page asks for it, leave.</p>
+              <p>After you have FRINK, use Transfer to send it to another Polygon address.</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
