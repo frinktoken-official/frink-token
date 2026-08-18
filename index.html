@@ -472,7 +472,7 @@
     }
 
     /* Transfer / swap on the homepage */
-    #use, #transfer, #swap, #guide, #gift, #notice { scroll-margin-top: 88px; }
+    #use, #transfer, #swap, #guide, #wallet, #gift, #notice { scroll-margin-top: 88px; }
     .use-widget { max-width: 640px; margin: 0 auto; }
     .wallet-bar {
       display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
@@ -678,7 +678,21 @@
         </div>
 
         <div class="guide-stack" id="guide">
-          <!-- Add another <details class="use-panel guide-box"> here when a new topic is ready. -->
+          <details class="use-panel guide-box" id="wallet">
+            <summary>How to make a wallet to receive FRINK</summary>
+            <div class="guide-body">
+              <p>You need a Polygon wallet to receive a bonus or gift. You do <strong>not</strong> need POL only to receive. The sender pays the network fee. This site never asks for your seed phrase. If a page asks for it, leave.</p>
+              <ol>
+                <li>Install a real wallet such as <strong>MetaMask</strong> from the official site or the official app store. Do not install a wallet from an ad or a chat link.</li>
+                <li>Create a new wallet. Write the seed phrase on paper and keep it offline. Never send the seed phrase to anyone.</li>
+                <li>Select the <strong>Polygon</strong> network (chain ID 137). FRINK is not on Ethereum mainnet.</li>
+                <li>Copy your account address. It starts with <code>0x</code>. Send <strong>only this address</strong> to the person who will send FRINK. Check it twice. A wrong address cannot be undone.</li>
+                <li>Optional: add the token so the balance is visible — contract <code>0x822AC53a3037d328645B5aa7d6A07360AcC23433</code>, symbol FRINK, 18 decimals, network Polygon.</li>
+              </ol>
+              <p>After you hold FRINK: keep it, or send it to someone else with Transfer (you will then need a little POL for gas). If many customers hold FRINK, they may send it to each other. That is person-to-person transfer, not a cash machine.</p>
+              <p><strong>Bonus or gift FRINK is not converted back to cash on Swap.</strong> Swap almost does not work. Do not expect Swap to return service payment or gift value as money.</p>
+            </div>
+          </details>
           <details class="use-panel guide-box">
             <summary>How to buy a little FRINK</summary>
             <div class="guide-body">
@@ -735,6 +749,7 @@
               <p><strong>FRINK you receive as a bonus or gift is not converted back to cash on Swap.</strong> It is only a bonus or gift. Swap almost does not work.</p>
               <p>How to use it: hold it, or send it to someone else with Transfer. If many customers hold FRINK, they may send it to each other. That is person-to-person transfer, not a cash machine.</p>
               <p>Do not open Swap expecting to get your service payment or gift value back as money. The pool is about 9.9 POL. Swap is effectively not available for that purpose.</p>
+              <p>Need an address first? <a href="#wallet">How to make a wallet to receive FRINK</a>.</p>
             </div>
           </details>
           <details class="use-panel guide-box" id="notice">
@@ -750,7 +765,7 @@
 
               <h4>Paid services and optional gifts</h4>
               <p>The founder runs paid services. That list may grow. Those services are billed in cash (for example KRW or USD). They are not billed in FRINK. After a cash payment, if the customer wants a thank-you gift, the founder may send FRINK. If the customer does not want it, it is not sent.</p>
-              <p>That gift is not a purchase of the service with FRINK. It is not cash back through Swap. It is not a return on an investment. It is only a bonus or gift. If many customers hold FRINK, they may send it to each other with Transfer. To receive a gift you must give a Polygon wallet address. A wrong address cannot be undone. The founder may send any amount from the founder wallet, up to the wallet balance. There is no FRINK tax on that send.</p>
+              <p>That gift is not a purchase of the service with FRINK. It is not cash back through Swap. It is not a return on an investment. It is only a bonus or gift. If many customers hold FRINK, they may send it to each other with Transfer. To receive a gift, make a Polygon wallet first (<a href="#wallet">How to make a wallet to receive FRINK</a>) and send only the <code>0x</code> address. A wrong address cannot be undone. The founder may send any amount from the founder wallet, up to the wallet balance. There is no FRINK tax on that send.</p>
 
               <h4>What you can do with FRINK</h4>
               <p>Hold it or <a href="#transfer">transfer</a> it to another Polygon address. That is the intended use, especially if many customers hold FRINK and send it to each other. <a href="#swap">Swap</a> almost does not work and is not a way to turn a gift into cash. There is no official shop, exchange listing, or founder service that takes FRINK as payment. Founder services stay cash. If some other person agrees on their own to take FRINK for a service, you may transfer to them. The founder does not arrange that and does not guarantee the service.</p>
@@ -795,6 +810,7 @@
     <p style="font-size: 0.85em;">
       <a href="#transfer">Transfer</a> • 
       <a href="#swap">Swap (almost none)</a> • 
+      <a href="#wallet">Wallet</a> • 
       <a href="#gift">Gifts</a> • 
       <a href="#notice">Notice</a> • 
       <a href="whitepaper.html">Whitepaper</a> • 
