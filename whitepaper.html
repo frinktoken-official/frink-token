@@ -107,6 +107,14 @@
     font-size: 0.95rem;
   }
 
+  @media (min-width: 992px) {
+    .navbar-nav .nav-link {
+      padding: 6px 10px !important;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+  }
+
   .dropdown-menu-dark {
     background: #1d1d1d;
     border: 1px solid var(--border-color);
@@ -451,12 +459,8 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a href="index.html#use" class="nav-link">Transfer / Swap</a></li>
         <li class="nav-item"><a href="#summary" class="nav-link">Summary</a></li>
-        <li class="nav-item"><a href="#problem" class="nav-link">What exists</a></li>
-        <li class="nav-item"><a href="#usecases" class="nav-link">What it does</a></li>
-        <li class="nav-item"><a href="#tech" class="nav-link">Tech</a></li>
         <li class="nav-item"><a href="#tokenomics" class="nav-link">Token</a></li>
         <li class="nav-item"><a href="#liquidity-lock" class="nav-link">Liquidity</a></li>
-        <li class="nav-item"><a href="#roadmap" class="nav-link">Roadmap</a></li>
         <li class="nav-item"><a href="#security" class="nav-link">Security</a></li>
         <li class="nav-item"><a href="#legal" class="nav-link">Legal</a></li>
         <li class="nav-item dropdown">
@@ -464,6 +468,11 @@
             More
           </a>
           <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#problem">What exists</a></li>
+            <li><a class="dropdown-item" href="#usecases">What it does</a></li>
+            <li><a class="dropdown-item" href="#tech">Tech</a></li>
+            <li><a class="dropdown-item" href="#roadmap">Roadmap</a></li>
+            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#market">Market</a></li>
             <li><a class="dropdown-item" href="#team">Team</a></li>
             <li><a class="dropdown-item" href="#finance">Finance</a></li>
