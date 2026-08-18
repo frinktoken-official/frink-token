@@ -472,7 +472,7 @@
     }
 
     /* Transfer / swap on the homepage */
-    #use, #transfer, #swap, #guide, #notice { scroll-margin-top: 88px; }
+    #use, #transfer, #swap, #guide, #gift, #notice { scroll-margin-top: 88px; }
     .use-widget { max-width: 640px; margin: 0 auto; }
     .wallet-bar {
       display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
@@ -643,7 +643,7 @@
           </form>
         </div>
         <div class="use-panel" id="swap" hidden>
-          <p>Swap FRINK ↔ POL through the locked QuickSwap V3 pool. Swap almost does not work: the pool is about 9.9 POL. Use only a tiny test.</p>
+          <p>Swap almost does not work. The pool is about 9.9 POL. Bonus or gift FRINK is not cash back through Swap. If many people hold FRINK, they may send it to each other with Transfer.</p>
           <form id="swapForm">
             <div class="mb-3">
               <label for="swapDir">Direction</label>
@@ -679,7 +679,7 @@
 
         <div class="guide-stack" id="guide">
           <!-- Add another <details class="use-panel guide-box"> here when a new topic is ready. -->
-          <details class="use-panel guide-box" open>
+          <details class="use-panel guide-box">
             <summary>How to buy a little FRINK</summary>
             <div class="guide-body">
               <p>Transfer is for sending FRINK you already have. To buy FRINK, use <a href="#swap">Swap</a> (almost does not work — tiny test only).</p>
@@ -709,13 +709,15 @@
                 <li>Click <strong>Send FRINK</strong>. Confirm in your wallet. If you click Reject, nothing is sent.</li>
               </ol>
               <p>When it finishes, this page shows a PolygonScan link. The other person will see FRINK in their wallet after the network confirms it.</p>
+              <p>Bonus or gift FRINK is not cashed out on Swap. If more customers hold FRINK, they may send it to each other this way. Swap almost does not work.</p>
               <p>This site never asks for your seed phrase. If a page asks for it, leave.</p>
             </div>
           </details>
           <details class="use-panel guide-box">
             <summary>How to sell FRINK</summary>
             <div class="guide-body">
-              <p>To sell FRINK, use <a href="#swap">Swap</a> (almost does not work). Direction: <strong>FRINK → POL</strong>. The pool is about 9.9 POL, so a sale may return almost nothing.</p>
+              <p><strong>Bonus or gift FRINK is not cash back through Swap.</strong> It is only a bonus or gift. Swap almost does not work. If more customers hold FRINK, they may send it to each other with Transfer. Do not use Swap to “get the gift back as money.”</p>
+              <p>If you still open Swap, direction is <strong>FRINK → POL</strong>. The pool is about 9.9 POL, so you may receive almost nothing.</p>
               <ol>
                 <li>Click <strong>Connect wallet</strong> if you are not connected. Confirm in the wallet popup.</li>
                 <li>Open the <strong>Swap</strong> tab.</li>
@@ -724,8 +726,15 @@
                 <li>Check the quote, then click <strong>Swap</strong>. Confirm in your wallet.</li>
                 <li>The first time, the wallet may ask you to <strong>Approve</strong> FRINK. That is normal. Confirm, then confirm the swap.</li>
               </ol>
-              <p>You receive POL, not cash. To turn POL into cash, send it to an exchange that lists POL, then sell it there.</p>
-              <p>The pool is thin. Swap almost does not work except a tiny test. Do not treat swap as cashing out a gift.</p>
+              <p>You receive POL, not cash. The pool is thin. Swap almost does not work.</p>
+            </div>
+          </details>
+          <details class="use-panel guide-box" id="gift" open>
+            <summary>Bonus and gift FRINK — not cash</summary>
+            <div class="guide-body">
+              <p><strong>FRINK you receive as a bonus or gift is not converted back to cash on Swap.</strong> It is only a bonus or gift. Swap almost does not work.</p>
+              <p>How to use it: hold it, or send it to someone else with Transfer. If many customers hold FRINK, they may send it to each other. That is person-to-person transfer, not a cash machine.</p>
+              <p>Do not open Swap expecting to get your service payment or gift value back as money. The pool is about 9.9 POL. Swap is effectively not available for that purpose.</p>
             </div>
           </details>
           <details class="use-panel guide-box" id="notice">
@@ -741,10 +750,10 @@
 
               <h4>Paid services and optional gifts</h4>
               <p>The founder runs paid services. That list may grow. Those services are billed in cash (for example KRW or USD). They are not billed in FRINK. After a cash payment, if the customer wants a thank-you gift, the founder may send FRINK. If the customer does not want it, it is not sent.</p>
-              <p>That gift is not a purchase of the service with FRINK. It is not a cash refund. It is not a return on an investment. To receive a gift you must give a Polygon wallet address. A wrong address cannot be undone. The founder may send any amount from the founder wallet, up to the wallet balance. There is no FRINK tax on that send.</p>
+              <p>That gift is not a purchase of the service with FRINK. It is not cash back through Swap. It is not a return on an investment. It is only a bonus or gift. If many customers hold FRINK, they may send it to each other with Transfer. To receive a gift you must give a Polygon wallet address. A wrong address cannot be undone. The founder may send any amount from the founder wallet, up to the wallet balance. There is no FRINK tax on that send.</p>
 
               <h4>What you can do with FRINK</h4>
-              <p>Hold it, <a href="#transfer">transfer</a> it to another Polygon address, or <a href="#swap">swap</a> it (almost does not work). There is no official shop, exchange listing, or founder service that takes FRINK as payment. Founder services stay cash. If some other person agrees on their own to take FRINK for a service, you may transfer to them. The founder does not arrange that and does not guarantee the service.</p>
+              <p>Hold it or <a href="#transfer">transfer</a> it to another Polygon address. That is the intended use, especially if many customers hold FRINK and send it to each other. <a href="#swap">Swap</a> almost does not work and is not a way to turn a gift into cash. There is no official shop, exchange listing, or founder service that takes FRINK as payment. Founder services stay cash. If some other person agrees on their own to take FRINK for a service, you may transfer to them. The founder does not arrange that and does not guarantee the service.</p>
               <p>Gifted FRINK and swapped FRINK are the same token. This contract cannot mark a gift so that it cannot be swapped. A written request not to swap is not enforced on-chain.</p>
 
               <h4>Transfers, including between customers</h4>
@@ -753,7 +762,7 @@
 
               <h4>Swap and the pool</h4>
               <p>Swap (almost does not work) uses the locked QuickSwap V3 position (NFT 177734). Published liquidity is about 9.913 POL + 50,560,100 FRINK. Even a small swap can return much less than you expect. You receive POL, not cash. Turning POL into cash is done off this site, for example on an exchange that lists POL.</p>
-              <p>The founder does not approve each swap. The founder is not adding more POL to the pool. If many people swap FRINK for POL, early swaps may take most of the POL and later swaps may receive almost nothing. Do not treat swap as a way to cash out a gift. Anyone may create another pool with their own FRINK and POL. That is their capital, not the founder’s. This page’s Swap button still uses the locked pool. The founder does not ask anyone to create a pool and does not promise a return for doing so.</p>
+              <p>The founder does not approve each swap. The founder is not adding more POL to the pool. Do not treat Swap as getting a gift back as cash. Anyone may create another pool with their own FRINK and POL. That is their capital, not the founder’s. This page’s Swap button still uses the locked pool. The founder does not ask anyone to create a pool and does not promise a return for doing so.</p>
 
               <h4>On-chain facts</h4>
               <p>About 99% of supply is in the founder wallet. Published LP is about 0.5% of supply. The LP NFT unlocks on 25 November 2026. That lock does not stop the founder from transferring founder-held FRINK. There is no professional audit. The founder does not charge a site fee for transfer or swap.</p>
@@ -786,6 +795,7 @@
     <p style="font-size: 0.85em;">
       <a href="#transfer">Transfer</a> • 
       <a href="#swap">Swap (almost none)</a> • 
+      <a href="#gift">Gifts</a> • 
       <a href="#notice">Notice</a> • 
       <a href="whitepaper.html">Whitepaper</a> • 
       <a href="https://polygonscan.com/token/0x822AC53a3037d328645B5aa7d6A07360AcC23433">PolygonScan</a> • 
