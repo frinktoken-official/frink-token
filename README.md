@@ -81,7 +81,6 @@ This is the same contract listed on [PolygonScan](https://polygonscan.com/token/
 | `js/use.js` | Wallet transfer and QuickSwap V3 swap |
 | `use.html` | Redirects to the homepage transfer/swap section |
 | `whitepaper.html` / `whitepaper.pdf` | Full whitepaper |
-| `guides/quickswap-liquidity-guide.html` | QuickSwap liquidity guide |
 | `SECURITY.md` | Vulnerability reporting |
 | `CONTRIBUTING.md` | How to contribute |
 | `LICENSE` | MIT License |

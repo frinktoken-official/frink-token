@@ -598,24 +598,8 @@
       <p class="lead">Transfer and swap on Polygon. This page is the official UI.</p>
       <p class="lede-muted mb-0">Experimental ERC-20 · chain 137 · this site never asks for a seed phrase</p>
       <p class="mt-3 mb-0">
-        <a class="btn-primary" id="walletAddressBtn" href="https://gtcloudlab.com/en/inquiry?from=frink" target="_blank" rel="noopener">Submit Polygon address to receive FRINK</a>
+        <a class="btn-primary" href="https://gtcloudlab.com/en/inquiry?from=frink" target="_blank" rel="noopener">Submit Polygon address to receive FRINK</a>
       </p>
-      <script>
-        (function () {
-          var en = "https://gtcloudlab.com/en/inquiry?from=frink";
-          var ko = "https://gtcloudlab.com/inquiry?from=frink";
-          var a = document.getElementById("walletAddressBtn");
-          if (!a) return;
-          a.href = en;
-          fetch("/cdn-cgi/trace", { cache: "no-store" })
-            .then(function (r) { return r.text(); })
-            .then(function (t) {
-              var m = /(?:^|\n)loc=([A-Z]{2})(?:\n|$)/.exec(t);
-              if (m && m[1] === "KR") a.href = ko;
-            })
-            .catch(function () {});
-        })();
-      </script>
     </section>
 
     <!-- Transfer / Swap -->
